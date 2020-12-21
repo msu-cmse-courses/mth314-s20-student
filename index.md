@@ -8,9 +8,7 @@ This is an introductory course on Linear Algebra with a focus on scientific/engi
 ## Links
 
 - [Announcements](Announcements)
-- [Download Assignments](assignments)
 - [Syllabus](Syllabus)
-- [Schedule](Schedule)
 
 ## Assignment Schedule and Download
 - [Section 001 Schedule (Tu Th 10:20AM - 11:40AM)](./assignments/Section_001)
