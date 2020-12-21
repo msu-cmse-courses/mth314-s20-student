@@ -14,7 +14,7 @@
 | Wed, Jan 27 | 06--Mechanics_pre-class-assignment | ipynb | 
 | Tue, Feb 2 | 06-Mechanics_in-class-assignment | ipynb | 
 | Wed, Feb 3 | 07--Transformations_pre-class-assignment | ipynb | 
-| Thu, Feb 4 | 07-Transformations_in-class-assignment | ipynb | 
+| Thu, Feb 4 | [07-Transformations_in-class-assignment](07-Transformations_in-class-assignment.html) | [ipynb](07-Transformations_in-class-assignment.ipynb) |
 | Mon, Feb 8 | [08--Robotics_pre-class-assignment](08--Robotics_pre-class-assignment.html) | [ipynb](08--Robotics_pre-class-assignment.ipynb) |
 | Tue, Feb 9 | 08-Robotics_in-class-assignment | ipynb | 
 | Wed, Feb 10 | 09--Determinants_pre-class-assignment | ipynb | 
