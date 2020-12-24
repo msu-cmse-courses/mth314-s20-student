@@ -5,21 +5,21 @@
 
 # Course Description
 
-Historically, _Linear Algebra_ was developed from studying methods for solving systems of linear equations. This course teaches core Linear Algebra concepts with a focus on applications encountered in science and engineering.  These “real world” problems are often larger than what can easily be solved by hand, so this course focuses on _Numerical _techniques for understanding and solving large systems of equations using computing.  
+Historically, _Linear Algebra_ was developed from studying methods for solving systems of linear equations. This course teaches core Linear Algebra concepts with a focus on applications encountered in science and engineering.  These “real world” problems are often larger than what can easily be solved by hand, so this course focuses on _**Numerical techniques for understanding and solving large systems of equations using computing**_.  
 
 By the end of this course, you will be able to:
 
-1. **Demonstrate** the ability to solve Ax=b for linear systems, including underdetermined, inverterable, and overdetermined systems.
-2. **Use** the language of Linear Algebra to describe scientific problems. (ex.  Vector spaces, pivots, multipliers, column spaces, row space, null space, back substitution, invertibility of  a matrix, etc.)
-3. **Define** and **Compute** key vector and matrix properties  (Rank, dot product, dimensionality, singular, identity, etc.)
-4. **Give examples and Use** basic Elementary and Transformation Matrices.  
-5. **Recognize** the use of Eigenvalues and Eigenvectors and their role in problem-solving. 
-6. **Explain** Factorization and Decompositions.
-7. **Explain** numerical complexity and **Compare **algorithms using Big-O notation. 
-8. Be able to** Illustrate** the differences between different Numerical approaches to solving large sets of linear equations. 
-9. **Demonstrate** the ability to write programs that can solve linear algebra problems.
-10. **Identify **programming libraries and techniques to solve linear algebra problems. 
-11. **Write** programs to solve common Linear Algebra problems in a variety of scientific and engineering disciplines.
+1. **_Demonstrate_** the ability to solve Ax=b for linear systems, including underdetermined, inverterable, and overdetermined systems.
+2. **_Use_** the language of Linear Algebra to describe scientific problems. (ex.  Vector spaces, pivots, multipliers, column spaces, row space, null space, back substitution, invertibility of  a matrix, etc.)
+3. **_Define_** and **_Compute_** key vector and matrix properties  (Rank, dot product, dimensionality, singular, identity, etc.)
+4. **_Give examples and Use_** basic Elementary and Transformation Matrices.  
+5. **_Recognize_** the use of Eigenvalues and Eigenvectors and their role in problem-solving. 
+6. **_Explain_** Factorization and Decompositions.
+7. **_Explain_** numerical complexity and **Compare **algorithms using Big-O notation. 
+8. Be able to **_Illustrate_** the differences between different Numerical approaches to solving large sets of linear equations. 
+9. **_Demonstrate_** the ability to write programs that can solve linear algebra problems.
+10. **_Identify_** programming libraries and techniques to solve linear algebra problems. 
+11. **_Write_** programs to solve common Linear Algebra problems in a variety of scientific and engineering disciplines.
 
 We will work toward the goals expressed above throughout this course using a range of activities – primarily by writing software both individually and in small groups, but also through discussion, presentations, and other types of exercises.  
 
@@ -70,7 +70,7 @@ You will have periodic programming assignments (approximately 1 assignment every
 
 ### Final Exam:
 
-The final exam will cover the entire course and will have a similar format to the Quizzes. However, instead of a single motivating question the final will have four motivating questions (likely with five parts each).  In this way the final exam will be like taking four quizzes in a row.   The final exam will be conducted via zoom during your section’s schedule exam period.  Students will be expected to log into zoom using a secondary device (ex. phone). this device will need to be positioned such that the students keyboard, mouse and screen are visible.   Details for the procedure used during the final exam will be explained during class. 
+The final exam will cover the entire course and will have a similar format to the Quizzes. However, instead of a single motivating question the final will have multiple motivating questions.  In this way the final exam will be like taking multiple quizzes in a row.   The final exam will be conducted via zoom during each section’s schedule exam period.  Students may be expected to log into zoom using a secondary device (ex. phone). this device will need to be positioned such that the students keyboard, mouse and screen are visible.   Details for the procedure used during the final exam will be explained during class. 
 
 ## Assessment Information
 
@@ -108,7 +108,7 @@ Note: grades will not be curved - your grade is based on your own effort and pro
 
 Information for this course is being managed via the course website:  
 
-[https://msu-cmse-courses.github.io/mth314-F20-student/](https://msu-cmse-courses.github.io/mth314-F20-student/)
+[https://msu-cmse-courses.github.io/mth314-s21-student/](https://msu-cmse-courses.github.io/mth314-s21-student/)
 
 Accompanying course information, including the official course calendar, can be found at this website. Each section also uses a Desire2Learn page for assignment grading and organization, which can be found at [http://d2l.msu.edu](http://d2l.msu.edu). All assignments will be handed in via Desire2Learn.  Consult the course website for instructions.
 
@@ -116,13 +116,19 @@ Accompanying course information, including the official course calendar, can be 
 
 For simplicity, all sections will be in the same zoom classroom.  Students are expected to attend their class for their own sections and will not be allowed in during other classes without both instructors' prior approval. 
 
-* Section 001: 	Tu Th 	10:20 AM - 11:40 AM 	[https://msu.zoom.us/j/98284388822](https://msu.zoom.us/j/98284388822) 
-* Section 002: 	M W 	12:40 PM - 2:00 PM 	[https://msu.zoom.us/j/98284388822](https://msu.zoom.us/j/98284388822) 
-* Section 003: 	Tu Th 	1:00 PM - 2:20 PM 	[https://msu.zoom.us/j/98284388822](https://msu.zoom.us/j/98284388822) 
+* **_Section 001_**: 	Tu Th 	10:20 AM - 11:40 AM  
+* **_Section 002_**: 	M W 	12:40 PM - 2:00 PM 	
+* **_Section 003_**: 	Tu Th 	1:00 PM - 2:20 PM 	
+* **_Section 004/005_**:  M W 	12:40 PM - 2:00 PM 
 
 ## Course Schedule
 
-Specific assignments and due dates will be maintained on the [course schedule](https://docs.google.com/spreadsheets/d/e/2PACX-1vTaJjto7KEG4_EW0IsxpYPOF2joudKiMZhvriKpHVZiFaWG_6q9-QU-ku_zlAe4PiZk0FG1rb1ENk9m/pubhtml), which is linked to off the course website.  Note the due date for your individual section. 
+Specific assignments and due dates will be maintained on the [course website](https://msu-cmse-courses.github.io/mth314-s21-student/), which is linked to off the course website.  Note the due date for your individual section. 
+
+- [Section 001 Schedule (Tu Th 10:20AM - 11:40AM)](./assignments/Section_001)
+- [Section 002 Schedule (M W 12:40PM - 2:00PM)](./assignments/Section_002)
+- [Section 003 Schedule (Tu Th 1:00PM - 2:20PM)](./assignments/Section_003)
+- [Section 004/005 Schedule (M W 12:40PM - 2:00PM)](./assignments/Section_004)
 
 ## Class discussion
 
@@ -133,7 +139,7 @@ We will be using Slack ([http://slack.com](http://slack.com/)) as our means of c
 1. Go to[ https://cmse-courses.slack.com/signup](https://cmse-courses.slack.com/signup)
 2. Once there, sign up using your @msu.edu email address. Important: When you create your account, use your MSU NetID as your user name and set up your display name to be the name you prefer to go by, including your last name. This will make it easier for your instructors to recognize you within the Slack channels.
 
-Once you've joined the CMSE Courses Slack team, you'll need to add yourself to two channels. The first channel you should add yourself to is "mth314-f20". The second one you should add yourself to is "mth314-###-f20" where "###" corresponds to the section of the course that you are enrolled in. To add yourself to these channels, click on the “+” next to the "Channels" header and “browse” for the appropriate channel -- double check that you are adding yourself to the correct channel.
+Once you've joined the CMSE Courses Slack team, you'll need to add yourself to two channels. The first channel you should add yourself to is "mth314-s21". The second one you should add yourself to is "mth314-###-s21" where "###" corresponds to the section of the course that you are enrolled in. To add yourself to these channels, click on the “+” next to the "Channels" header and “browse” for the appropriate channel -- double check that you are adding yourself to the correct channel.
 
 The "help" channel will be the place to go for any questions about assignments in the course or issues you're having with your computer or Python. We encourage you to help out other classmates when you can! The section-specific channel will be used by your instructor for important messages relevant only to your section of the course.
 
@@ -179,20 +185,14 @@ Student self-guided learning through assigned readings is required for students 
 
 **Section 001 Instructors (Tu/Th 10:20 AM - 11:40 AM):**
 
-- Dr. Rongrong Wang (she/her)
+- Dr. Paul Speaker 
     - Faculty Instructor
-    - Mathematics and Computational Mathematics, Science and Engineering
-    - Email: &lt;[wangron6@msu.edu](mailto:wangron6@msu.edu)
-
+    - Department of Statistics
+    - Email: [speakerp@msu.edu](mailto:speakerp@msu.edu)
 - Shuyang Qin
     - Graduate Teaching Assistant
     - Mathematics and Computational Mathematics, Science and Engineering
     - Email: [qinshuya@msu.edu](mailto:qinshuya@msu.edu) 
-- Drew Pype (he/him)
-    - Undergraduate Learning Assistant
-    - Physics 
-    - Email: [pypeandr@msu.edu](mailto:pypeandr@msu.edu) \
-
 
 **Section 002 Instructors (M/W 12:40 PM - 2:00 PM):**
 
@@ -200,29 +200,30 @@ Student self-guided learning through assigned readings is required for students 
     - Faculty Instructor
     - Mathematics
     - Email: [millsm12@msu.edu](mailto:millsm12@msu.edu)
-- Leo Li 
+- Cullen Avery Haselby 
     - Graduate Teaching Assistant
-    - Applied Mathematics 
-    - Email: [liyao6@msu.edu](mailto:liyao6@msu.edu) 
-- Zachary Matson (he/him)
-    - Undergraduate Learning Assistant
-    - Computational Data Science
-    - Email: [matsonza@msu.edu](mailto:matsonza@msu.edu) 
+    - Email: [haselbyc@msu.edu](mailto:haselbyc@msu.edu) 
 
 **Section 003 Instructors (Tu/Th 1:00 PM - 2:20 PM):**
 
-- Dr. Paul Speaker 
+- Dr. Peng Zhichao
     - Faculty Instructor
-    - Department of Statistics
-    - Email: [speakerp@msu.edu](mailto:speakerp@msu.edu)
-- Thomas Chuna
+    - Mathematics
+    - Email: [pengzhic@msu.edu](mailto:pengzhic@msu.edu)
+- Huang Kai 
     - Graduate Teaching Assistant
-    - Physics and Computational Math, Science and Engineering
-    - Email: [chunatho@msu.edu](mailto:chunatho@msu.edu)
-- Heather Noonan 
-    - Undergraduate Learning Assistant
-    - Computer Science
-    - Email: [noonanhe@msu.edu](mailto:noonanhe@msu.edu) 
+    - Email: [huangk18@msu.edu](mailto:huangk18@msu.edu) 
+
+
+**Section 004/005 Instructors (M/W 12:40 PM - 2:00 PM):**
+
+- Dr. Sulin Wang
+    - Faculty Instructor
+    - Mathematics
+    - Email: [wangsuli@msu.edu](mailto:wangsuli@msu.edu)
+- Haoyang Chen
+    - Graduate Teaching Assistant
+    - Email: [chenha43@msu.edu](mailto:chenha43@msu.edu) 
 
 **Course Coordinator:**
 
@@ -278,7 +279,7 @@ This class is heavily based on material presented and worked on during class, an
 
 ## Email
 
-At times, we will send out important course information via email.  This email is sent to your MSU email address (the one that ends in “@msu.edu”).  You are responsible for all information sent to your university email and for checking this account daily. \
+At times, we will send out important course information via email.  This email is sent to your MSU email address (the one that ends in “@msu.edu”).  You are responsible for all information sent to your university email and for checking this account daily.
 
 ## Inclusive classroom behavior 
 
@@ -288,7 +289,9 @@ In addition, MSU welcomes a full spectrum of experiences, viewpoints, and intell
 
 ## Accommodations for Students with Disabilities
 
-(from the Resource Center for Persons with Disabilities (RCPD): Michigan State University is committed to providing equal opportunity for participation in all programs, services and activities. Requests for accommodations by persons with disabilities may be made by contacting the Resource Center for Persons with Disabilities at 517-884-RCPD or on the web at [http://rcpd.msu.edu](http://rcpd.msu.edu).  Once your eligibility for an accommodation has been determined, you will be issued a Verified Individual Services Accommodation ("VISA") form. Please present this form to the instructor at the start of the term and/or two weeks prior to the accommodation date (test, project, etc.). Requests received after this date may not be honored.
+> Michigan State University is committed to providing equal opportunity for participation in all programs, services and activities. Requests for accommodations by persons with disabilities may be made by contacting the Resource Center for Persons with Disabilities at 517-884-RCPD or on the web at [http://rcpd.msu.edu](http://rcpd.msu.edu).  Once your eligibility for an accommodation has been determined, you will be issued a Verified Individual Services Accommodation ("VISA") form. Please present this form to the instructor at the start of the term and/or two weeks prior to the accommodation date (test, project, etc.). Requests received after this date may not be honored. 
+>
+>- from the Resource Center for Persons with Disabilities (RCPD)
 
 ## Academic honesty
 
@@ -304,10 +307,6 @@ More broadly, we ask that students adhere to the Spartan Code of Honor academic 
 
 Essays, journals, and other materials submitted for this class are generally considered confidential pursuant to the University's student record policies.  However, students should be aware that University employees, including instructors, may not be able to maintain confidentiality when it conflicts with their responsibility to report certain issues to protect the health and safety of MSU community members and others.  As the instructor, I must report the following information to other University offices (including the Department of Police and Public Safety) if you share it with me: suspected child abuse/neglect, even if this maltreatment happened when you were a child, allegations of sexual assault or sexual harassment when they involve MSU students, faculty, or staff, and credible threats of harm to oneself or to others. These reports may trigger contact from a campus official who will want to talk with you about the incident that you have shared.  In almost all cases, it will be your decision whether you wish to speak with that individual.  If you would like to talk about these events in a more confidential setting you are encouraged to make an appointment with the MSU Counseling Center.
 
-## Drops and Adds
-
-The last day to add this course is September 9, 2020 at 8:00pm. The last day to drop this course with a 100 percent refund and no grade reported is September 28, 2020, at 8:00pm. The last day to drop this course with no refund and no grade reported is October 21, 2020, at 8:00pm. You should immediately make a copy of your amended schedule to verify you have added or dropped this course.
-
 ## Changes to Syllabus
 
 The syllabus may also be adjusted if needed. These types of changes will be announced during class, by email and/or in the course’s Desire2Learn page.
@@ -318,7 +317,13 @@ All lectures, videos and notes provided in this course are copyrighted by the un
 
 ## Disruptive Behavior
 
-Article 2.III.B.4 of the[ Student Rights and Responsibilities (SRR)](http://splife.studentlife.msu.edu/academic-freedom-for-students-at-michigan-state-university) for students at Michigan State University states: "The student's behavior in the classroom shall be conducive to the teaching and learning process for all concerned." Article 2.III.B.10 of the[ SRR](http://splife.studentlife.msu.edu/academic-freedom-for-students-at-michigan-state-university) states that "The student and the faculty share the responsibility for maintaining professional relationships based on mutual trust and civility."[ General Student Regulation 5.02](http://splife.studentlife.msu.edu/regulations/general-student-regulations) states: "No student shall . . . interfere with the functions and services of the University (for example, but not limited to, classes . . .) such that the function or service is obstructed or disrupted. Students whose conduct adversely affects the learning environment in this classroom may be subject to disciplinary action through the Student Judicial Affairs office.
+Article 2.III.B.4 of the[ Student Rights and Responsibilities (SRR)](http://splife.studentlife.msu.edu/academic-freedom-for-students-at-michigan-state-university) for students at Michigan State University states: 
+
+> "The student's behavior in the classroom shall be conducive to the teaching and learning process for all concerned." Article 2.III.B.10 of the[ SRR](http://splife.studentlife.msu.edu/academic-freedom-for-students-at-michigan-state-university) states that "The student and the faculty share the responsibility for maintaining professional relationships based on mutual trust and civility."
+
+[ General Student Regulation 5.02](http://splife.studentlife.msu.edu/regulations/general-student-regulations) states: 
+
+>"No student shall . . . interfere with the functions and services of the University (for example, but not limited to, classes . . .) such that the function or service is obstructed or disrupted. Students whose conduct adversely affects the learning environment in this classroom may be subject to disciplinary action through the Student Judicial Affairs office."
 
 ## Grief Absence Policy
 
@@ -402,8 +407,5 @@ When you are finished editing your iPython notebook and are ready to turn in the
 
 
 [TOC]
-
-    [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
-
 
 ----

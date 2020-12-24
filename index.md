@@ -14,7 +14,7 @@ This is an introductory course on Linear Algebra with a focus on scientific/engi
 - [Section 001 Schedule (Tu Th 10:20AM - 11:40AM)](./assignments/Section_001)
 - [Section 002 Schedule (M W 12:40PM - 2:00PM)](./assignments/Section_002)
 - [Section 003 Schedule (Tu Th 1:00PM - 2:20PM)](./assignments/Section_003)
-- [Section 004 Schedule (M W 12:40PM - 2:00PM)](./assignments/Section_004)
+- [Section 004/005 Schedule (M W 12:40PM - 2:00PM)](./assignments/Section_004)
 
 ## Textbook References:
 - [Beezer](http://linear.ups.edu/download/fcla-3.50-tablet.pdf)
