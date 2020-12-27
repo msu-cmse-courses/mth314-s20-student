@@ -1,3 +1,16 @@
+##ANSWER##
+
+# Tasklist
+
+- Record welcome video
+- Make background survey from last semester.
+- Make Python library tutorial
+- Finish week1 pre-class assignments
+
+
+
+##ANSWER##
+
 [Link to MTH314 website](http://cmse.msu.edu/mth314/)
 
 ----
@@ -17,8 +30,9 @@ Since this course will also taught with all sections "in-sync" and since there i
 To help with the first week tasks, some office hours will be provided.  Please see the office hour schedule on the course website and feel free to stop by to just introduce yourself or ask a question about the first week class. 
 
 
-    Dr. Dirk Colbry 
-    MTH314 Course Coordinator on behalf of all of the MTH314 course instructors
+>    Dr. Dirk Colbry 
+>
+>    MTH314 Course Coordinator on behalf of all of the MTH314 course instructors
 
 Detailed information about the course, including the syllabus, announcements, schedule and assignments can be found on the course website (Bookmark this page!):
 
@@ -40,13 +54,13 @@ Students in MTH314 come from a variety of backgrounds.  To help the instructor a
 - []()
 
 
-**_Task 3 - get Jupyter working_**
+**_Task 3 - Get Jupyter working_**
 
 We will be using Jupyter notebooks for most of our student/instructor communication. Please attend class with the latest version of Anaconda Python installed on your computer (Anaconda includes Jupyter). Instructions for installing and using Anaconda and Jupyter can be found here:
 
 - [0000--Jupyter-Getting-Started-Guide.html](https://msu-cmse-courses.github.io/mth314-F20-student/assignments/0000--Jupyter-Getting-Started-Guide.html)
 
-As a backup, all students are also given accounts on the MSU jupyterhub servers [http://jupyterhub.msu.edu](http://jupyterhub.msu.edu) and [http://jupyterhub2.msu.edu](http://jupyterhub2.msu.edu).  Make sure you follow the directions in the above "getting started guide" and ensure that you can login and use both jupyterhub servers. 
+As a backup, all students are also given accounts on the MSU jupyterhub servers [http://jupyterhub.egr.msu.edu](http://jupyterhub.egr.msu.edu) and [http://jupyterhub2.egr.msu.edu](http://jupyterhub2.egr.msu.edu).  Make sure you follow the directions in the above "getting started guide" and ensure that you can login and use both jupyterhub servers. 
 
 
 **_Task 4 - Review Python libraries_**
@@ -67,9 +81,6 @@ Each pre-class assignment ends with an online survey which students are required
 **_NOTE_**: A backup copy of this email is also provided as a reference on the course website in the [Announcements page](https://msu-cmse-courses.github.io/mth314-s21-student/Announcements).
 
     [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
-
-
-    mv: cannot move 'Announcements.md' to './cmse401-S21-student/': Not a directory
 
 
 -----

@@ -15,7 +15,7 @@ By the end of this course, you will be able to:
 4. **_Give examples and Use_** basic Elementary and Transformation Matrices.  
 5. **_Recognize_** the use of Eigenvalues and Eigenvectors and their role in problem-solving. 
 6. **_Explain_** Factorization and Decompositions.
-7. **_Explain_** numerical complexity and **Compare **algorithms using Big-O notation. 
+7. **_Explain_** numerical complexity and **_Compare_** algorithms using Big-O notation. 
 8. Be able to **_Illustrate_** the differences between different Numerical approaches to solving large sets of linear equations. 
 9. **_Demonstrate_** the ability to write programs that can solve linear algebra problems.
 10. **_Identify_** programming libraries and techniques to solve linear algebra problems. 
@@ -91,11 +91,17 @@ There are a variety of course activities, with percentages of total grade listed
 
 
 $$ 4.0 \lt 90\%$$
+
 $$ 3.5 \lt 85\%$$ 
+
 $$ 3.0 \lt 80\%$$
+
 $$ 2.5 \lt 75\%$$
+
 $$ 2.0 \lt 70\%$$
+
 $$ 1.5 \lt 65\%$$
+
 $$ 0.0 \lt 60\%$$
 
 Note: grades will not be curved - your grade is based on your own effort and progress, not on competition with your classmates. 
@@ -407,5 +413,8 @@ When you are finished editing your iPython notebook and are ready to turn in the
 
 
 [TOC]
+
+    [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
+
 
 ----
