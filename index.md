@@ -9,6 +9,7 @@ This is an introductory course on Linear Algebra with a focus on scientific/engi
 
 - [Announcements](Announcements)
 - [Syllabus](Syllabus)
+- [Desire2Learn](http://d2l.msu.edu/)
 
 ## Assignment Schedule and Download
 - [Section 001 Schedule (Tu Th 10:20AM - 11:40AM)](./assignments/Section_001)
