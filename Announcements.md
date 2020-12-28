@@ -1,16 +1,3 @@
-##ANSWER##
-
-# Tasklist
-
-- Record welcome video
-- Make background survey from last semester.
-- Make Python library tutorial
-- Finish week1 pre-class assignments
-
-
-
-##ANSWER##
-
 [Link to MTH314 website](http://cmse.msu.edu/mth314/)
 
 ----
@@ -40,9 +27,24 @@ Detailed information about the course, including the syllabus, announcements, sc
 
 **_Task 1 - Syllabus and Course Review_**
 
-To start, I suggest that you watch the following video and review the course Syllabus.
+To start, I suggest that you watch the following video and review the course Syllabus. Note that this video is much longer than most of the videos you will find in the class.  You will probably be fine if you speed up the video and you can probably just listen to most of it. 
 
-- [Welcome video]()
+- [Welcome video](https://youtu.be/pRG9RVOP-3k)
+
+
+
+
+
+<iframe
+    width="640"
+    height="360"
+    src="https://www.youtube.com/embed/pRG9RVOP-3k?cc_load_policy=True"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+
+
+
 
 - [Course Syllabus](https://msu-cmse-courses.github.io/mth314-s21-student/Syllabus)
 
@@ -51,7 +53,22 @@ To start, I suggest that you watch the following video and review the course Syl
 
 Students in MTH314 come from a variety of backgrounds.  To help the instructor adjust the curriculum and provide support to all students in this course please fill out the following on-line survey:
 
-- []()
+- [MTH314 background survey](https://forms.office.com/Pages/ResponsePage.aspx?id=MHEXIi9k2UGSEXQjetVofVsFhDFfo_lLkU7qIzY8I4ZUMk1WWjNFWlpIMVg2TFNKV0xXNkpQU0ZCRi4u)
+
+
+
+
+
+<iframe 
+	src="https://forms.office.com/Pages/ResponsePage.aspx?id=MHEXIi9k2UGSEXQjetVofVsFhDFfo_lLkU7qIzY8I4ZUMk1WWjNFWlpIMVg2TFNKV0xXNkpQU0ZCRi4u&embed=true"
+	height="500px" 
+	frameborder="0" 
+	marginheight="0" 
+	marginwidth="0">
+	Loading...
+</iframe>
+
+
 
 
 **_Task 3 - Get Jupyter working_**
@@ -66,7 +83,7 @@ As a backup, all students are also given accounts on the MSU jupyterhub servers 
 **_Task 4 - Review Python libraries_**
 In this class we will be using programming to teach linear algebra and therefore assume that everyone knows how to use python. the instructors provide the following reference as a review for the most common python libraries we expect you to be able to use for class (numpy, scipy, math, sympy, etc).  please review this tutorial to make sure you are properly prepared for class:
 
-    Python Libraries (Tutorial)
+- [Python Library Review](assignments/00-Python_Packages.html)
 
 
 **_Task 5 - Pre-class assignment_**
@@ -80,7 +97,14 @@ Each pre-class assignment ends with an online survey which students are required
 
 **_NOTE_**: A backup copy of this email is also provided as a reference on the course website in the [Announcements page](https://msu-cmse-courses.github.io/mth314-s21-student/Announcements).
 
-    [NbConvertApp] WARNING | Config option `kernel_spec_manager_class` not recognized by `NbConvertApp`.
+    /opt/anaconda3/bin/jupyter: line 4: import: command not found
+    /opt/anaconda3/bin/jupyter: line 5: import: command not found
+    /opt/anaconda3/bin/jupyter: line 7: from: command not found
+    /opt/anaconda3/bin/jupyter: jupyter: line 10: syntax error near unexpected token `('
+    /opt/anaconda3/bin/jupyter: jupyter: line 10: `    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])'
+
+
+    mv: cannot stat 'Announcements.md': No such file or directory
 
 
 -----
