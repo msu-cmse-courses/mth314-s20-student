@@ -36,8 +36,8 @@ To start, I suggest that you watch the following video and review the course Syl
 
 
 <iframe
-    width="640"
-    height="360"
+    width="100%"
+    height="300"
     src="https://www.youtube.com/embed/pRG9RVOP-3k?cc_load_policy=True"
     frameborder="0"
     allowfullscreen
@@ -96,15 +96,5 @@ Each pre-class assignment ends with an online survey which students are required
 - []()
 
 **_NOTE_**: A backup copy of this email is also provided as a reference on the course website in the [Announcements page](https://msu-cmse-courses.github.io/mth314-s21-student/Announcements).
-
-    /opt/anaconda3/bin/jupyter: line 4: import: command not found
-    /opt/anaconda3/bin/jupyter: line 5: import: command not found
-    /opt/anaconda3/bin/jupyter: line 7: from: command not found
-    /opt/anaconda3/bin/jupyter: jupyter: line 10: syntax error near unexpected token `('
-    /opt/anaconda3/bin/jupyter: jupyter: line 10: `    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])'
-
-
-    mv: cannot stat 'Announcements.md': No such file or directory
-
 
 -----
