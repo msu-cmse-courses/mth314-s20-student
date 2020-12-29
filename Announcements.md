@@ -1,8 +1,5 @@
 [Link to MTH314 website](http://cmse.msu.edu/mth314/)
 
-----
-
----
 ## Welcome to MTH314: Matrix Algebra I: with computational applications
 
 
@@ -14,7 +11,7 @@ We are excited to be teaching MTH314 this Spring and look forward to meeting all
 
 This semester is unique since, due to new university COVID policies, we will not be meeting the first week of class. Instead the first week will be used for reading, review and semester preparation.  To this end, it is required that all students complete the tasks found in the following website:
 
-- [00--Class_Prep-Checklist](https://msu-cmse-courses.github.io/mth314-s21-student/assignments/00--Class_Prep-Checklist.html)
+- [00--Class_Prep-Checklist](https://msu-cmse-courses.github.io/mth314-s21-student/assignments//00-Class_Prep_Checklist.html)
 
 NOTE: failure to complete these tasks will be reflected in your course participation grade. 
 
