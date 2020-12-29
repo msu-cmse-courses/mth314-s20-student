@@ -4,8 +4,8 @@
 
 | Date | Assignment | Link to Notebook |
 |------|------------|------------------|
-| Tue, Jan 12 | [00-Class_Prep_Checklist](00-Class_Prep_Checklist.html) |      |
-| Wed, Jan 13 | [00-Python_Packages](00-Python_Packages.html) | [ipynb](00-Python_Packages.ipynb) |
+| Tue, Jan 12 | 00-Class_Prep_Checklist |      |
+| Wed, Jan 13 | 00-Python_Packages | [ipynb](00-Python_Packages.ipynb) |
 | Wed, Jan 20 | 01--Welcome_pre-class-assignment |      |
 | Thu, Jan 21 | 01-CMSE314_introduction_in-class-assignment |      |
 | Mon, Jan 25 | 02--Vectors_pre-class-assignment |      |
