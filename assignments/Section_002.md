@@ -4,7 +4,7 @@
 
 | Date | Assignment | Link to Notebook |
 |------|------------|------------------|
-| Mon, Jan 11 | 00-Class_Prep_Checklist |      |
+| Mon, Jan 11 | [00-Class_Prep_Checklist](00-Class_Prep_Checklist.md) |       |
 | Tue, Jan 12 | [00-Python_Packages](00-Python_Packages.html) | [ipynb](00-Python_Packages.ipynb) |
 | Tue, Jan 19 | 01--Welcome_pre-class-assignment |      |
 | Wed, Jan 20 | 01-CMSE314_introduction_in-class-assignment |      |
