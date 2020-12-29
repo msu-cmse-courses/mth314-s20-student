@@ -5,16 +5,16 @@
 Due to COVID-19 pandemic the first week of the Spring 2021 semester will be used for reading, review and semester preparation.  To this end, it is required that all students complete the following tasks before showing up for the first day of class.  NOTE: failure to complete these tasks will be reflected in your course participation grade. 
 
 
-1. [Welcome and Syllabus](#Welcome_and_Syllabus)
-2. [Get Jupyter working](#Get-Jupyter-working)
-3. [Review Python libraries](#Review-Python-libraries)
+1. [Watch Welcome Video and Review Syllabus](#Welcome_and_Syllabus)
+2. [Complete background survey](#Complete_background_survey)
+2. [Get Jupyter Working](#Get-Jupyter-working)
 4. [Review Python Packages](#Review-Python-Packages)
-5. [Pre class assignment](#Pre-class-assignment)
+5. [Complete Pre-class Assignment](#Complete-Pre-class-assignment)
 
 
 ---
 <a name=Welcome_and_Syllabus></a>
-# 1. Welcome and Syllabus
+# 1. Watch Welcome Video and Review Syllabus
 
 
 To start, I suggest that you watch the following video and review the course Syllabus. Note that this video is much longer than most of the videos you will find in the class.  You will probably be fine if you speed up the video and you can probably just listen to most of it. 
@@ -39,8 +39,8 @@ To start, I suggest that you watch the following video and review the course Syl
 - [Course Syllabus](https://msu-cmse-courses.github.io/mth314-s21-student/Syllabus)
 
 ---
-<a name=Get-Jupyter-working></a>
-# 2. Get Jupyter working
+<a name=Complete_background_survey></a>
+# 2. Complete background survey
 
 
 
@@ -66,11 +66,8 @@ Students in MTH314 come from a variety of backgrounds.  To help the instructor a
 
 
 ---
-<a name=Review-Python-libraries></a>
-# 3. Review Python libraries
-
-
-
+<a name=Get-Jupyter-working></a>
+# 3. Get Jupyter Working
 
 We will be using Jupyter notebooks for most of our student/instructor communication. Please attend class with the latest version of Anaconda Python installed on your computer (Anaconda includes Jupyter). Instructions for installing and using Anaconda and Jupyter can be found here:
 
@@ -89,9 +86,9 @@ In this class we will be using programming to teach linear algebra and therefore
 
 
 ---
-<a name=Pre-class-assignment></a>
+<a name=Complete-Pre-class-assignment></a>
 
-# 5. Pre-class assignment
+# 5. Complete Pre-class Assignment
 
 You are expected to come to class ready to complete the in-class assignments.  To prepare for most classes, students are required to complete pre-class assignments (typically two pre-class assignments per week).  These assignments will be in the form of jupyter notebooks and will include reading, videos and programming activities.  The required time for each pre-class will vary but the instructors have tried to make them take approximately 30-minutes.  
 
