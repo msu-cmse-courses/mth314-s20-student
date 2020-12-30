@@ -82,7 +82,7 @@ As a backup, all students are also given accounts on the MSU jupyterhub servers 
 
 In this class we will be using programming to teach linear algebra and therefore assume that everyone knows how to use python. the instructors provide the following reference as a review for the most common python libraries we expect you to be able to use for class (numpy, scipy, math, sympy, etc).  please review this tutorial to make sure you are properly prepared for class:
 
-- [Python Library Review](01-Python_Packages.ipynb.html)
+- [Python Library Review](01-Python_Packages)
 
 
 ---

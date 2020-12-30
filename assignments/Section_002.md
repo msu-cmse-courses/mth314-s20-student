@@ -7,7 +7,7 @@
 | Mon, Jan 11 | [01-Class_Prep_Checklist](01-Class_Prep_Checklist.md) |       |
 | Fri, Jan 15 | [01-Python_Packages](01-Python_Packages.html) | [ipynb](01-Python_Packages.ipynb) |
 | Mon, Jan 18 | MLK Holiday |      |
-| Tue, Jan 19 | 02--Vectors_pre-class-assignment |      |
+| Tue, Jan 19 | [02--Vectors_pre-class-assignment](02--Vectors_pre-class-assignment.html) | [ipynb](02--Vectors_pre-class-assignment.ipynb) |
 | Wed, Jan 20 | 02-Vectors_in-class-assignment |      |
 | Sun, Jan 24 | 03--Linear_Equations_pre-class-assignment |      |
 | Mon, Jan 25 | 03-Linear_Equations_in-class-assignment |      |
