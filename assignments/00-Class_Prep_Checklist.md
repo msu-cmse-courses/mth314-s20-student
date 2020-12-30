@@ -26,7 +26,7 @@ To start, I suggest that you watch the following video and review the course Syl
 
 
 <iframe
-    width="400"
+    width="100%"
     height="300"
     src="https://www.youtube.com/embed/pRG9RVOP-3k?cc_load_policy=True"
     frameborder="0"
@@ -94,9 +94,8 @@ You are expected to come to class ready to complete the in-class assignments.  T
 
 Each pre-class assignment ends with an online survey which students are required to complete in order to earn credit for the assignment.  Your first weeks assignments are available on the course git repository or downloadable from the course website.  At a minimum, you must complete the first pre-class assignment by 11:59pm on Tuesday January 19th. 
 
-- []()
+- [01--Vectors_pre-class-assignment](01--Vectors_pre-class-assignment.ipynb)
 
-**_NOTE_**: A backup copy of this email is also provided as a reference on the course website in the [Announcements page](https://msu-cmse-courses.github.io/mth314-s21-student/Announcements).
 
 ----
 

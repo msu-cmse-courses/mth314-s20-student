@@ -8,7 +8,7 @@
 | Wed, Jan 13 | [00-Python_Packages](00-Python_Packages.html) | [ipynb](00-Python_Packages.ipynb) |
 | Wed, Jan 20 | 01--Welcome_pre-class-assignment |      |
 | Thu, Jan 21 | 01-CMSE314_introduction_in-class-assignment |      |
-| Mon, Jan 25 | 02--Vectors_pre-class-assignment |      |
+| Mon, Jan 25 | [02--Vectors_pre-class-assignment](02--Vectors_pre-class-assignment.html) | [ipynb](02--Vectors_pre-class-assignment.ipynb) |
 | Tue, Jan 26 | 02-Vectors_in-class-assignment |      |
 | Wed, Jan 27 | 03--Linear_Equations_pre-class-assignment |      |
 | Thu, Jan 28 | 03-Linear_Equations_in-class-assignment |      |
