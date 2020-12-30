@@ -14288,15 +14288,15 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <p><a name="answercheck"></a></p>
-<h1 id="1.-AnswerCheck-tool">1. AnswerCheck tool<a class="anchor-link" href="#1.-AnswerCheck-tool">&#182;</a></h1><p>The jupytercheck library is intended to provide students with immediate feedback to check answers inside of a Jupyter notebook. This was written with a Linear Algebra class in mind so it tries to do a robust comparison and take into consideration different object types as well as round off errors.</p>
-<p>It works by providing a function called answercheck that takes in a variable to be checked and a "hash" which is a one-way function encoding the answer. The program generates a new hash based on the input variable and compares the two hash values. An output is provided that the answer appears correct or incorrect.</p>
+<h1 id="1.-AnswerCheck-tool">1. AnswerCheck tool<a class="anchor-link" href="#1.-AnswerCheck-tool">&#182;</a></h1><p>The <code>jupytercheck</code> Package is intended to provide students with immediate feedback to check answers inside of a Jupyter notebook. This was written with a Linear Algebra class in mind so it tries to do a robust comparison and take into consideration different object types as well as round off errors.</p>
+<p>It works by providing a function called <code>answercheck</code> that takes in a variable to be checked and a "hash" which is a one-way function encoding the answer. The program generates a new hash based on the input variable and compares the two hash values. An output is provided that the answer appears correct or incorrect.</p>
 <p>The program is also designed to run without installing anything in python. However, it does require the download of the correct file.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Two use answercheck we will need to download <code>answercheck.py</code> to your current working directory.  You only really need to do this once.  However, if you delete this file by mistake sometime during the semester, you can come back to this notebook and download it again by running the following cell:</p>
+<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Two use <code>answercheck</code> we will need to download <code>answercheck.py</code> to your current working directory.  You only really need to do this once.  However, if you delete this file by mistake sometime during the semester, you can come back to this notebook and download it again by running the following cell:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14330,7 +14330,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>(&#39;answercheck.py&#39;, &lt;http.client.HTTPMessage at 0x7fbe00272eb8&gt;)</pre>
+<pre>(&#39;answercheck.py&#39;, &lt;http.client.HTTPMessage at 0x7f0b9d5fcda0&gt;)</pre>
 </div>
 
 </div>
@@ -14388,7 +14388,7 @@ Answer seems to be correct
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;answercheck.checkanswer at 0x7fbe00272ef0&gt;</pre>
+<pre>&lt;answercheck.checkanswer at 0x7f0b7b5574a8&gt;</pre>
 </div>
 
 </div>
@@ -14884,7 +14884,7 @@ $$ 72x-3y = 644$$</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.image.AxesImage at 0x7fbdda3f5be0&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7f0b78798ba8&gt;</pre>
 </div>
 
 </div>
@@ -14938,7 +14938,7 @@ $$ 72x-3y = 644$$</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.image.AxesImage at 0x7fbdd8380390&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7f0b76724278&gt;</pre>
 </div>
 
 </div>
@@ -14992,7 +14992,7 @@ $$ 72x-3y = 644$$</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.image.AxesImage at 0x7fbdd8362cc0&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7f0b76706be0&gt;</pre>
 </div>
 
 </div>
@@ -15046,7 +15046,7 @@ $$ 72x-3y = 644$$</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.image.AxesImage at 0x7fbdd82bfbe0&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7f0b76663b00&gt;</pre>
 </div>
 
 </div>
@@ -15101,7 +15101,7 @@ $$ 72x-3y = 644$$</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.colorbar.Colorbar at 0x7fbdd825c898&gt;</pre>
+<pre>&lt;matplotlib.colorbar.Colorbar at 0x7f0b76600748&gt;</pre>
 </div>
 
 </div>
@@ -15159,7 +15159,7 @@ $$ 72x-3y = 644$$</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.image.AxesImage at 0x7fbdd827e898&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7f0b76621550&gt;</pre>
 </div>
 
 </div>
@@ -15215,7 +15215,7 @@ $$ 72x-3y = 644$$</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.image.AxesImage at 0x7fbdd8380470&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7f0b76724438&gt;</pre>
 </div>
 
 </div>
@@ -15271,7 +15271,7 @@ $$ 72x-3y = 644$$</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.image.AxesImage at 0x7fbdd81d0a20&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7f0b76574b00&gt;</pre>
 </div>
 
 </div>
@@ -15334,7 +15334,7 @@ $$ 72x-3y = 644$$</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.image.AxesImage at 0x7fbdd81aea20&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7f0b76550b00&gt;</pre>
 </div>
 
 </div>
