@@ -4,57 +4,57 @@
 
 | Date | Assignment | Link to Notebook |
 |------|------------|------------------|
-| Tue, Jan 12 | [00-Class_Prep_Checklist](00-Class_Prep_Checklist.md) |       |
-| Wed, Jan 13 | [00-Python_Packages](00-Python_Packages.html) | [ipynb](00-Python_Packages.ipynb) |
-| Wed, Jan 20 | 01--Welcome_pre-class-assignment |      |
-| Thu, Jan 21 | 01-CMSE314_introduction_in-class-assignment |      |
-| Mon, Jan 25 | [02--Vectors_pre-class-assignment](02--Vectors_pre-class-assignment.html) | [ipynb](02--Vectors_pre-class-assignment.ipynb) |
-| Tue, Jan 26 | 02-Vectors_in-class-assignment |      |
-| Wed, Jan 27 | 03--Linear_Equations_pre-class-assignment |      |
-| Thu, Jan 28 | 03-Linear_Equations_in-class-assignment |      |
-| Mon, Feb 1 | 04--Python_Packages_pre-class-assignment |      |
-| Tue, Feb 2 | 04-Linear_Algebra_and_Python_in-class-assignment |      |
-| Wed, Feb 3 | 05--Gauss_Jordan_pre-class-assignment |      |
-| Thu, Feb 4 | 05-Gauss_Jordan_in-class-assignment |      |
-| Fri, Feb 5 | Homework |      |
-| Mon, Feb 8 | 06--Mechanics_pre-class-assignment |      |
-| Tue, Feb 9 | 06-Mechanics_in-class-assignment |      |
-| Wed, Feb 10 | 07--Transformations_pre-class-assignment |      |
-| Thu, Feb 11 | Quiz |      |
-| Tue, Feb 16 | 07-Transformations_in-class-assignment |      |
-| Wed, Feb 17 | 08--Robotics_pre-class-assignment |      |
-| Thu, Feb 18 | 08-Robotics_in-class-assignment |      |
-| Fri, Feb 19 | Homework |      |
-| Mon, Feb 22 | 09--Determinants_pre-class-assignment |      |
-| Tue, Feb 23 | 09-Determinats_in-class-assignment |      |
-| Wed, Feb 24 | 10--Eigenproblems_pre-class-assignment |      |
-| Thu, Feb 25 | Quiz |      |
-| Thu, Mar 4 | 10-Eigenproblems_in-class-assignment |      |
-| Mon, Mar 8 | 11--Vector_Spaces_pre-class-assignment |      |
-| Tue, Mar 9 | 11-Vector_Spaces_in-class-assignment |      |
-| Wed, Mar 10 | 12--Change_Basis_pre-class-assignment |      |
-| Thu, Mar 11 | 12-Change_Basis_in-class-assignment |      |
-| Fri, Mar 12 | Homework |      |
-| Mon, Mar 15 | 13--Projections_pre-class-assignment |      |
-| Tue, Mar 16 | 13-Projections_in-class-assignment |      |
-| Wed, Mar 17 | 14--Fundamental_Spaces_pre-class-assignment |      |
-| Thu, Mar 18 | Quiz |      |
-| Tue, Mar 23 | 14-Fundamental_Spaces_in-class-assignment |      |
-| Wed, Mar 24 | 15--Diagonalization_pre-class-assignment |      |
-| Thu, Mar 25 | 15-Diagonalization_in-class-assignment |      |
-| Fri, Mar 26 | Homework |      |
-| Mon, Mar 29 | 16--Linear_Dynamical_Systems_pre-class-assignment |      |
-| Tue, Mar 30 | 16-Linear_Dynamical_Systems_in-class-assignment |      |
-| Wed, Mar 31 | 17--Decompositions_pre-class-assignment |      |
-| Thu, Apr 1 | Quiz |      |
-| Tue, Apr 6 | 17-Decompositions_in-class-assignment |      |
-| Wed, Apr 7 | 18--Inner_Product_pre-class-assignment |      |
-| Thu, Apr 8 | 18-Inner_Product_in-class-assignment |      |
-| Fri, Apr 9 | Homework |      |
-| Mon, Apr 12 | 19--LSF_pre-class-assignment |      |
-| Tue, Apr 13 | 19-LSF_in-class-assignment |      |
-| Wed, Apr 14 | 20--Solve_Systems_pre-class-assignment |      |
-| Thu, Apr 15 | Quiz |      |
-| Tue, Apr 20 | 20-Solve_Systems_in-class-assignment |      |
+| Tue, Jan 12 | [01-Class_Prep_Checklist](01-Class_Prep_Checklist.md) |       |
+| Fri, Jan 15 | [01-Python_Packages](01-Python_Packages.html) | [ipynb](01-Python_Packages.ipynb) |
+| Tue, Jan 19 | MLK Holiday |      |
+| Wed, Jan 20 | 02--Vectors_pre-class-assignment |      |
+| Thu, Jan 21 | 02-Vectors_in-class-assignment |      |
+| Mon, Jan 25 | 03--Linear_Equations_pre-class-assignment |      |
+| Tue, Jan 26 | 03-Linear_Equations_in-class-assignment |      |
+| Wed, Jan 27 | 04--Python_Packages_pre-class-assignment |      |
+| Thu, Jan 28 | 04-Linear_Algebra_and_Python_in-class-assignment |      |
+| Mon, Feb 1 | 05--Gauss_Jordan_pre-class-assignment |      |
+| Tue, Feb 2 | 05-Gauss_Jordan_in-class-assignment |      |
+| Wed, Feb 3 | 06--Mechanics_pre-class-assignment |      |
+| Thu, Feb 4 | 06-Mechanics_in-class-assignment |      |
+| Fri, Feb 5 | Homework 1 |      |
+| Mon, Feb 8 | 07--Transformations_pre-class-assignment |      |
+| Tue, Feb 9 | 07-Transformations_in-class-assignment |      |
+| Thu, Feb 11 | Quiz 1 |      |
+| Mon, Feb 15 | 08--Robotics_pre-class-assignment |      |
+| Tue, Feb 16 | 08-Robotics_in-class-assignment |      |
+| Wed, Feb 17 | 09--Determinants_pre-class-assignment |      |
+| Thu, Feb 18 | 09-Determinats_in-class-assignment |      |
+| Fri, Feb 19 | Homework 2 |      |
+| Mon, Feb 22 | 10--Eigenproblems_pre-class-assignment |      |
+| Tue, Feb 23 | 10-Eigenproblems_in-class-assignment |      |
+| Thu, Feb 25 | Quiz 2 |      |
+| Wed, Mar 3 | 11--Vector_Spaces_pre-class-assignment |      |
+| Thu, Mar 4 | 11-Vector_Spaces_in-class-assignment |      |
+| Mon, Mar 8 | 12--Change_Basis_pre-class-assignment |      |
+| Tue, Mar 9 | 12-Change_Basis_in-class-assignment |      |
+| Wed, Mar 10 | 13--Projections_pre-class-assignment |      |
+| Thu, Mar 11 | 13-Projections_in-class-assignment |      |
+| Fri, Mar 12 | Homework 3 |      |
+| Mon, Mar 15 | 14--Fundamental_Spaces_pre-class-assignment |      |
+| Tue, Mar 16 | 14-Fundamental_Spaces_in-class-assignment |      |
+| Thu, Mar 18 | Quiz 3 |      |
+| Mon, Mar 22 | 15--Diagonalization_pre-class-assignment |      |
+| Tue, Mar 23 | 15-Diagonalization_in-class-assignment |      |
+| Wed, Mar 24 | 16--Linear_Dynamical_Systems_pre-class-assignment |      |
+| Thu, Mar 25 | 16-Linear_Dynamical_Systems_in-class-assignment |      |
+| Fri, Mar 26 | Homework 4 |      |
+| Mon, Mar 29 | 17--Decompositions_pre-class-assignment |      |
+| Tue, Mar 30 | 17-Decompositions_in-class-assignment |      |
+| Thu, Apr 1 | Quiz 4 |      |
+| Mon, Apr 5 | 18--Inner_Product_pre-class-assignment |      |
+| Tue, Apr 6 | 18-Inner_Product_in-class-assignment |      |
+| Wed, Apr 7 | 19--LSF_pre-class-assignment |      |
+| Thu, Apr 8 | 19-LSF_in-class-assignment |      |
+| Fri, Apr 9 | Homework 5 |      |
+| Mon, Apr 12 | 20--Solve_Systems_pre-class-assignment |      |
+| Tue, Apr 13 | 20-Solve_Systems_in-class-assignment |      |
+| Thu, Apr 15 | Quiz 5 |      |
+| Tue, Apr 20 | 21-Course Review |      |
 | Thu, Apr 22 | 21-Course_Review |      |
 | Friday, April 30 7:45am - 9:45am | Final Exam |      |

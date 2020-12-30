@@ -82,7 +82,7 @@ As a backup, all students are also given accounts on the MSU jupyterhub servers 
 
 In this class we will be using programming to teach linear algebra and therefore assume that everyone knows how to use python. the instructors provide the following reference as a review for the most common python libraries we expect you to be able to use for class (numpy, scipy, math, sympy, etc).  please review this tutorial to make sure you are properly prepared for class:
 
-- [Python Library Review](00-Python_Packages.html)
+- [Python Library Review](01-Python_Packages.ipynb.html)
 
 
 ---
@@ -94,7 +94,7 @@ You are expected to come to class ready to complete the in-class assignments.  T
 
 Each pre-class assignment ends with an online survey which students are required to complete in order to earn credit for the assignment.  Your first weeks assignments are available on the course git repository or downloadable from the course website.  At a minimum, you must complete the first pre-class assignment by 11:59pm on Tuesday January 19th. 
 
-- [01--Vectors_pre-class-assignment](01--Vectors_pre-class-assignment.ipynb)
+- [02--Vectors_pre-class-assignment](02--Vectors_pre-class-assignment.ipynb)
 
 
 ----
