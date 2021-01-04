@@ -94,7 +94,7 @@ You are expected to come to class ready to complete the in-class assignments.  T
 
 Each pre-class assignment ends with an online survey which students are required to complete in order to earn credit for the assignment.  Your first weeks assignments are available on the course git repository or downloadable from the course website.  At a minimum, you must complete the first pre-class assignment by 11:59pm on Tuesday January 19th. 
 
-- [02--Vectors_pre-class-assignment](02--Vectors_pre-class-assignment.ipynb)
+- [02--Vectors_pre-class-assignment](02--Vectors_pre-class-assignment)
 
 
 ----
