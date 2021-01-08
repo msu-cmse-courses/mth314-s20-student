@@ -9,8 +9,8 @@
 | Mon, Jan 18 | MLK Holiday |      |
 | Tue, Jan 19 | [02--Vectors_pre-class-assignment](02--Vectors_pre-class-assignment.html) | [ipynb](02--Vectors_pre-class-assignment.ipynb) |
 | Wed, Jan 20 | 02-Vectors_in-class-assignment |      |
-| Sun, Jan 24 | 03--Linear_Equations_pre-class-assignment |      |
-| Mon, Jan 25 | 03-Linear_Equations_in-class-assignment |      |
+| Sun, Jan 24 | 03--Linear_Equations_pre-class-assignment | [ipynb](03--Linear_Equations_pre-class-assignment.ipynb) |
+| Mon, Jan 25 | 03-Linear_Equations_in-class-assignment | [ipynb](03-Linear_Equations_in-class-assignment.ipynb) |
 | Tue, Jan 26 | 04--Python_Packages_pre-class-assignment |      |
 | Wed, Jan 27 | 04-Linear_Algebra_and_Python_in-class-assignment |      |
 | Sun, Jan 31 | 05--Gauss_Jordan_pre-class-assignment |      |
