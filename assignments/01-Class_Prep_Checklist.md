@@ -2,7 +2,7 @@
 
 #  MTH314: Week 1 class preparation checklist
 
-Due to COVID-19 pandemic the first week of the Spring 2021 semester will be used for reading, review and semester preparation.  To this end, it is required that all students complete the following tasks before showing up for the first day of class.  NOTE: failure to complete these tasks will be reflected in your course participation grade. 
+Due to COVID-19 pandemic the first week of the Spring 2021 semester will be used for reading, review and semester preparation.  To this end, it is recommended that all students complete the following tasks before showing up for the first day of class.  
 
 
 1. [Watch Welcome Video and Review Syllabus](#Welcome_and_Syllabus)
@@ -21,21 +21,6 @@ To start, I suggest that you watch the following video and review the course Syl
 
 - [Welcome video](https://youtu.be/pRG9RVOP-3k)
 
-
-
-
-
-<iframe
-    width="100%"
-    height="300"
-    src="https://www.youtube.com/embed/pRG9RVOP-3k?cc_load_policy=True"
-    frameborder="0"
-    allowfullscreen
-></iframe>
-
-
-
-
 - [Course Syllabus](https://msu-cmse-courses.github.io/mth314-s21-student/Syllabus)
 
 ---
@@ -48,22 +33,6 @@ To start, I suggest that you watch the following video and review the course Syl
 Students in MTH314 come from a variety of backgrounds.  To help the instructor adjust the curriculum and provide support to all students in this course please fill out the following on-line survey:
 
 - [MTH314 background survey](https://forms.office.com/Pages/ResponsePage.aspx?id=MHEXIi9k2UGSEXQjetVofVsFhDFfo_lLkU7qIzY8I4ZUMk1WWjNFWlpIMVg2TFNKV0xXNkpQU0ZCRi4u)
-
-
-
-
-
-<iframe 
-	src="https://forms.office.com/Pages/ResponsePage.aspx?id=MHEXIi9k2UGSEXQjetVofVsFhDFfo_lLkU7qIzY8I4ZUMk1WWjNFWlpIMVg2TFNKV0xXNkpQU0ZCRi4u&embed=true"
-	height="500px" 
-	frameborder="0" 
-	marginheight="0" 
-	marginwidth="0">
-	Loading...
-</iframe>
-
-
-
 
 ---
 <a name=Get-Jupyter-working></a>

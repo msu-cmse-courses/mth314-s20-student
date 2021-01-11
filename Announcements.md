@@ -9,11 +9,9 @@ We are excited to be teaching MTH314 this Spring and look forward to meeting all
 
 - [MTH314 Course Website](http://cmse.msu.edu/mth314)
 
-This semester is unique since, due to new university COVID policies, we will not be meeting the first week of class. Instead the first week will be used for reading, review and semester preparation.  To this end, it is required that all students complete the tasks found in the following website:
+This semester is unique since, due to new university COVID policies, we will not be meeting the first week of class. Instead the first week will be used for reading, review and semester preparation.  To this end, it is recommended that all students complete the tasks found in the following website:
 
 - [01--Class_Prep-Checklist](https://msu-cmse-courses.github.io/mth314-s21-student/assignments//01-Class_Prep_Checklist)
-
-NOTE: failure to complete these tasks will be reflected in your course participation grade. 
 
 Since this course will also taught with all sections "in-sync" and since there is no class on Monday (Due to MLK) our first day of class will either be **_Wednesday January 20th_** (for MW sections) or **_Thursday January 21st_** (for TTh sections) in order to keep the sections on the same basic schedule.
 
