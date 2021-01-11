@@ -1,5 +1,22 @@
 [Link to MTH314 website](http://cmse.msu.edu/mth314/)
 
+----
+
+# January 11, 2021 - Week 1 Assignment Correction/Clarification
+
+Hello MTH314 Students,
+
+Sorry for the confusion but after sending out my previous email I learned that, per the new COVID policy, instructors are NOT allowed to assign any required work during the review week (January 11th-15th). I now understand that this policy must be in place because there are large groups of students that do not have access to reliable Internet this week.  To be fair and equitable to these students, the [01--Class_Prep-Checklist](https://msu-cmse-courses.github.io/mth314-s21-student/assignments//01-Class_Prep_Checklist) is no longer required and only recommended.  
+
+Please email me if you have any comments, questions or concerns.  I am also happy to schedule a zoom or even a phone meeting if anyone would prefer to discuss the class and/or this policy.
+
+Take care,
+
+- Dirk 
+
+
+----
+
 ## Welcome to MTH314: Matrix Algebra I: with computational applications
 
 
