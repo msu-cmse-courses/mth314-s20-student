@@ -8,7 +8,7 @@
 | Fri, Jan 15 | [01-Python_Packages](01-Python_Packages.html) | [ipynb](01-Python_Packages.ipynb) |
 | Tue, Jan 19 | MLK Holiday |      |
 | Wed, Jan 20 | [02--Vectors_pre-class-assignment](02--Vectors_pre-class-assignment.html) | [ipynb](02--Vectors_pre-class-assignment.ipynb) |
-| Thu, Jan 21 | 02-Vectors_in-class-assignment | [ipynb](02-Vectors_in-class-assignment.ipynb) |
+| Thu, Jan 21 | 02-Vectors_in-class-assignment |      |
 | Mon, Jan 25 | 03--Linear_Equations_pre-class-assignment |      |
 | Tue, Jan 26 | 03-Linear_Equations_in-class-assignment |      |
 | Wed, Jan 27 | 04-Gauss_Jordan_in-class-assignment |      |
@@ -18,8 +18,8 @@
 | Wed, Feb 3 | 06--Mechanics_pre-class-assignment |      |
 | Thu, Feb 4 | 06-Mechanics_in-class-assignment |      |
 | Fri, Feb 5 | Homework 1 |      |
-| Mon, Feb 8 | 07--Transformations_pre-class-assignment | [ipynb](07--Transformations_pre-class-assignment.ipynb) |
-| Tue, Feb 9 | 07-Transformations_in-class-assignment | [ipynb](07-Transformations_in-class-assignment.ipynb) |
+| Mon, Feb 8 | 07--Transformations_pre-class-assignment |      |
+| Tue, Feb 9 | 07-Transformations_in-class-assignment |      |
 | Wed, Feb 10 | 08--Robotics_pre-class-assignment |      |
 | Thu, Feb 11 | 08-Quiz1_Instructions |      |
 | Tue, Feb 16 | 08-Robotics_in-class-assignment |      |
