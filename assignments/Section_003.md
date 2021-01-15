@@ -17,7 +17,7 @@
 | Tue, Feb 2 | 05--Inner_Product_pre-class-assignment |      |
 | Wed, Feb 3 | 06--Mechanics_pre-class-assignment |      |
 | Thu, Feb 4 | 06-Mechanics_in-class-assignment |      |
-| Fri, Feb 5 | HW1-Systems_of_linear_equations_STUDENT |      |
+| Fri, Feb 5 | [HW1-Systems_of_linear_equations](HW1-Systems_of_linear_equations-STUDENT.html) | [ipynb](HW1-Systems_of_linear_equations-STUDENT.ipynb) |
 | Mon, Feb 8 | 07--Transformations_pre-class-assignment |      |
 | Tue, Feb 9 | 07-Transformations_in-class-assignment |      |
 | Wed, Feb 10 | 08--Robotics_pre-class-assignment |      |
