@@ -10,6 +10,9 @@ This is an introductory course on Linear Algebra with a focus on scientific/engi
 - [Announcements](Announcements)
 - [Syllabus](Syllabus)
 - [Desire2Learn](http://d2l.msu.edu/)
+- [Jupyterhub](http://jupyterhub.egr.msu.edu/)
+
+## Zoom links
 - [MTH314 Sections 001/002/003 Zoom Classroom Link](https://msu.zoom.us/j/94970022586) (949 7002 2586)
 - [MTH314 Sections 004/005 Zoom Classroom Link](https://msu.zoom.us/j/94169512702) (941 6951 2702)
 - [MTH314 Zoom Help Desk](https://msu.zoom.us/j/96752146069) (967 5214 6069)
