@@ -13667,11 +13667,8 @@ $$ M = \left[ \begin{matrix} 1 &amp; 0 &amp; -3 &amp; 0 \\ 2 &amp; 4 &amp; -8 &a
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##ANSWER</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">116</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">22</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">18</span><span class="p">]])</span>
-<span class="n">A_REF</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">18</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">14</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>
-<span class="c1">##ANSWER</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
+<span class="n">checkanswer</span><span class="o">.</span><span class="n">eq_matrix</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="s1">&#39;bb6c9782ce482b2aea5d41312e9697c4&#39;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -13684,49 +13681,10 @@ $$ M = \left[ \begin{matrix} 1 &amp; 0 &amp; -3 &amp; 0 \\ 2 &amp; 4 &amp; -8 &a
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">eq_matrix</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="s1">&#39;bb6c9782ce482b2aea5d41312e9697c4&#39;</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">checkanswer</span><span class="o">.</span><span class="n">eq_matrix</span><span class="p">(</span><span class="n">A_REF</span><span class="p">,</span><span class="s1">&#39;bb6c9782ce482b2aea5d41312e9697c4&#39;</span><span class="p">);</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-CheckWarning: passed matrix is int64 and not &lt;class &#39;numpy.float64&#39;&gt;...
-    Trying to convert to float using ```A = A.astype(float)```.
-
-
-CheckWarning: Matrix contains negative values for zero...
-    Converting to positive values of zero using  ```A[A==-0] = 0```.
-
-
-CheckWarning: passed matrix is object and not &lt;class &#39;numpy.float64&#39;&gt;...
-    Trying to convert to float using ```A = A.astype(float)```.
-
-
-CheckWarning: Matrix contains negative values for zero...
-    Converting to positive values of zero using  ```A[A==-0] = 0```.
-
-Testing [[1. 0. 0. 4.]
- [0. 1. 0. 8.]
- [0. 0. 1. 6.]]
-Answer seems to be correct
-
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13736,93 +13694,10 @@ Answer seems to be correct
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">checkanswer</span><span class="o">.</span><span class="n">eq_matrix</span><span class="p">(</span><span class="n">A_REF</span><span class="p">,</span><span class="s1">&#39;bb6c9782ce482b2aea5d41312e9697c4&#39;</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-CheckWarning: passed matrix is int64 and not &lt;class &#39;numpy.float64&#39;&gt;...
-    Trying to convert to float using ```A = A.astype(float)```.
-
-
-CheckWarning: Matrix contains negative values for zero...
-    Converting to positive values of zero using  ```A[A==-0] = 0```.
-
-
-CheckWarning: passed matrix is object and not &lt;class &#39;numpy.float64&#39;&gt;...
-    Trying to convert to float using ```A = A.astype(float)```.
-
-
-CheckWarning: Matrix contains negative values for zero...
-    Converting to positive values of zero using  ```A[A==-0] = 0```.
-
-Testing [[1. 0. 0. 4.]
- [0. 1. 0. 8.]
- [0. 0. 1. 6.]]
-Answer seems to be correct
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">checkanswer</span><span class="o">.</span><span class="n">vector</span><span class="p">([</span><span class="n">A_REF</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">A_REF</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">A_REF</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]],</span><span class="s1">&#39;b5021f73f68b6e2f957706af7a39ac75&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-CheckWarning: passed variable is &lt;class &#39;list&#39;&gt; and not a numpy.matrix.
-    Trying to convert to a array matrix using ```A = np.matrix(A)```.
-
-
-CheckWarning: passed matrix is int64 and not &lt;class &#39;numpy.float64&#39;&gt;...
-    Trying to convert to float using ```A = A.astype(float)```.
-
-
-CheckWarning: Vector contains negative values for zero...
-    Converting to positive values of zero using  ```A[A==-0] = 0```.
-
-Testing [[0. 0. 0.]]
-Answer seems to be correct
-
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13837,7 +13712,7 @@ Answer seems to be correct
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer here</span>
@@ -13851,7 +13726,7 @@ Answer seems to be correct
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##ANSWER</span>
@@ -13867,7 +13742,7 @@ Answer seems to be correct
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
@@ -13875,40 +13750,6 @@ Answer seems to be correct
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-CheckWarning: passed variable is &lt;class &#39;sympy.matrices.dense.MutableDenseMatrix&#39;&gt; and not a numpy.matrix...
-    Trying to convert to a array matrix using ```A = np.matrix(A)```.
-
-
-CheckWarning: passed matrix is object and not &lt;class &#39;numpy.float64&#39;&gt;...
-    Trying to convert to float using ```A = A.astype(float)```.
-
-
-CheckWarning: Matrix contains negative values for zero...
-    Converting to positive values of zero using  ```A[A==-0] = 0```.
-
-Testing [[1. 0. 0. 4.]
- [0. 1. 0. 8.]
- [0. 0. 1. 6.]]
-Answer seems to be correct
-
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13923,7 +13764,7 @@ Answer seems to be correct
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Put your answer here</span>
@@ -13939,7 +13780,7 @@ Answer seems to be correct
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#ANSWER</span>
@@ -13956,7 +13797,7 @@ Answer seems to be correct
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
@@ -14063,7 +13904,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -14097,7 +13938,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here.</span>
@@ -14110,7 +13951,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
@@ -14132,7 +13973,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here</span>
@@ -14145,7 +13986,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
@@ -14167,7 +14008,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here</span>
@@ -14180,7 +14021,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
@@ -14202,7 +14043,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">profit</span> <span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span>
@@ -14217,7 +14058,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here</span>
@@ -14230,7 +14071,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
