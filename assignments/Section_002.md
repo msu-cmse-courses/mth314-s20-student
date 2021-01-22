@@ -9,10 +9,10 @@
 | Mon, Jan 18 | MLK Holiday |      |
 | Tue, Jan 19 | [02--Vectors_pre-class-assignment](02--Vectors_pre-class-assignment.html) | [ipynb](02--Vectors_pre-class-assignment.ipynb) |
 | Wed, Jan 20 | [02-Vectors_in-class-assignment](02-Vectors_in-class-assignment.html) | [ipynb](02-Vectors_in-class-assignment.ipynb) |
-| Sun, Jan 24 | 03--Linear_Equations_pre-class-assignment |      |
-| Mon, Jan 25 | 03-Linear_Equations_in-class-assignment |      |
-| Tue, Jan 26 | 04-Gauss_Jordan_in-class-assignment |      |
-| Wed, Jan 27 | 04--Gauss_Jordan_pre-class-assignment |      |
+| Sun, Jan 24 | [03--Linear_Equations_pre-class-assignment](03--Linear_Equations_pre-class-assignment.html) | [ipynb](03--Linear_Equations_pre-class-assignment.ipynb) |
+| Mon, Jan 25 | [03-Linear_Equations_in-class-assignment](03-Linear_Equations_in-class-assignment.html) | [ipynb](03-Linear_Equations_in-class-assignment.ipynb) |
+| Tue, Jan 26 | [04-Gauss_Jordan_in-class-assignment](04-Gauss_Jordan_in-class-assignment.html) | [ipynb](04-Gauss_Jordan_in-class-assignment.ipynb) |
+| Wed, Jan 27 | [04--Gauss_Jordan_pre-class-assignment](04--Gauss_Jordan_pre-class-assignment.html) | [ipynb](04--Gauss_Jordan_pre-class-assignment.ipynb) |
 | Sun, Jan 31 | 05-Inner_Product_in-class-assignment |      |
 | Mon, Feb 1 | 05--Inner_Product_pre-class-assignment |      |
 | Tue, Feb 2 | 06--Mechanics_pre-class-assignment |      |

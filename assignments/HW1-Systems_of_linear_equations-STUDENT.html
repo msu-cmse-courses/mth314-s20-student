@@ -13128,7 +13128,7 @@ div#notebook {
 <p><a name=-Solving-Systems-of-Linear-Equations></a></p>
 <h1 id="1.--Solving-Systems-of-Linear-Equations">1.  Solving Systems of Linear Equations<a class="anchor-link" href="#1.--Solving-Systems-of-Linear-Equations">&#182;</a></h1><p><img src="https://cdn.pixabay.com/photo/2015/12/08/21/42/tools-1083796__340.jpg" alt="Image of tools on the wall "></p>
 <p>Image obtained from Pixabay under the Creative commons License</p>
-<p>In this problem we will go back to the problem on the <a href="05--Gauss_Jordan_pre-class-assignment.ipynb">05 pre-class assignment</a>, with the Giselle’s earnings as a carpenter and a blacksmith.  In this problem for week 1 she worked a total of 30 hours and earned a total of \$690, where her wages as a carpenter were \\$20/hour and as a blacksmith were \$25/hour.  This generated the following set of linear equations:</p>
+<p>In this problem we will go back to the problem on the <a href="04-Gauss_Jordan_in-class-assignment.ipynb">04-Gauss_Jordan_in-class-assignment</a>, with the Giselle’s earnings as a carpenter and a blacksmith.  In this problem for week 1 she worked a total of 30 hours and earned a total of \$690, where her wages as a carpenter were \\$20/hour and as a blacksmith were \$25/hour.  This generated the following set of linear equations:</p>
 $$ c+b = 30$$$$20c+25b=690$$<p>Now here is the new information.  For any job, there are two parts of the time spent; work set-up and work completion.  Giselle spent $1/10$ of her work-setup time and $2/3$ of her work completion time on carpentry, so she spent $9/10$ of her work setup time and $1/3$ of her time on work completion.  If <code>s</code> is the amount of work set-up time, and <code>w</code> is the amount of work completion time, we get the equations:</p>
 $$ \frac{1}{10}s + \frac{2}{3}w = c$$$$ \frac{9}{10}s + \frac{1}{3} w = b$$<p>To solve for s and w, there are 2 ways: first we can solve for c and b, and then solve for s and w; or second, we can solve for s and w directly.</p>
 
@@ -13155,7 +13155,7 @@ $$ \frac{1}{10}s + \frac{2}{3}w = c$$$$ \frac{9}{10}s + \frac{1}{3} w = b$$<p>To
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989;  <strong><font color=red>QUESTION 1:</font></strong> (5pts)  use python to solve for c and b in the original set of equations (you did this already in the 05-pre-class assignment)</p>
+<p>&#9989;  <strong><font color=red>QUESTION 1:</font></strong> (5pts)  use python to solve for c and b in the original set of equations (you did this already in the 04-pre-class assignment)</p>
 
 </div>
 </div>
@@ -13764,56 +13764,11 @@ $$ M = \left[ \begin{matrix} 1 &amp; 0 &amp; -3 &amp; 0 \\ 2 &amp; 4 &amp; -8 &a
 <div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#ANSWER</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">4</span> 
-<span class="n">y</span> <span class="o">=</span> <span class="mi">8</span>
-<span class="n">z</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="c1">#ANSWER</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
 <span class="n">checkanswer</span><span class="o">.</span><span class="n">vector</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">],</span><span class="s1">&#39;c550ab8dd2e8d171e88dd545ad653bff&#39;</span><span class="p">);</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-CheckWarning: passed variable is &lt;class &#39;list&#39;&gt; and not a numpy.matrix.
-    Trying to convert to a array matrix using ```A = np.matrix(A)```.
-
-
-CheckWarning: passed matrix is int64 and not &lt;class &#39;numpy.float64&#39;&gt;...
-    Trying to convert to float using ```A = A.astype(float)```.
-
-Testing [[4. 8. 6.]]
-Answer seems to be correct
-
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13885,7 +13840,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13919,7 +13874,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here.</span>
@@ -13932,7 +13887,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
@@ -13954,7 +13909,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here</span>
@@ -13967,7 +13922,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
@@ -13989,7 +13944,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here</span>
@@ -14002,7 +13957,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
@@ -14024,7 +13979,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">profit</span> <span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span>
@@ -14039,7 +13994,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here</span>
@@ -14052,7 +14007,7 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
