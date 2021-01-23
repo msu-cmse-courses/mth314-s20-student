@@ -11,10 +11,10 @@
 | Thu, Jan 21 | [02-Vectors_in-class-assignment](02-Vectors_in-class-assignment.html) | [ipynb](02-Vectors_in-class-assignment.ipynb) |
 | Mon, Jan 25 | [03--Linear_Equations_pre-class-assignment](03--Linear_Equations_pre-class-assignment.html) | [ipynb](03--Linear_Equations_pre-class-assignment.ipynb) |
 | Tue, Jan 26 | [03-Linear_Equations_in-class-assignment](03-Linear_Equations_in-class-assignment.html) | [ipynb](03-Linear_Equations_in-class-assignment.ipynb) |
-| Wed, Jan 27 | [04-Gauss_Jordan_in-class-assignment](04-Gauss_Jordan_in-class-assignment.html) | [ipynb](04-Gauss_Jordan_in-class-assignment.ipynb) |
-| Thu, Jan 28 | [04--Gauss_Jordan_pre-class-assignment](04--Gauss_Jordan_pre-class-assignment.html) | [ipynb](04--Gauss_Jordan_pre-class-assignment.ipynb) |
-| Mon, Feb 1 | 05-Inner_Product_in-class-assignment |      |
-| Tue, Feb 2 | 05--Inner_Product_pre-class-assignment |      |
+| Wed, Jan 27 | [04--Gauss_Jordan_pre-class-assignment](04--Gauss_Jordan_pre-class-assignment.html) | [ipynb](04--Gauss_Jordan_pre-class-assignment.ipynb) |
+| Thu, Jan 28 | [04-Gauss_Jordan_in-class-assignment](04-Gauss_Jordan_in-class-assignment.html) | [ipynb](04-Gauss_Jordan_in-class-assignment.ipynb) |
+| Mon, Feb 1 | 05--Inner_Product_pre-class-assignment |      |
+| Tue, Feb 2 | 05-Inner_Product_in-class-assignment |      |
 | Wed, Feb 3 | 06--Mechanics_pre-class-assignment |      |
 | Thu, Feb 4 | 06-Mechanics_in-class-assignment |      |
 | Fri, Feb 5 | [HW1-Systems_of_linear_equations](HW1-Systems_of_linear_equations-STUDENT.html) | [ipynb](HW1-Systems_of_linear_equations-STUDENT.ipynb) |
