@@ -15,8 +15,8 @@
 | Wed, Jan 27 | [04-Gauss_Jordan_in-class-assignment](04-Gauss_Jordan_in-class-assignment.html) | [ipynb](04-Gauss_Jordan_in-class-assignment.ipynb) |
 | Sun, Jan 31 | 05--Inner_Product_pre-class-assignment |      |
 | Mon, Feb 1 | 05-Inner_Product_in-class-assignment |      |
-| Tue, Feb 2 | 06--Mechanics_pre-class-assignment |      |
-| Wed, Feb 3 | 06-Mechanics_in-class-assignment |      |
+| Tue, Feb 2 | [06--Mechanics_pre-class-assignment](06--Mechanics_pre-class-assignment.html) | [ipynb](06--Mechanics_pre-class-assignment.ipynb) |
+| Wed, Feb 3 | [06-Mechanics_in-class-assignment](06-Mechanics_in-class-assignment.html) | [ipynb](06-Mechanics_in-class-assignment.ipynb) |
 | Fri, Feb 5 | [HW1-Systems_of_linear_equations](HW1-Systems_of_linear_equations-STUDENT.html) | [ipynb](HW1-Systems_of_linear_equations-STUDENT.ipynb) |
 | Sun, Feb 7 | 07--Transformations_pre-class-assignment |      |
 | Mon, Feb 8 | 07-Transformations_in-class-assignment |      |

@@ -13077,6 +13077,22 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="05--Gauss_Jordan2_pre-class-assignment.ipynb">Link to this document's Jupyter Notebook</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In order to successfully complete this assignment you must do the required reading, watch the provided videos and complete all instructions.  The embedded survey form must be entirely filled out and submitted on or before <strong><em>11:59pm on on the day before class</em></strong>.  Students must come to class the next day prepared to discuss the material covered in this assignment.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 
 </div>
@@ -13085,7 +13101,11 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="HW1-Systems_of_linear_equations.ipynb">Link to this document's Jupyter Notebook</a></p>
+<h3 id="Recommended-further-readings-for-this-pre-class-assignment.">Recommended further readings for this pre-class assignment.<a class="anchor-link" href="#Recommended-further-readings-for-this-pre-class-assignment.">&#182;</a></h3><ul>
+<li><strong><em><a href="http://vmls-book.stanford.edu/vmls.pdf">Boyd - Section 1.4-1.5 pg 19-24</a></em></strong></li>
+<li><a href="http://linear.ups.edu/download/fcla-3.50-tablet.pdf">Beezer - Subsection IP pg 149-152</a></li>
+<li><a href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Heffron - Chapter 1.II.2 pg 43-47</a></li>
+</ul>
 
 </div>
 </div>
@@ -13093,44 +13113,12 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In order to successfully complete this assignment, you must follow all the instructions in this notebook and upload your edited ipynb file to <a href="http://d2l.msu.edu/">D2L</a> with your answers on or before <strong>11:59pm on Friday February 5th</strong>.</p>
-<p><strong>BIG HINT:</strong> Read the entire homework before starting.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Homework-1:-Data-as-Vectors">Homework 1: Data as Vectors<a class="anchor-link" href="#Homework-1:-Data-as-Vectors">&#182;</a></h1><p>In this homework, we will exploring four different examples of in-class quizzes students had in previous semesters of this course.   These problems are intended to give student's exposure to the style of questions asked on quizzes and help you practice. Please finish the entire Jupyter Notebook and turn in your edited file using the <a href="http://d2l.msu.edu">MSU D2L Website</a>.</p>
-<p>Your instructors recommend doing one question at a time.  Set a timer for 20-30 minutes and see how much of the question you can answer.  We hope this will get you used to getting a timed quiz complete during class.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Outline-for-Homework-1">Outline for Homework 1<a class="anchor-link" href="#Outline-for-Homework-1">&#182;</a></h3><ol>
-<li><a href="#-Solving-Systems-of-Linear-Equations">Solving Systems of Linear Equations</a></li>
-<li><a href="#Balancing-Equations">Balancing Equations</a></li>
-<li><a href="#Chickens-and-Rabbits">Chickens and Rabbits</a></li>
-<li><a href="#Starship-Truckers">Starship Truckers</a></li>
+<h1 id="Pre-Class-Assignment:-Gauss-Jordan-Elimination">Pre-Class Assignment: Gauss-Jordan Elimination<a class="anchor-link" href="#Pre-Class-Assignment:-Gauss-Jordan-Elimination">&#182;</a></h1><h3 id="Goals-for-today's-pre-class-assignment">Goals for today's pre-class assignment<a class="anchor-link" href="#Goals-for-today's-pre-class-assignment">&#182;</a></h3><ol>
+<li><a href="#Sympy-RREF-function">Sympy RREF function</a></li>
+<li><a href="#Calculating-Vector-Length,-Normalization,-Distance-and-Dot">Calculating Vector Length, Normalization, Distance and Dot</a></li>
+<li><a href="#Vector-spaces-in-Rn">Vector spaces in $R_n$</a></li>
+<li><a href="#Assignment-wrap-up">Assignment wrap up</a></li>
 </ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<p><a name=-Solving-Systems-of-Linear-Equations></a></p>
-<h1 id="1.--Solving-Systems-of-Linear-Equations">1.  Solving Systems of Linear Equations<a class="anchor-link" href="#1.--Solving-Systems-of-Linear-Equations">&#182;</a></h1><p><img src="https://cdn.pixabay.com/photo/2015/12/08/21/42/tools-1083796__340.jpg" alt="Image of tools on the wall "></p>
-<p>Image obtained from Pixabay under the Creative commons License</p>
-<p>In this problem we will go back to the problem on the <a href="04-Gauss_Jordan_in-class-assignment.ipynb">04-Gauss_Jordan_in-class-assignment</a>, with the Giselle’s earnings as a carpenter and a blacksmith.  In this problem for week 1 she worked a total of 30 hours and earned a total of \$690, where her wages as a carpenter were \\$20/hour and as a blacksmith were \$25/hour.  This generated the following set of linear equations:</p>
-$$ c+b = 30$$$$20c+25b=690$$<p>Now here is the new information.  For any job, there are two parts of the time spent; work set-up and work completion.  Giselle spent $1/10$ of her work-setup time and $2/3$ of her work completion time on carpentry, so she spent $9/10$ of her work setup time and $1/3$ of her time on work completion.  If <code>s</code> is the amount of work set-up time, and <code>w</code> is the amount of work completion time, we get the equations:</p>
-$$ \frac{1}{10}s + \frac{2}{3}w = c$$$$ \frac{9}{10}s + \frac{1}{3} w = b$$<p>To solve for s and w, there are 2 ways: first we can solve for c and b, and then solve for s and w; or second, we can solve for s and w directly.</p>
 
 </div>
 </div>
@@ -13140,11 +13128,12 @@ $$ \frac{1}{10}s + \frac{2}{3}w = c$$$$ \frac{9}{10}s + \frac{1}{3} w = b$$<p>To
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#  Load Useful Python Libraries </span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
-<span class="n">sym</span><span class="o">.</span><span class="n">init_printing</span><span class="p">()</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">init_printing</span><span class="p">(</span><span class="n">use_unicode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13155,7 +13144,9 @@ $$ \frac{1}{10}s + \frac{2}{3}w = c$$$$ \frac{9}{10}s + \frac{1}{3} w = b$$<p>To
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989;  <strong><font color=red>QUESTION 1:</font></strong> (5pts)  use python to solve for c and b in the original set of equations (you did this already in the 04-pre-class assignment)</p>
+<hr>
+<p><a name=Sympy-RREF-function></a></p>
+<h1 id="1.-Sympy-RREF-function">1. Sympy RREF function<a class="anchor-link" href="#1.-Sympy-RREF-function">&#182;</a></h1><p>In class we talked about the Python <code>sympy</code> library which has a "reduced row echelon form" (rref) function that runs a much more efficient version of the Gauss-Jordan function.  To use the <code>rref</code> function you must first convert your matrix into a <code>sympy.Matrix</code> and then run the function. For example, lets do this for the following  matrix $B$:</p>
 
 </div>
 </div>
@@ -13165,25 +13156,31 @@ $$ \frac{1}{10}s + \frac{2}{3}w = c$$$$ \frac{9}{10}s + \frac{1}{3} w = b$$<p>To
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#put your answer to the above question here.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">30</span> <span class="p">],</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">60</span> <span class="p">],</span>  <span class="p">[</span><span class="mf">20.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">650</span><span class="p">]])</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">B</span><span class="p">)</span><span class="o">.</span><span class="n">rref</span><span class="p">()</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$\left ( \left[\begin{matrix}1 & 0 & -7.82918149466192\\0 & 1 & 32.4199288256228\\0 & 0 & 0\end{matrix}\right], \quad \left ( 0, \quad 1\right )\right )$$
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
 
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">vector</span><span class="p">([</span><span class="n">c</span><span class="p">,</span><span class="n">b</span><span class="p">],</span><span class="s2">&quot;db03b41005ab488f64e4028c15f96340&quot;</span><span class="p">);</span>
-</pre></div>
+</div>
 
-    </div>
 </div>
 </div>
 
@@ -13191,7 +13188,81 @@ $$ \frac{1}{10}s + \frac{2}{3}w = c$$$$ \frac{9}{10}s + \frac{1}{3} w = b$$<p>To
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989;  <strong><font color=red>QUESTION 2:</font></strong> (5 pts) Using your answers for <code>c</code> and <code>b</code>, generate the augmented matrix <code>A</code> for solving for <code>s</code> and <code>w</code>.</p>
+<p>This function outputs two values (a matrix and a tuple).  For the purposes of this class we only care about the matrix.  I generally use the following syntax when using <code>rref()</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">B</span><span class="p">)</span><span class="o">.</span><span class="n">rref</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$\left[\begin{matrix}1 & 0 & -7.82918149466192\\0 & 1 & 32.4199288256228\\0 & 0 & 0\end{matrix}\right]$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&#9989;<strong><font color=red>QUESTION</font></strong>: Although we do not use it often in this course, what does the second output of the <code>rref</code> mean (i.e. what does <code>(0,1,2)</code> mean? <strong><em>hint</em></strong>: read the documentation for <code>rref</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>Put your answer to the above question here</em></strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How lets consider the multi-week example from a previous assignment, where:</p>
+<p><strong>Week 1:</strong>
+$$ c + b = 30 $$
+$$ 20c + 25b = 690 $$</p>
+<p><strong>Week 2:</strong>
+$$ c + b = 35 $$
+$$ 20c + 25b = 750 $$</p>
+<p><strong>Week 3:</strong>
+$$ c + b = 30 $$
+$$ 20c + 25b = 650 $$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&#9989;<strong><font color=red>DO THIS</font></strong>: Write a $2 \times 5$ augmented matrix representing the 6 equations above.  (you can just copy and paste this from the pre-class if you got it right there), Name your Matrix $G$ to verify your answer using the <code>checkanswer</code> function below.</p>
 
 </div>
 </div>
@@ -13201,22 +13272,7 @@ $$ \frac{1}{10}s + \frac{2}{3}w = c$$$$ \frac{9}{10}s + \frac{1}{3} w = b$$<p>To
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here.</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
-
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="s2">&quot;31ec508251cdc937ccba2f25a6aff458&quot;</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here. </span>
 </pre></div>
 
     </div>
@@ -13227,7 +13283,29 @@ $$ \frac{1}{10}s + \frac{2}{3}w = c$$$$ \frac{9}{10}s + \frac{1}{3} w = b$$<p>To
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989;  <strong><font color=red>QUESTION 3:</font></strong> (5pts) Use Gauss Jordan and the reduced row echelon form to solve for <code>s</code> and <code>w</code> for your augmented matrix in question 2.</p>
+<p>The following function will apply the rref function to the matrix $G$ and store it in a variable called, wait for it,  <code>rref</code>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rref</span><span class="p">,</span><span class="n">_</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">G</span><span class="p">)</span><span class="o">.</span><span class="n">rref</span><span class="p">()</span>
+<span class="n">rref</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&#9989;<strong><font color=red>QUESTION</font></strong>: Given the above,  How many hours did Giselle work as a capenter for the three weeks and how many hours did she work as a blacksmith.  Fill in your answers below to check if you are correct:</p>
 
 </div>
 </div>
@@ -13237,7 +13315,13 @@ $$ \frac{1}{10}s + \frac{2}{3}w = c$$$$ \frac{9}{10}s + \frac{1}{3} w = b$$<p>To
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Put your answer to the above question here</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Replace the zeros with your answers</span>
+<span class="n">carpenter_week1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">carpenter_week2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">carpenter_week3</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">blacksmith_week1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">blacksmith_week2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">blacksmith_week3</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 
     </div>
@@ -13252,7 +13336,11 @@ $$ \frac{1}{10}s + \frac{2}{3}w = c$$$$ \frac{9}{10}s + \frac{1}{3} w = b$$<p>To
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
 
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">vector</span><span class="p">([</span><span class="n">s</span><span class="p">,</span><span class="n">w</span><span class="p">],</span><span class="s2">&quot;8d69467202b2e2cd7f3a18d614028316&quot;</span><span class="p">);</span>
+<span class="n">hours</span> <span class="o">=</span> <span class="p">[[</span><span class="n">carpenter_week1</span><span class="p">,</span> <span class="n">carpenter_week2</span><span class="p">,</span> <span class="n">carpenter_week3</span><span class="p">],</span>
+         <span class="p">[</span><span class="n">blacksmith_week1</span><span class="p">,</span> <span class="n">blacksmith_week2</span><span class="p">,</span> <span class="n">blacksmith_week3</span><span class="p">]]</span>
+<span class="n">hours</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">hours</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
+
+<span class="n">checkanswer</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span><span class="s1">&#39;b2d4a73cac3c95204f5ed743b507093a&#39;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -13263,21 +13351,11 @@ $$ \frac{1}{10}s + \frac{2}{3}w = c$$$$ \frac{9}{10}s + \frac{1}{3} w = b$$<p>To
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989;  <strong><font color=red>QUESTION 4:</font></strong> (5pts) Multiply the following 2 matrices and store them in a variable named <code>A2</code>:</p>
-$$ 
-\left[
-\begin{matrix}
-    1 &amp; 1  \\
-    20 &amp; 25
- \end{matrix}
-\right] 
-\left[
-\begin{matrix}
-    \frac{1}{10} &amp; \frac{2}{3}  \\
-    \frac{9}{10} &amp; \frac{1}{3} 
- \end{matrix}
-\right] 
-$$
+<hr>
+<p><a name=Calculating-Vector-Length,-Normalization,-Distance-and-Dot></a></p>
+<h1 id="2.-Calculating-Vector-Length,-Normalization,-Distance-and-Dot">2. Calculating Vector Length, Normalization, Distance and Dot<a class="anchor-link" href="#2.-Calculating-Vector-Length,-Normalization,-Distance-and-Dot">&#182;</a></h1><p>In this section we will cover some of the basic vector math we will use this semester.</p>
+<p>&#9989;<strong><font color=red>DO THIS</font></strong>:  Watch the following summary video about calculation of vector length, Normalizing vectors and the distance between points then answer the questions.</p>
+
 </div>
 </div>
 </div>
@@ -13286,120 +13364,142 @@ $$
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Put your answer to the above equation here. </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;S0BIhbV6reI&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">640</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">360</span><span class="p">,</span> <span class="n">cc_load_policy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <iframe
+            width="640"
+            height="360"
+            src="https://www.youtube.com/embed/S0BIhbV6reI?cc_load_policy=True"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Vector:">Vector:<a class="anchor-link" href="#Vector:">&#182;</a></h2>$$(a_1, a_2, \dots a_n)$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$(b_1, b_2, \dots b_n)$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Length:">Length:<a class="anchor-link" href="#Length:">&#182;</a></h2>$$length = \sqrt{a_1^2 + a_2^2 + \dots + a_n^2}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Normalization:">Normalization:<a class="anchor-link" href="#Normalization:">&#182;</a></h2>$$\frac{1}{length}(a_1, a_2, \dots a_n)$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Distance:">Distance:<a class="anchor-link" href="#Distance:">&#182;</a></h2>$$distance = \sqrt{(a_1 - b_1)^2 + (a_2 - b_2)^2 + \dots + (a_n - b_n)^2}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&#9989;<strong><font color=red>QUESTION</font></strong>:   Calculate length of vector (4.5, 2.6, 3.3, 4.1)?</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
-
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">A2</span><span class="p">,</span><span class="s2">&quot;dcac2bb51a2f3bb09877934788038de5&quot;</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989;  <strong><font color=red>QUESTION 5:</font></strong> (5pts) Solve the resulting set of equations with</p>
-$$ 
-\left[
-\begin{matrix}
-    1 &amp; 1  \\
-    20 &amp; 25
- \end{matrix}
-\right] 
-\left[
-\begin{matrix}
-    \frac{1}{10} &amp; \frac{2}{3}  \\
-    \frac{9}{10} &amp; \frac{1}{3} 
- \end{matrix}
-\right] 
-\left[
-\begin{matrix}
-    s \\
-    w
- \end{matrix}
-\right] 
-=
-\left[
-\begin{matrix}
-    30 \\
-    690
- \end{matrix}
-\right] 
-$$
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Put your answer to the above equation here</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
+
+<span class="n">checkanswer</span><span class="p">(</span><span class="n">length</span><span class="p">,</span><span class="s1">&#39;56baadaaf9d6779ff9746e55269e74a6&#39;</span><span class="p">);</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&#9989;<strong><font color=red>QUESTION</font></strong>: What is a normalized form of the vector (4.5, 2.6, 3.3, 4.1)?</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
-
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">vector</span><span class="p">([</span><span class="n">s2</span><span class="p">,</span><span class="n">w2</span><span class="p">],</span><span class="s2">&quot;8d69467202b2e2cd7f3a18d614028316&quot;</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong><em>Notice that if we did everything correctly the answer for Question 5 is the same as the answer for Question 3.</em></strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<p><a name=Balancing-Equations></a></p>
-<h1 id="2.-Balancing-Equations">2. Balancing Equations<a class="anchor-link" href="#2.-Balancing-Equations">&#182;</a></h1><p><img src="https://i1.pickpik.com/photos/478/881/147/justice-scales-balance-lawyer-preview.jpg" alt="IMage of a scale representing the balance of time and money.  This image is being used to show the balance of linear systems"></p>
-<p>One of the earliest applications of matrix algebra was to solve systems of linear equations. We encounter these in all sorts of situations throughout our lives. In the first two questions below we ask you to formulate and solve a system of linear equations related to figuring out the number of hours worked at two different jobs. In the third and fourth problems we ask you to use Gauss-Jordan elimination to balance chemical equations. The last question is about matrix multiplication.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline 
-<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
-<span class="n">sym</span><span class="o">.</span><span class="n">init_printing</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
+
+<span class="n">checkanswer</span><span class="p">(</span><span class="n">norm</span><span class="p">,</span><span class="s1">&#39;e8a2678da4e35c50673ddb07a5773d13&#39;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -13410,15 +13510,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Situation-for-problems-1-and-2.">Situation for problems 1 and 2.<a class="anchor-link" href="#Situation-for-problems-1-and-2.">&#182;</a></h3><p>Amy works for a movie theater. She can be assigned to two different jobs during her shift and each job pays a different amount of money. If Amy works at the concessions stand then she will make \$14.50 an hour, and \\$12.15 an hour for selling tickets. Last week, Amy worked a total of 39.5 hours and earned \$525.75. (Disregard all taxes.) If we set $c$ to be the number of hours worked on concessions and $t$ to be the number of hours worked selling tickets then we get two equations</p>
-$$ c + t = 39.5,$$$$ 14.50c + 12.15t = 525.75.$$
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989;  <strong><font color=red>QUESTION 1:</font></strong> (5pts)  Represent the above system of equations as a matrix equation of the form $Ax = b$ and then use <code>numpy</code> to solve the system.</p>
+<p>&#9989;<strong><font color=red>QUESTION</font></strong>:  What is the distance between (4.5, 2.6, 3.3, 4.1) and (4, 3, 2, 1)?</p>
 
 </div>
 </div>
@@ -13428,7 +13520,7 @@ $$ c + t = 39.5,$$$$ 14.50c + 12.15t = 525.75.$$
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##Edit this cell to answer the question.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here</span>
 </pre></div>
 
     </div>
@@ -13443,7 +13535,7 @@ $$ c + t = 39.5,$$$$ 14.50c + 12.15t = 525.75.$$
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
 
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="s2">&quot;92b54c2b36360ec6cc21ca67bc8eeb41&quot;</span><span class="p">);</span>
+<span class="n">checkanswer</span><span class="p">(</span><span class="n">distance</span><span class="p">,</span><span class="s1">&#39;8a19ba7eba32e86ac284a6afe2990405&#39;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -13454,7 +13546,7 @@ $$ c + t = 39.5,$$$$ 14.50c + 12.15t = 525.75.$$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989;  <strong><font color=red>QUESTION 2:</font></strong> (5 pts) Use complete sentences to describe what the three values $A_{2,2}$, $x_{1,1}$, and $b_{2,1}$ represent in the context of Amy's situation.</p>
+<h2 id="Dot-Product:">Dot Product:<a class="anchor-link" href="#Dot-Product:">&#182;</a></h2>$$dot(a,b) = a_1b_1 + a_2b_2 +\dots + a_nb_n$$<p>&#9989;<strong><font color=red>DO THIS</font></strong>:  Review <strong><em>Sections 1.4 and 1.5 of the Boyd and Vandenberghe</em></strong> text and answer the questions below.</p>
 
 </div>
 </div>
@@ -13462,36 +13554,7 @@ $$ c + t = 39.5,$$$$ 14.50c + 12.15t = 525.75.$$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>YOUR ANSWER HERE</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Situation-for-problems-3-and-4.">Situation for problems 3 and 4.<a class="anchor-link" href="#Situation-for-problems-3-and-4.">&#182;</a></h3><p>A chemical equation is the symbolic representation of a chemical reaction in the form of symbols and formulae, wherein the reactant entities are given on the left-hand side and the product entities on the right-hand side. The coefficients of the symbols represent the number of molecules of each chemical required to preserve matter in the chemical reaction.</p>
-<p>For example, the process of burning methane is represented by the chemical equation</p>
-$$ 1 CH_4 + 2 O_2 \rightarrow 1CO_2 + 2 H_2O$$<p>We see there are a total of 1 unit of C (carbon), four units of H (hydrogen), and 4 units of O (oxygen) on the left, and the same on the right. These numbers are computed by multiplying the coefficient by the subscript.</p>
-<p>We can represent this reaction using vectors. If the coefficients are unknown then we have</p>
-$$x_1 CH_4 + x_2 O_2 \rightarrow x_3 CO_2 + x_4 H_2O$$<p>Here we see that each chemical in the reaction gives us an unknown variable, and we can obtain an equation in these variables for each element in the reaction.</p>
-$$ C: x_1  = x_3 $$$$ H: 4x_1 = 2x_4$$$$ O: 2x_2 = 2x_3 + x_4$$<p>which leads us to the augmented matrix $$ \left[ \begin{matrix} 1 &amp; 0 &amp; -1 &amp; 0 \\ 4 &amp; 0 &amp; 0 &amp;-2 \\ 0 &amp; 2 &amp; -2 &amp; -1  \end{matrix} \, \middle\vert \, \begin{matrix} 0 \\ 0 \\ 0 \end{matrix} \right]
-\stackrel{RREF}{\longrightarrow}
-\left[ \begin{matrix} 1 &amp; 0 &amp;  &amp; -0.5 \\ 0 &amp; 1 &amp; 0 &amp;-1 \\ 0 &amp; 0 &amp; 1 &amp; -0.5  \end{matrix} \, \middle\vert \, \begin{matrix} 0 \\ 0 \\ 0 \end{matrix} \right]$$</p>
-<p>This leads us to equations $$x_1 - \frac 1 2 x_4 = 0$$</p>
-$$ x_2 -  x_4 = 0$$$$ x_3 - \frac 1 2 x_4 = 0$$<p>To get integer values for our solution we can take $x_4 =2$ and see that $x_1 = 1, x_2 = 2,$ and $x_3 = 1$.</p>
-<hr>
-<p>The (unbalanced) chemical reaction $$Ca(OH)_2 + H_3PO_4 \rightarrow Ca_3(PO_4)_2 + H_2O$$ mixes calcium hydroxide with phosphoric acid to create tricalcium phosphate and water. This chemical equation is unbalanced and so assigning variables to the coefficients</p>
-$$x_1 Ca(OH)_2 + x_2H_3PO_4 \rightarrow x_3Ca_3(PO_4)_2 + x_4H_2O$$<p>produces the augmented matrix</p>
-$$ M = \left[ \begin{matrix} 1 &amp; 0 &amp; -3 &amp; 0 \\ 2 &amp; 4 &amp; -8 &amp;-1 \\ 2 &amp; 3 &amp; 0 &amp; -2 \\ 0 &amp; 1 &amp; -2 &amp; 0  \end{matrix} \, \middle\vert \, \begin{matrix} 0 \\ 0 \\ 0 \\0 \end{matrix} \right]$$
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989;  <strong><font color=red>QUESTION 3:</font></strong> (5pts) Find the reduced row echelon form of the matrix $M$ above. Save the reduced matrix as <code>rref</code> for answer check.</p>
+<p>&#9989;<strong><font color=red>QUESTION</font></strong>:   What is the dot product between $u = [ 1, 7, 9, 11]$ and $v = [ 7, 1, 2, 2]$  (Store the information in a variable called <code>uv</code>)?</p>
 
 </div>
 </div>
@@ -13501,8 +13564,7 @@ $$ M = \left[ \begin{matrix} 1 &amp; 0 &amp; -3 &amp; 0 \\ 2 &amp; 4 &amp; -8 &a
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Edit this cell to answer this question.</span>
-<span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="s2">&quot;1,0,-3,0,0;2,4,-8,-1,0;2,3,0,-2,0;0,1,-2,0,0&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here</span>
 </pre></div>
 
     </div>
@@ -13517,7 +13579,7 @@ $$ M = \left[ \begin{matrix} 1 &amp; 0 &amp; -3 &amp; 0 \\ 2 &amp; 4 &amp; -8 &a
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
 
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">rref</span><span class="p">,</span><span class="s2">&quot;4c1a09e6f2097c1319ee4704fe05dce2&quot;</span><span class="p">);</span>
+<span class="n">checkanswer</span><span class="p">(</span><span class="n">uv</span><span class="p">,</span><span class="s1">&#39;a684eceee76fc522773286a895bc8436&#39;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -13528,7 +13590,7 @@ $$ M = \left[ \begin{matrix} 1 &amp; 0 &amp; -3 &amp; 0 \\ 2 &amp; 4 &amp; -8 &a
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989;  <strong><font color=red>QUESTION 4:</font></strong> (5pts) Give a non-zero <strong>integer</strong> solution to the balanced chemical equation associated to the matrix $M$. Save your answer as <code>solution</code> which is a list of $x_1,x_2,x_3,x_4$</p>
+<p>&#9989;<strong><font color=red>QUESTION</font></strong>:  What is the norm of vector $u$ defined above (store this value in a variabled called <code>n</code>)?</p>
 
 </div>
 </div>
@@ -13538,8 +13600,7 @@ $$ M = \left[ \begin{matrix} 1 &amp; 0 &amp; -3 &amp; 0 \\ 2 &amp; 4 &amp; -8 &a
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Edit this cell to save your answer.</span>
-<span class="n">solution</span><span class="o">=</span><span class="p">[]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here</span>
 </pre></div>
 
     </div>
@@ -13552,8 +13613,9 @@ $$ M = \left[ \begin{matrix} 1 &amp; 0 &amp; -3 &amp; 0 \\ 2 &amp; 4 &amp; -8 &a
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
-<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
+
+<span class="n">checkanswer</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="s1">&#39;b5b9dc568a9d7d71a6b4c5c95327c6a2&#39;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -13564,82 +13626,7 @@ $$ M = \left[ \begin{matrix} 1 &amp; 0 &amp; -3 &amp; 0 \\ 2 &amp; 4 &amp; -8 &a
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<p>The following question is unrelated to the system of equations above. It is a question about matrix multiplication.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989;  <strong><font color=red>QUESTION 5:</font></strong> (5pts) Suppose $A,$ $B,$ and $C$ are matrices that satisfy $$A + BB^T = C,$$ where $B^T$ is the transpose of $B$.</p>
-<p>Which of the following statements are <strong>always</strong> true? (Note. There may be more than one.)</p>
-<ol>
-<li>$A$ is square.</li>
-<li>$A$ and $B$ have the same dimensions.</li>
-<li>$A$, $B$, and $C$ have the same number of rows.</li>
-<li>$B$ is a tall matrix. That is, $B$ has more rows than columns.</li>
-<li>$B$ is a wide matrix. That is, $B$ has more columns than rows.</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>YOUR ANSWER HERE</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<p><a name=Chickens-and-Rabbits></a></p>
-<h1 id="3.-Chickens-and-Rabbits">3. Chickens and Rabbits<a class="anchor-link" href="#3.-Chickens-and-Rabbits">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://wiki.jsswsq.com/images/0/09/%E9%B8%A1%E5%85%94%E5%90%8C%E7%AC%BC%E9%97%AE%E9%A2%98.png" alt="Image of chickens and rabbits in a cage as a visual representation of the problem"></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Above is a famous primary school math olympiad problem: there are only chickens and rabbits in a cage. After counting, we found there are totally 35 heads and 94 feet. How many do we have for each kind?</p>
-<p>Let us have some fun by using linear algebra to solve an advanced version of it. There are spiders, dragonflies, and cicadas totally 18 insects in a cage. We have a total of 116 legs and 22 pairs of wings. How many insects do we have of each kind? (spider has 8 legs and 0 wings; dragonfly has 6 legs and 2 pairs of wings; cicada has 6 legs and 1 pair of wings)</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989; <strong><font color=red>Question 1:</font></strong> (6pts) Suppose there are $x$ spiders, $y$ dragonflies, and $z$ cicadas. Set up three linear equations involving $x$, $y$, and $z$.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>YOUR ANSWER HERE</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989; <strong><font color=red>Question 2:</font></strong> (7pts) Write out the augmented matrix $A$ for the linear equations you set up above, and reduce it to the REF (Row Echelon Form) <strong>(not RREF)</strong> by hand. (Please just provide the REF below, no need to show the intermediate steps)</p>
+<p>&#9989;<strong><font color=red>QUESTION</font></strong>:  What is the distance between points $u$ and $v$ defined above. (put your answer in a variable named <code>d</code>)</p>
 
 </div>
 </div>
@@ -13649,9 +13636,7 @@ $$ M = \left[ \begin{matrix} 1 &amp; 0 &amp; -3 &amp; 0 \\ 2 &amp; 4 &amp; -8 &a
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer here</span>
-<span class="n">A</span> <span class="o">=</span> 
-<span class="n">A_REF</span> <span class="o">=</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here</span>
 </pre></div>
 
     </div>
@@ -13665,33 +13650,8 @@ $$ M = \left[ \begin{matrix} 1 &amp; 0 &amp; -3 &amp; 0 \\ 2 &amp; 4 &amp; -8 &a
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">eq_matrix</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="s1">&#39;bb6c9782ce482b2aea5d41312e9697c4&#39;</span><span class="p">);</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">checkanswer</span><span class="o">.</span><span class="n">eq_matrix</span><span class="p">(</span><span class="n">A_REF</span><span class="p">,</span><span class="s1">&#39;bb6c9782ce482b2aea5d41312e9697c4&#39;</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">checkanswer</span><span class="o">.</span><span class="n">vector</span><span class="p">([</span><span class="n">A_REF</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">A_REF</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">A_REF</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]],</span><span class="s1">&#39;b5021f73f68b6e2f957706af7a39ac75&#39;</span><span class="p">)</span>
+<span class="n">checkanswer</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="s1">&#39;f09106bd6e8d2573f8bcf0a2073a8a24&#39;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -13702,7 +13662,110 @@ $$ M = \left[ \begin{matrix} 1 &amp; 0 &amp; -3 &amp; 0 \\ 2 &amp; 4 &amp; -8 &a
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989; <strong><font color=red>Question 3:</font></strong> (6pts) Use sympy to reduce the augemented matrix $A$ to the <strong>Reduced Row Echelon Form</strong> (RREF). (Hint: check Part 4 of the 05 in-class assignment)</p>
+<hr>
+<p><a name=Vector-spaces-in-Rn></a></p>
+<h1 id="3.-Vector-spaces-in-$R^n$">3. Vector spaces in $R^n$<a class="anchor-link" href="#3.-Vector-spaces-in-$R^n$">&#182;</a></h1><p>There are two properties that define a vector space these are:</p>
+<ul>
+<li>Closed under addition</li>
+<li>Closed under scalar multiplication </li>
+</ul>
+<p>For now we will consider vector spaces in $R^n$ which are just vectors of real numbers (ex: [10,20,3.2], [5,8,32], [8,-0.7], etc) where $n$ is just the length of the vector (ex: 3, 3, and 2 in the earlier example). In the general case a vector does not have to be composed of real numbers but can be almost any type of object as long as it maintains the two above properties, we will get into this concept later in the semester. In the case of real number the above concepts can be described as follows:</p>
+<ul>
+<li>Closed under addition means that if we add any two real vectors vectors (i.e. $u,v \in R^n$) then the result is also in $R^n$). This is easy to understand if you think about adding any two real vectors there is no way to get a result that is not also a real vector. A way to say this mathematically is as follows:</li>
+</ul>
+$$\text{if } u,v \in R^n$$$$\text{then } u+v \in R^n$$<ul>
+<li>Closed under scalar multiplication means that if we have any scalar number ($s \in R$) and we multiply it by a real vector ($v \in R^n$) then the result is also a vector in $R^n$.  Since multiplying a real number by a real number results in a real number this one is also true. Or we can say it as follows:</li>
+</ul>
+$$\text{if } s \in R \text{ and } v \in R^n$$$$\text{then } sv \in R^n$$<p>The following are some properties of vector addition and multiplication for vectors $u$ and $v$:</p>
+<ol>
+<li>$u + v = v + u$ Commutative property</li>
+<li>$u + (v + w) = (u + v) + w$ Associative property</li>
+<li>$u+0 = 0 + u = u$ Property of zero vector</li>
+<li>$u + (-u) = 0$ Property of the negative vector</li>
+<li>$c(u+v) = cu + cv$ Distributive properties</li>
+<li>$(c+d)u = cu+du$ Distributive Properties</li>
+<li>$c(du) = (cd)u$ Distributed Properties</li>
+<li>$1u = u$ Scalar multiplication by 1</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&#9989;<strong><font color=red>QUESTION</font></strong>: Compute the following linear combinations for $u = (1,2), v = (4,-1)$, and $w = (-3,5)$.</p>
+<p><strong><font color=red>(a)</font></strong> $a = u+w$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Put your answer here</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
+
+<span class="n">checkanswer</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="s1">&#39;af464d466ae982f2cd4461af494e86d6&#39;</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><font color=red>(b)</font></strong> $a = 2u+v$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Put your answer here</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
+
+<span class="n">checkanswer</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="s1">&#39;393468eff8c6ba5d27b7d0aa1b18f929&#39;</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><font color=red>(c)</font></strong> $a = u+3w$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Put your answer here</p>
 
 </div>
 </div>
@@ -13712,334 +13775,232 @@ $$ M = \left[ \begin{matrix} 1 &amp; 0 &amp; -3 &amp; 0 \\ 2 &amp; 4 &amp; -8 &a
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer here</span>
-<span class="n">RREF</span> <span class="o">=</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
+
+<span class="n">checkanswer</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="s1">&#39;d5e5ca43a86501bcde09b1cbc0ba49b5&#39;</span><span class="p">);</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<p><a name=Assignment-wrap-up></a></p>
+<h1 id="4.-Assignment-wrap-up">4. Assignment wrap up<a class="anchor-link" href="#4.-Assignment-wrap-up">&#182;</a></h1><p>Please fill out the form that appears when you run the code below.  <strong>You must completely fill this out in order to receive credit for the assignment!</strong></p>
+<p><a href="https://cmse.msu.edu/cmse314-pc-survey">Direct Link to Google Form</a></p>
+<p>If you have trouble with the embedded form, please make sure you log on with your MSU google account at <a href="https://googleapps.msu.edu">googleapps.msu.edu</a> and then click on the direct link above.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&#9989; <font color=red>**Assignment-Specific QUESTION:**</font> What is the distance between (4.5, 2.6, 3.3, 4.1) and (4, 3, 2, 1)?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&#9989; <font color=red>**QUESTION:**</font>  Summarize what you did in this assignment.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&#9989; <font color=red>**QUESTION:**</font>  What questions do you have, if any, about any of the topics discussed in this assignment after working through the jupyter notebook?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&#9989; <font color=red>**QUESTION:**</font>  How well do you feel this assignment helped you to achieve a better understanding of the above mentioned topic(s)?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&#9989; <font color=red>**QUESTION:**</font> What was the <strong>most</strong> challenging part of this assignment for you?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&#9989; <font color=red>**QUESTION:**</font> What was the <strong>least</strong> challenging part of this assignment for you?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&#9989; <font color=red>**QUESTION:**</font>  What kind of additional questions or support, if any, do you feel you need to have a better understanding of the content in this assignment?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&#9989; <font color=red>**QUESTION:**</font>  Do you have any further questions or comments about this material, or anything else that's going on in class?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>&#9989; <font color=red>**QUESTION:**</font> Approximately how long did this pre-class assignment take?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">RREF</span><span class="p">,</span><span class="s1">&#39;bb6c9782ce482b2aea5d41312e9697c4&#39;</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">HTML</span>
+<span class="n">HTML</span><span class="p">(</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&lt;iframe </span>
+<span class="sd">	src=&quot;https://cmse.msu.edu/cmse314-pc-survey&quot; </span>
+<span class="sd">	width=&quot;100%&quot; </span>
+<span class="sd">	height=&quot;1000px&quot; </span>
+<span class="sd">	frameborder=&quot;0&quot; </span>
+<span class="sd">	marginheight=&quot;0&quot; </span>
+<span class="sd">	marginwidth=&quot;0&quot;&gt;</span>
+<span class="sd">	Loading...</span>
+<span class="sd">&lt;/iframe&gt;</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989; <strong><font color=red>Question 4:</font></strong> (3pts) Use the RREF you found in Question 3 to derive the solution to the original linear system.</p>
+<div class="output_wrapper">
+<div class="output">
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Put your answer here</span>
-<span class="n">x</span> <span class="o">=</span> 
-<span class="n">y</span> <span class="o">=</span>
-<span class="n">z</span> <span class="o">=</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
+<div class="output_area">
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">vector</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">],</span><span class="s1">&#39;c550ab8dd2e8d171e88dd545ad653bff&#39;</span><span class="p">);</span>
-</pre></div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
-    </div>
-</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+<iframe 
+	src="https://cmse.msu.edu/cmse314-pc-survey" 
+	width="100%" 
+	height="1000px" 
+	frameborder="0" 
+	marginheight="0" 
+	marginwidth="0">
+	Loading...
+</iframe>
+
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989; <strong><font color=red>Question 5:</font></strong> (3pts) For the RREF you found in Question 3, which part of it  corresponds to an identity matrix?</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>YOUR ANSWER HERE</p>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<p><a name=Starship-Truckers></a></p>
-<h1 id="4.-Starship-Truckers">4. Starship Truckers<a class="anchor-link" href="#4.-Starship-Truckers">&#182;</a></h1><p><img src="https://freesvg.org/img/1528153358.png" width="30%" alt="Rocketship logo to help motivate problem"></p>
-<p>As a member of the intergalactic union of starship truckers you are trying to a little honest industrial espionage and spy on your fellow truckers to see how they are making their money.  The following are commodities that any trucker may be shipping:</p>
-<table>
-<thead><tr>
-<th>Commodity</th>
-<th>Density (mass / volume)</th>
-<th>Profit (Price / mass)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Water</td>
-<td>1000 $kg/m^3$</td>
-<td>4200  $\$ / kg$</td>
-</tr>
-<tr>
-<td>Gold</td>
-<td>19,300 $kg/m^3$</td>
-<td>17000  $\$ / kg$</td>
-</tr>
-<tr>
-<td>Fuel*</td>
-<td>719 $kg/m^3$</td>
-<td>-3100 $\$ / kg$</td>
-</tr>
-<tr>
-<td>vacuum</td>
-<td>0 $kg/m^3$</td>
-<td>0 $\$ / kg$</td>
-</tr>
-</tbody>
-</table>
-<p>* <em><strong>NOTE</strong></em> the fuel profit is negative because it is an expense incurred by the trucker for each run.</p>
-<p>Starship trucks are in categories based on the volume of their hold volume ($S_v$).  Starship trucks are always shipped full when they leave the mining colony and therefore the sum of the volumes of each of the individual commodities must equal the volume of the hold:</p>
-$$W + G + F + V = S_v$$<p>Where $W, G$, and $F$  are the volumes of each of the commodities. The jumpdrive burn rate ($b_r$) is exactly $2.4x10^{-5} m^3 / kg$ no matter the distance.  No starship trucker worth their salt will have any left over fuel so this means we have the following linear relationship. The weight of the entire shipment times the burn rate equals the amount of fuel needed:</p>
-$$\text{Weight}\times b_r = F$$<p>The weight of the entire shipment is just the volume of each individual commodity times it's density ($d_w, d_g, d_f$) plus the weight of the starship truck itself ($S_w$):</p>
-$$\text{Weight} = Wd_w + Gd_g + Fd_f + S_w$$<p>Combining the previous two equations we get:</p>
-$$(Wd_w + Gd_g + Fd_f + S_w)b_r = F$$<p>Notice that the unknown variable $F$ is on both sides of the equation.  To get this equation into a standard linear form we do the following simple algebra (Steps shown for clarity):</p>
-$$Wd_wb_r + Gd_gb_r + Fd_fb_r + S_wb_r = F$$$$Wd_wb_r + Gd_gb_r + Fd_fb_r -F = -S_wb_r$$$$Wd_wb_r + Gd_gb_r + F(d_fb_r - 1) = -S_wb_r$$<p>Profit is determined by the mass of a commodity times the price per kilogram as follows:</p>
-$$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are the profit/mass of the product as listed in the above table. All the above numbers are repeated here for simplicity:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
-<span class="n">sym</span><span class="o">.</span><span class="n">init_printing</span><span class="p">()</span>
-
-<span class="c1">#Numbers from the above table</span>
-<span class="n">dw</span> <span class="o">=</span> <span class="mi">1000</span>   <span class="c1"># kg/m3</span>
-<span class="n">dg</span> <span class="o">=</span> <span class="mi">19300</span>  <span class="c1"># kg/m3</span>
-<span class="n">df</span> <span class="o">=</span> <span class="mi">719</span>    <span class="c1"># kg/m3</span>
-<span class="n">pw</span> <span class="o">=</span> <span class="mi">4200</span>   <span class="c1"># $/kg</span>
-<span class="n">pg</span> <span class="o">=</span> <span class="mi">17000</span>  <span class="c1"># $/kg</span>
-<span class="n">pf</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2100</span>  <span class="c1"># $/kg</span>
-
-<span class="c1"># Burn Rate</span>
-<span class="n">br</span> <span class="o">=</span> <span class="mf">2.4</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mi">5</span> <span class="c1"># m3/kg</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989; <strong><font color=red>Question 1.a:</font></strong> Assume you just finished a shipment with $W = 200 m^3, G = 200 m^3 \text{and } F=100{m^3}$.  What is your ships hold volume (yes, this one is easy)?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here.</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">float</span><span class="p">(</span><span class="n">Sv</span><span class="p">,</span><span class="s1">&#39;02541b7cbb840b5f6bd8eff3c9f56f61&#39;</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989; <strong><font color=red>Question 1.b:</font></strong> In the same run as Question 1.a, what is the maximum weight of your ship ($S_w$)?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">float</span><span class="p">(</span><span class="n">Sw</span><span class="p">,</span><span class="s1">&#39;b6a776fd8d09eafe8954d5aa7cd7740d&#39;</span><span class="p">,</span><span class="n">decimal_accuracy</span><span class="o">=</span><span class="mi">2</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989; <strong><font color=red>Question 1.c:</font></strong> How much money did you earn on the previous run?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">float</span><span class="p">(</span><span class="n">profit</span><span class="p">,</span><span class="s1">&#39;20f32ce6e591e84e398721178c7b8f06&#39;</span><span class="p">,</span><span class="n">decimal_accuracy</span><span class="o">=</span><span class="mi">2</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989; <strong><font color=red>Question 1.d:</font></strong> Now assume that your compeditor (Nan) has a smalish ship of $S_w = 10,000 kg$ and hold size of $S_v = 100m^3$. On Nan's last run they made a profit of 20 billion spacebucks.  Assume that the volumns $W$, $G$ and $F$ are unknown. Write this system of equations $Ax=b$ as an augmented numpy matrix $A$.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">profit</span> <span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span>
-<span class="n">Sb</span> <span class="o">=</span> <span class="mi">10000</span>
-<span class="n">Sv</span> <span class="o">=</span> <span class="mi">100</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your answer to the above question here</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">eq_matrix</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="s1">&#39;ef4af5a1ad087f8838df635139c3236b&#39;</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>&#9989; <strong><font color=red>Question 1.e:</font></strong> In your own words, explain why you can not solve this system of equations above using the Jacobi iterative solver.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>YOUR ANSWER HERE</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Congratulations,-we're-done!">Congratulations, we're done!<a class="anchor-link" href="#Congratulations,-we're-done!">&#182;</a></h3><p>Turn in your assignment using D2L no later than <strong><em>11:59pm on the day of class</em></strong>. See links at the end of this document for access to the class timeline for your section.</p>
+<h3 id="Congratulations,-we're-done!">Congratulations, we're done!<a class="anchor-link" href="#Congratulations,-we're-done!">&#182;</a></h3><p>To get credits for this assignment, you must fill out and submit the above survey form on or before the assignment due date.</p>
 
 </div>
 </div>
@@ -14047,7 +14008,17 @@ $$ Wd_wp_w + Gd_gp_g + Fd_fp_f = \text{profit}$$<p>Where \$p_w, p_g, p_f$ are th
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Written by Dirk Colbry, Michigan State University
+<h3 id="Course-Resources:">Course Resources:<a class="anchor-link" href="#Course-Resources:">&#182;</a></h3><ul>
+<li><a href="http://cmse.msu.edu/mth314">MTH314 Course Website</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Written by Dr. Dirk Colbry, Michigan State University
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
 
 </div>
