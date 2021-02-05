@@ -18,14 +18,14 @@
 | Tue, Feb 2 | [06--Mechanics_pre-class-assignment](06--Mechanics_pre-class-assignment.html) | [ipynb](06--Mechanics_pre-class-assignment.ipynb) |
 | Wed, Feb 3 | [06-Mechanics_in-class-assignment](06-Mechanics_in-class-assignment.html) | [ipynb](06-Mechanics_in-class-assignment.ipynb) |
 | Fri, Feb 5 | [HW1-Systems_of_linear_equations](HW1-Systems_of_linear_equations-STUDENT.html) | [ipynb](HW1-Systems_of_linear_equations-STUDENT.ipynb) |
-| Sun, Feb 7 | 07--Transformations_pre-class-assignment |      |
-| Mon, Feb 8 | 07-Transformations_in-class-assignment |      |
-| Tue, Feb 9 | 08--Robotics_pre-class-assignment |      |
-| Wed, Feb 10 | 08-Quiz1_Instructions |      |
-| Mon, Feb 15 | 08-Robotics_in-class-assignment |      |
+| Sun, Feb 7 | [07--Transformations_pre-class-assignment](07--Transformations_pre-class-assignment.html) | [ipynb](07--Transformations_pre-class-assignment.ipynb) |
+| Mon, Feb 8 | [07-Transformations_in-class-assignment](07-Transformations_in-class-assignment.html) | [ipynb](07-Transformations_in-class-assignment.ipynb) |
+| Tue, Feb 9 | [08--Robotics_pre-class-assignment](08--Robotics_pre-class-assignment.html) | [ipynb](08--Robotics_pre-class-assignment.ipynb) |
+| Wed, Feb 10 | [08-Quiz1_Instructions](08-Quiz1_Instructions.html) | [ipynb](08-Quiz1_Instructions.ipynb) |
+| Mon, Feb 15 | [08-Robotics_in-class-assignment](08-Robotics_in-class-assignment.html) | [ipynb](08-Robotics_in-class-assignment.ipynb) |
 | Tue, Feb 16 | 09--Determinants_pre-class-assignment |      |
 | Wed, Feb 17 | 09-Determinats_in-class-assignment |      |
-| Fri, Feb 19 | Homework 2 |      |
+| Fri, Feb 19 | HW2-Affine_transform | [ipynb](HW2-Affine_transform.ipynb) |
 | Sun, Feb 21 | 10--Eigenproblems_pre-class-assignment |      |
 | Mon, Feb 22 | 10-Eigenproblems_in-class-assignment |      |
 | Tue, Feb 23 | 11--Vector_Spaces_pre-class-assignment |      |
