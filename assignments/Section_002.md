@@ -25,7 +25,7 @@
 | Mon, Feb 15 | [08-Robotics_in-class-assignment](08-Robotics_in-class-assignment.html) | [ipynb](08-Robotics_in-class-assignment.ipynb) |
 | Tue, Feb 16 | 09--Determinants_pre-class-assignment |      |
 | Wed, Feb 17 | 09-Determinats_in-class-assignment |      |
-| Fri, Feb 19 | HW2-Affine_transform | [ipynb](HW2-Affine_transform.ipynb) |
+| Fri, Feb 19 | [HW2-Affine_transform](HW2-Affine_transform-STUDENT.html) | [ipynb](HW2-Affine_transform-STUDENT.ipynb) |
 | Sun, Feb 21 | 10--Eigenproblems_pre-class-assignment |      |
 | Mon, Feb 22 | 10-Eigenproblems_in-class-assignment |      |
 | Tue, Feb 23 | 11--Vector_Spaces_pre-class-assignment |      |
