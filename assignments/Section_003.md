@@ -23,16 +23,16 @@
 | Wed, Feb 10 | [08--Robotics_pre-class-assignment](08--Robotics_pre-class-assignment.html) | [ipynb](08--Robotics_pre-class-assignment.ipynb) |
 | Thu, Feb 11 | [08-Quiz1_Instructions](08-Quiz1_Instructions.html) | [ipynb](08-Quiz1_Instructions.ipynb) |
 | Tue, Feb 16 | [08-Robotics_in-class-assignment](08-Robotics_in-class-assignment.html) | [ipynb](08-Robotics_in-class-assignment.ipynb) |
-| Wed, Feb 17 | 09--Determinants_pre-class-assignment |      |
-| Thu, Feb 18 | 09-Determinats_in-class-assignment |      |
+| Wed, Feb 17 | [09--Determinants_pre-class-assignment](09--Determinants_pre-class-assignment.html) | [ipynb](09--Determinants_pre-class-assignment.ipynb) |
+| Thu, Feb 18 | [09-Determinats_in-class-assignment](09-Determinats_in-class-assignment.html) | [ipynb](09-Determinats_in-class-assignment.ipynb) |
 | Fri, Feb 19 | [HW2-Affine_transform](HW2-Affine_transform-STUDENT.html) | [ipynb](HW2-Affine_transform-STUDENT.ipynb) |
-| Mon, Feb 22 | 10--Eigenproblems_pre-class-assignment |      |
-| Tue, Feb 23 | 10-Eigenproblems_in-class-assignment |      |
-| Wed, Feb 24 | 11--Vector_Spaces_pre-class-assignment |      |
+| Mon, Feb 22 | [10--Eigenproblems_pre-class-assignment](10--Eigenproblems_pre-class-assignment.html) | [ipynb](10--Eigenproblems_pre-class-assignment.ipynb) |
+| Tue, Feb 23 | [10-Eigenproblems_in-class-assignment](10-Eigenproblems_in-class-assignment.html) | [ipynb](10-Eigenproblems_in-class-assignment.ipynb) |
+| Wed, Feb 24 | [11--Vector_Spaces_pre-class-assignment](11--Vector_Spaces_pre-class-assignment.html) | [ipynb](11--Vector_Spaces_pre-class-assignment.ipynb) |
 | Thu, Feb 25 | 11-Quiz2_Instructions |      |
-| Thu, Mar 4 | 11-Vector_Spaces_in-class-assignment |      |
+| Thu, Mar 4 | [11-Vector_Spaces_in-class-assignment](11-Vector_Spaces_in-class-assignment.html) | [ipynb](11-Vector_Spaces_in-class-assignment.ipynb) |
 | Mon, Mar 8 | 12--Change_Basis_pre-class-assignment |      |
-| Tue, Mar 9 | 12-Change_Basis_in-class-assignment |      |
+| Tue, Mar 9 | 12-Changing_vector_space_in-class-assignment |      |
 | Wed, Mar 10 | 13--Projections_pre-class-assignment |      |
 | Thu, Mar 11 | 13-Projections_in-class-assignment |      |
 | Fri, Mar 12 | Homework 3 |      |
