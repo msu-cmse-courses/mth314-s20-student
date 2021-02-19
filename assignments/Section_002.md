@@ -29,13 +29,13 @@
 | Sun, Feb 21 | [10--Eigenproblems_pre-class-assignment](10--Eigenproblems_pre-class-assignment.html) | [ipynb](10--Eigenproblems_pre-class-assignment.ipynb) |
 | Mon, Feb 22 | [10-Eigenproblems_in-class-assignment](10-Eigenproblems_in-class-assignment.html) | [ipynb](10-Eigenproblems_in-class-assignment.ipynb) |
 | Tue, Feb 23 | [11--Vector_Spaces_pre-class-assignment](11--Vector_Spaces_pre-class-assignment.html) | [ipynb](11--Vector_Spaces_pre-class-assignment.ipynb) |
-| Wed, Feb 24 | 11-Quiz2_Instructions |      |
+| Wed, Feb 24 | [11-Quiz2_Instructions](11-Quiz2_Instructions.html) | [ipynb](11-Quiz2_Instructions.ipynb) |
 | Mon, Mar 1 | [11-Vector_Spaces_in-class-assignment](11-Vector_Spaces_in-class-assignment.html) | [ipynb](11-Vector_Spaces_in-class-assignment.ipynb) |
-| Sun, Mar 7 | 12--Change_Basis_pre-class-assignment |      |
-| Mon, Mar 8 | 12-Changing_vector_space_in-class-assignment |      |
-| Tue, Mar 9 | 13--Projections_pre-class-assignment |      |
-| Wed, Mar 10 | 13-Projections_in-class-assignment |      |
-| Fri, Mar 12 | Homework 3 |      |
+| Sun, Mar 7 | [12--Change_Basis_pre-class-assignment](12--Change_Basis_pre-class-assignment.html) | [ipynb](12--Change_Basis_pre-class-assignment.ipynb) |
+| Mon, Mar 8 | [12-Changing_vector_space_in-class-assignment](12-Changing_vector_space_in-class-assignment.html) | [ipynb](12-Changing_vector_space_in-class-assignment.ipynb) |
+| Tue, Mar 9 | [13--Projections_pre-class-assignment](13--Projections_pre-class-assignment.html) | [ipynb](13--Projections_pre-class-assignment.ipynb) |
+| Wed, Mar 10 | [13-Projections_in-class-assignment](13-Projections_in-class-assignment.html) | [ipynb](13-Projections_in-class-assignment.ipynb) |
+| Fri, Mar 12 | HW3-Skin |      |
 | Sun, Mar 14 | 14--Fundamental_Spaces_pre-class-assignment |      |
 | Mon, Mar 15 | 14-Fundamental_Spaces_in-class-assignment |      |
 | Tue, Mar 16 | 15--Diagonalization_pre-class-assignment |      |
