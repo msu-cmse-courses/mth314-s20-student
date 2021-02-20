@@ -35,7 +35,7 @@
 | Mon, Mar 8 | [12-Changing_vector_space_in-class-assignment](12-Changing_vector_space_in-class-assignment.html) | [ipynb](12-Changing_vector_space_in-class-assignment.ipynb) |
 | Tue, Mar 9 | [13--Projections_pre-class-assignment](13--Projections_pre-class-assignment.html) | [ipynb](13--Projections_pre-class-assignment.ipynb) |
 | Wed, Mar 10 | [13-Projections_in-class-assignment](13-Projections_in-class-assignment.html) | [ipynb](13-Projections_in-class-assignment.ipynb) |
-| Fri, Mar 12 | HW3-Skin |      |
+| Fri, Mar 12 | [HW3-Skin](HW3-Skin-STUDENT.html) | [ipynb](HW3-Skin-STUDENT.ipynb) |
 | Sun, Mar 14 | 14--Fundamental_Spaces_pre-class-assignment |      |
 | Mon, Mar 15 | 14-Fundamental_Spaces_in-class-assignment |      |
 | Tue, Mar 16 | 15--Diagonalization_pre-class-assignment |      |
