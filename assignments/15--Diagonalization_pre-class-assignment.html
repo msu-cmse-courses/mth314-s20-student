@@ -14259,13 +14259,13 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a href="13-Projections_in-class-assignment.ipynb">Link to this document's Jupyter Notebook</a></p>
+<p><a href="15--Diagonalization_pre-class-assignment.ipynb">Link to this document's Jupyter Notebook</a></p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In order to successfully complete this assignment you need to participate both individually and in groups during class.   If you attend class in-person then have one of the instructors check your notebook and sign you out before leaving class. If you are attending asynchronously, turn in your assignment using D2L no later than <strong><em>11:59pm on the day of class</em></strong>. See links at the end of this document for access to the class timeline for your section.</p>
+<p>In order to successfully complete this assignment you must do the required reading, watch the provided videos and complete all instructions.  The embedded survey form must be entirely filled out and submitted on or before <strong><em>11:59pm on on the day before class</em></strong>.  Students must come to class the next day prepared to discuss the material covered in this assignment.</p>
 
 </div>
 </div>
@@ -14277,23 +14277,24 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In order to successfully complete this assignment you need to participate both individually and in groups during class.   If you attend class in-person then have one of the instructors check your notebook and sign you out before leaving class. If you are attending asyncronously, turn in your assignment using D2L no later than <strong><em>11:59pm on the day of class</em></strong>. See links at the end of this document for access to the class timeline for your section.</p>
+<h3 id="Readings-for-this-topic-(Recommended-in-bold)">Readings for this topic (Recommended in bold)<a class="anchor-link" href="#Readings-for-this-topic-(Recommended-in-bold)">&#182;</a></h3><ul>
+<li><a href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Heffron Chapter 5 II1-2 pg 388-396</a></li>
+<li><a href="http://linear.ups.edu/download/fcla-3.50-tablet.pdf"><strong><em>Beezer Section SD pg 403-415</em></strong></a></li>
+</ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="In-Class-Assignment:-Projections">In-Class Assignment: Projections<a class="anchor-link" href="#In-Class-Assignment:-Projections">&#182;</a></h1><p><img alt="Graph showing how one vector can be projected onto another vector by forming a right triangle" src="https://upload.wikimedia.org/wikipedia/commons/9/98/Projection_and_rejection.png" width="50%"></p>
-<p>Image from: <a href="https://en.wikipedia.org/wiki/Vector_projection">https://en.wikipedia.org/wiki/Vector_projection</a></p>
-
+<h1 id="Pre-Class-Assignment:-Diagonalization-and-Powers">Pre-Class Assignment: Diagonalization and Powers<a class="anchor-link" href="#Pre-Class-Assignment:-Diagonalization-and-Powers">&#182;</a></h1>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Agenda-for-today's-class-(80-minutes)">Agenda for today's class (80 minutes)<a class="anchor-link" href="#Agenda-for-today's-class-(80-minutes)">&#182;</a></h3><ol>
-<li><a href="#Quiz_4_Review">(20 minutes) Pre-Class Review</a></li>
-<li><a href="#Understanding_Projections_with_Code">(30 minutes) Understanding Projections with Code</a></li>
-<li><a href="#Gram-Schmidt_Orthoganalization_Process">(30 minutes) Gram-Schmidt Orthoganalization Process</a></li>
+<h1 id="Goals-for-today's-pre-class-assignment">Goals for today's pre-class assignment<a class="anchor-link" href="#Goals-for-today's-pre-class-assignment">&#182;</a></h1><ol>
+<li><a href="#Eigenvalues_and_eigenvectors_review">Eigenvalues and eigenvectors review</a></li>
+<li><a href="#Diagonalizable_Matrix">Diagonalizable Matrix</a></li>
+<li><a href="#Assignment_wrap-up">Assignment wrap-up</a></li>
 </ol>
 
 </div>
@@ -14301,20 +14302,40 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<p><a name="Quiz_4_Review"></a></p>
-<h1 id="1.-Pre-class-Review">1. Pre-class Review<a class="anchor-link" href="#1.-Pre-class-Review">&#182;</a></h1><ul>
-<li><a href="13--Projections_pre-class-assignment.ipynb">13--Projections_pre-class-assignment</a></li>
-</ul>
+<p><a name="Eigenvalues_and_eigenvectors_review"></a></p>
+<h1 id="1.-Eigenvalues-and-eigenvectors-review">1. Eigenvalues and eigenvectors review<a class="anchor-link" href="#1.-Eigenvalues-and-eigenvectors-review">&#182;</a></h1><p><strong>Definition</strong>: A non-zero vector $x$ in $R^n$ is called an <em>eigenvector</em> of a $n\times n$ matrix $A$ if $Ax$ is a scalar multiple of $x$. If $Ax = \lambda x$, then $\lambda$ is called the <em>eigenvalue</em> of $A$ corresponding to $x$.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr>
-<p><a name="Understanding_Projections_with_Code"></a></p>
-<h1 id="2.-Understanding-Projections-With-Code">2. Understanding Projections With Code<a class="anchor-link" href="#2.-Understanding-Projections-With-Code">&#182;</a></h1><p>In this in-class assignment, we are going to avoid some of the more advanced libraries ((i.e. no <code>numpy</code> or <code>scipy</code> or <code>sympy</code>) to try to get a better understanding about what is going on in the math. 
-The following code implements some common linear algebra functions:</p>
+<h3 id="Steps-for-finding-the-eigenvalues-and-eigenvectors">Steps for finding the eigenvalues and eigenvectors<a class="anchor-link" href="#Steps-for-finding-the-eigenvalues-and-eigenvectors">&#182;</a></h3><p>We want to find $\lambda$ and non-zero vector $x$ such that $Ax=\lambda x$ for a $n\times n$ matrix.</p>
+<ol>
+<li>We introduce an identity matrix $I$ of $n\times n$. Then the equation becomes
+$$Ax = \lambda I x$$
+$$Ax-\lambda I x = 0$$
+$$(A-\lambda I)x = 0$$</li>
+<li>This suggests that we want to find $\lambda$ such that $(A-\lambda I)x=0$ has a non-trivial solution. 
+It is equivalent to that the matrix $A-\lambda I$ is singular, i.e., has a determinant of $0$.
+$$|A-\lambda I|=0$$</li>
+<li>The determinant is polynomial in $\lambda$ (called the characteristic polynomial of $A$) with degree $n$. We solve this equation (called the characteristic equation) for all possible $\lambda$ (eigenvalues).</li>
+<li>After finding the eigenvalues, we substitute them back into 
+$$(A-\lambda I)x=0$$
+and find the eigenvectors $x$. </li>
+</ol>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Let's calculate eigenvalues for the following matrix:</p>
+$$ A=\begin{bmatrix} 0 &amp; 0 &amp; -2 \\ 1 &amp; 2 &amp; 1 \\ 1 &amp; 0 &amp; 3 \end{bmatrix}$$
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Find-eigenvalues">Find eigenvalues<a class="anchor-link" href="#Find-eigenvalues">&#182;</a></h4><p>Looking at the above recipe, let's solve the problem symbollically using <code>sympy</code>. First lets create a matrix $B$ such that:</p>
+$$B = A-\lambda I$$
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -14322,9 +14343,11 @@ The following code implements some common linear algebra functions:</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Standard Python Libraries only</span>
-<span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">import</span> <span class="nn">copy</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">init_printing</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14332,18 +14355,22 @@ The following code implements some common linear algebra functions:</p>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">dot</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;Calculate the dot product between vectors u and v&#39;&#39;&#39;</span>
-    <span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">u</span><span class="p">)):</span>
-        <span class="n">temp</span> <span class="o">+=</span> <span class="n">u</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">temp</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Most sympy requires defeing the variables as &quot;symbols&quot;</span>
+<span class="c1">#Once we do this we can use the variables in place of numbers</span>
+<span class="n">lam</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;lambda&#39;</span><span class="p">)</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="n">A</span> <span class="o">-</span> <span class="n">lam</span><span class="o">*</span><span class="n">I</span>
+
+<span class="n">B</span>
 </pre></div>
 
      </div>
@@ -14351,26 +14378,42 @@ The following code implements some common linear algebra functions:</p>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+$\displaystyle \left[\begin{matrix}- \lambda &amp; 0 &amp; -2\\1 &amp; 2 - \lambda &amp; 1\\1 &amp; 0 &amp; 3 - \lambda\end{matrix}\right]$
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Now, per step 2, the determinate of $B$ must be zero. Note that <code>sympy</code> calculates the determinate symbollically as follows:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;Calculate the matrix multiplication between m1 and m2 represented as list-of-list.&#39;&#39;&#39;</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m2</span><span class="p">)</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">m1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">!=</span> <span class="n">d</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ERROR - inner dimentions not equal&quot;</span><span class="p">)</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">)]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
-                <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">m1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">m2</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">result</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">B</span><span class="o">.</span><span class="n">det</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14378,17 +14421,42 @@ The following code implements some common linear algebra functions:</p>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+$\displaystyle - \lambda^{3} + 5 \lambda^{2} - 8 \lambda + 4$
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>Do This:</font></strong>  Using the <code>sympy.solve</code> function on the determinate of $B$ to solve for <code>lam</code> ($\lambda$). Verify that the solution to the last question produces the same eigenvalues as above.</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">add_vectors</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span><span class="n">v2</span><span class="p">):</span>
-    <span class="n">v3</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">v1</span><span class="p">)):</span>
-        <span class="n">v3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">v2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">v3</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Put your code to solve for det(B) = 0 here</span>
 </pre></div>
 
      </div>
@@ -14396,17 +14464,19 @@ The following code implements some common linear algebra functions:</p>
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>Do This:</font></strong>  First, let's use the built in funciton <code>eigenvals</code> function in <code>sympy</code> to calculate the eigenvalues. Find out the meaning of the output.</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sub_vectors</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span><span class="n">v2</span><span class="p">):</span>
-    <span class="n">v3</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">v1</span><span class="p">)):</span>
-        <span class="n">v3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">v2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">v3</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Put your code here</span>
 </pre></div>
 
      </div>
@@ -14414,42 +14484,26 @@ The following code implements some common linear algebra functions:</p>
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Explain your output here.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Find-eigenvectors">Find eigenvectors<a class="anchor-link" href="#Find-eigenvectors">&#182;</a></h4><p>Now we know the eigenvalues, we can substitue them back into the equation to find the eigenvectors.<br>
+We solve this symbollically using <code>sympy</code>. First let's make a vector of our eigenvalues (from above):</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">norm</span><span class="p">(</span><span class="n">u</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;Calculate the norm of vector u&#39;&#39;&#39;</span>
-    <span class="n">nm</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">u</span><span class="p">)):</span>
-        <span class="n">nm</span> <span class="o">+=</span> <span class="n">u</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">u</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">transpose</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;Calculate the transpose of matrix A represented as list of lists&#39;&#39;&#39;</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">AT</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>    
-        <span class="n">temp</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-            <span class="n">temp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
-        <span class="n">AT</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">AT</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">eig</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -14460,105 +14514,58 @@ The following code implements some common linear algebra functions:</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Projection-function">Projection function<a class="anchor-link" href="#Projection-function">&#182;</a></h2><p>&#9989; <strong><font color=red>DO THIS:</font></strong> Write a function that projects vector $v$ onto vector $u$. 
-Do not use the numpy library. 
-Instead use the functions provided above:</p>
-$$\mbox{proj}_u v = \frac{v \cdot u}{u \cdot u} u$$<p>Make sure this function will work for any size of $v$ and $u$.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">proj</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">u</span><span class="p">):</span>
-    <span class="c1">## Put your code here</span>
-    <span class="k">return</span> <span class="n">pv</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Let's test your function. Below are two example vectors. Make sure you get the correct answers. 
-You may want to test this code with more than one set of vectors.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-<span class="n">v</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">proj</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="kn">import</span> <span class="n">checkanswer</span>
-
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">proj</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">),</span><span class="s1">&#39;53216508af49c616fa0f4e9676ce3b9d&#39;</span><span class="p">);</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Visualizing-projections">Visualizing projections<a class="anchor-link" href="#Visualizing-projections">&#182;</a></h3><p>&#9989; <strong><font color=red>DO THIS:</font></strong>See if you can design and implement a small function that takes two vectors ($a$ and $b$) as inputs and generates a figure similar to the one above.</p>
-<p>I.e. a black line from the origin to "$b$", a black line from origin to "$a$"; a green line showing the "$a$" component in the "$b$" direction and a red line showing the "$a$" component orthogonal to the green line. 
-Also see section titled "Projection of One Vector onto Another Vector" in Section 4.6 on page 258 of the book.</p>
-<p>When complete, show your solution to the instructor.</p>
+<p>Now (per step 4 above) we need to solve the equation $(A-\lambda I)x=0$. One way to do this in <code>sympy</code> is as follows:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">x3</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">([</span><span class="s1">&#39;x_1&#39;</span><span class="p">,</span><span class="s1">&#39;x_2&#39;</span><span class="p">,</span><span class="s1">&#39;x_3&#39;</span><span class="p">])</span>
 
-<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="n">x1</span><span class="p">],[</span><span class="n">x2</span><span class="p">],[</span><span class="n">x3</span><span class="p">]])</span>
+<span class="n">x</span>
+</pre></div>
 
-<span class="k">def</span> <span class="nf">show_projection</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> 
-            <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">),</span> <span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;axes fraction&#39;</span><span class="p">,</span>
-            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
-            <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> 
-            <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">),</span> <span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;axes fraction&#39;</span><span class="p">,</span>
-            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
-            <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
     
-<span class="c1">#Finish your code here</span>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
-    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-    
-<span class="n">x</span> <span class="o">=</span> <span class="n">show_projection</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="p">;</span>
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+$\displaystyle \left[\begin{matrix}x_{1}\\x_{2}\\x_{3}\end{matrix}\right]$
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">lam</span> <span class="ow">in</span> <span class="n">eig</span><span class="p">:</span>
+    <span class="n">vec</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">A</span> <span class="o">-</span> <span class="n">lam</span><span class="o">*</span><span class="n">I</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14577,14 +14584,11 @@ Also see section titled "Projection of One Vector onto Another Vector" in Sectio
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-
-<div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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
-"
->
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>{x_2: x_3, x_1: -2*x_3}
+{x_1: -x_3}
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -14594,38 +14598,183 @@ Also see section titled "Projection of One Vector onto Another Vector" in Sectio
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr>
-<p><a name="Gram-Schmidt_Orthoganalization_Process"></a></p>
-<h1 id="3.-Gram-Schmidt-Orthoganalization-Process">3. Gram-Schmidt Orthoganalization Process<a class="anchor-link" href="#3.-Gram-Schmidt-Orthoganalization-Process">&#182;</a></h1><p>&#9989; <strong><font color=red>DO THIS:</font></strong> Implement the Gram-Schmidt orthoganalization process from the <a href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Hefron</a> textbook (page 282). 
-This function takes a $m \times n$ Matrix $A$ with linearly independent columns as input and return a $m \times n$ Matrix $G$ with orthogonal column vectors. 
-The basic algorithm works as follows:</p>
-<ul>
-<li><code>AT = transpose(A)</code> (this process works with the columns of the matrix so it is easier to work with the transpose. Think about a list of list, it is easy to get a row (a list)).  </li>
-<li>Make a new empty list of the same size as <code>AT</code> and call it <code>GT</code> (G transpose)</li>
-<li><p>Loop index <code>i</code> over all of the rows in AT (i.e. columns of A)</p>
-<ul>
-<li><code>GT[i] = AT[i]</code></li>
-<li>Loop index <code>j</code> from 0 to <code>i</code><ul>
-<li><code>GT[i] -= proj(GT[i], GT[j])</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><code>G = transpose(GT)</code></li>
-</ul>
-<p>Use the following function definition as a template:</p>
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong>  Explain your output here. (Hint, you can also try the <code>rref</code> to find the solutions)</p>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>Do This:</font></strong>  Next, let's use the <code>eigenvects</code>  function in <code>sympy</code> to find three linear independent eigenvectors for the matrix $A$?</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Put your answer to the above question here</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong>  Compare this answer to the eigenvectors we calculated above. Does this answer make sense?  What does the syntax tell us?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Find the eigenvalues and eigenvectors of the following matrix:
+$$ A2=\begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 2 \end{bmatrix}$$</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong>  What are the eigenvalues for the matrix $A2$?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong>  What are the eigenvectors for the matrix $A2$?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<p><a name="Diagonalizable_Matrix"></a></p>
+<h1 id="2.-Diagonalizable-Matrix">2. Diagonalizable Matrix<a class="anchor-link" href="#2.-Diagonalizable-Matrix">&#182;</a></h1><p>In class we will be using matrix diagonalization to solve some problems.</p>
+<p>Matrix $A$ is diagonalizable if there exists a diagonal matrix $D$ that is similar similar to $A$:</p>
+$$ D = C^{-1}AC$$<p>If matrix $A$ has linearly independent eigenvectors ($v_1, \ldots v_n$) then $A$ is diagonalizable with the following solution:</p>
+$$C = \left[ v_1^T, \ldots, v_n^T \right]$$<p>In other words, each column of $C$ is a linearly independent eigenvector of $A$. The diagonal matrix $D$ is</p>
+$$ D = 
+\left[
+\begin{matrix}
+    \lambda_1  &amp; 0  &amp; 0 \\
+    0   &amp; \ddots &amp; 0  \\
+    0   &amp; 0 &amp; \lambda_n 
+\end{matrix}
+\right] 
+$$<p>In other-other words, $D$ consists of the corresponding eigenvalues.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">init_printing</span><span class="p">(</span><span class="n">use_unicode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Using <code>numpy</code>, Diagonalize (i.e. calculate  C and D) the following matrix:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]])</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+$\displaystyle \left[\begin{matrix}5 &amp; -2 &amp; 2\\4 &amp; -3 &amp; 4\\4 &amp; -6 &amp; 7\end{matrix}\right]$
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">GramSchmidt</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">G</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Put your answer here</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="kn">import</span> <span class="n">checkanswer</span>
+
+<span class="n">checkanswer</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="s1">&#39;56821475223b52e0b6e751da444a1441&#39;</span><span class="p">);</span>
 </pre></div>
 
      </div>
@@ -14636,35 +14785,16 @@ The basic algorithm works as follows:</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Here, we are going to test your function using the vectors:</p>
+<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Verify that $A$ is in fact Diagonalizable by calculating $D2 = C^{-1}AC$ and comparing it to your original $D$ using <code>np.allclose</code>.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A4</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">]]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">transpose</span><span class="p">(</span><span class="n">A4</span><span class="p">))</span>
-<span class="n">G4</span> <span class="o">=</span> <span class="n">GramSchmidt</span><span class="p">(</span><span class="n">A4</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">transpose</span><span class="p">(</span><span class="n">G4</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="kn">import</span> <span class="n">checkanswer</span>
-
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">G4</span><span class="p">,</span><span class="s1">&#39;a472a81eef411c0df03ae9a072dfa040&#39;</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Put your verificaiton code here.</span>
 </pre></div>
 
      </div>
@@ -14678,26 +14808,7 @@ The basic algorithm works as follows:</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A2</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">6</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">transpose</span><span class="p">(</span><span class="n">A2</span><span class="p">))</span>
-<span class="n">G2</span> <span class="o">=</span> <span class="n">GramSchmidt</span><span class="p">(</span><span class="n">A2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">transpose</span><span class="p">(</span><span class="n">G2</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="kn">import</span> <span class="n">checkanswer</span>
-
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">G2</span><span class="p">,</span><span class="s1">&#39;23b9860b72dbe5b84d7c598c08af9688&#39;</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">D2</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14708,21 +14819,198 @@ The basic algorithm works as follows:</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989; <strong><font color=red>QUESTION:</font></strong> What is the Big-O complexity of the Gram-Schmidt process?</p>
+<h2 id="Diagonalization-of-Symmetric-Matrices">Diagonalization of Symmetric Matrices<a class="anchor-link" href="#Diagonalization-of-Symmetric-Matrices">&#182;</a></h2><p>One special case is Symmetric Matrices.  It can be shown that symmetric Matrices are Diagonalizable and the resulting eigenvectors are not only linearly independent but also orthogonal.    Since this is true, the equation changes to:</p>
+$$ D = C^{T}AC$$<p>&#9989; <strong><font color=red>QUESTION:</font></strong> Why do we care if $C$ is orthogonal?  What advantages does the above equation give us?</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Put your answer here</p>
+<p>Put your answer to the above question here.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h3 id="Congratulations,-we're-done!">Congratulations, we're done!<a class="anchor-link" href="#Congratulations,-we're-done!">&#182;</a></h3><p>If you attend class in-person then have one of the instructors check your notebook and sign you out before leaving class. If you are attending asynchronously, turn in your assignment using D2L.</p>
+<p><a name="Assignment_wrap-up"></a></p>
+<h1 id="3.-Assignment-wrap-up">3. Assignment wrap-up<a class="anchor-link" href="#3.-Assignment-wrap-up">&#182;</a></h1><p>Please fill out the form that appears when you run the code below.  <strong>You must completely fill this out in order to receive credit for the assignment!</strong></p>
+<p><a href="https://cmse.msu.edu/cmse314-pc-survey">Direct Link to Google Form</a></p>
+<p>If you have trouble with the embedded form, please make sure you log on with your MSU google account at <a href="https://googleapps.msu.edu">googleapps.msu.edu</a> and then click on the direct link above.</p>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>Assignment-Specific QUESTION:</font></strong> Why do we care if $C$ is orthogonal?  What advantages does the above equation give us?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong>  Summarize what you did in this assignment.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong>  What questions do you have, if any, about any of the topics discussed in this assignment after working through the jupyter notebook?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong>  How well do you feel this assignment helped you to achieve a better understanding of the above mentioned topic(s)?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong> What was the <strong>most</strong> challenging part of this assignment for you?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong> What was the <strong>least</strong> challenging part of this assignment for you?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong>  What kind of additional questions or support, if any, do you feel you need to have a better understanding of the content in this assignment?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong>  Do you have any further questions or comments about this material, or anything else that's going on in class?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong> Approximately how long did this pre-class assignment take?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="n">HTML</span><span class="p">(</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&lt;iframe </span>
+<span class="sd">	src=&quot;https://cmse.msu.edu/cmse314-pc-survey&quot; </span>
+<span class="sd">	width=&quot;100%&quot; </span>
+<span class="sd">	height=&quot;1000px&quot; </span>
+<span class="sd">	frameborder=&quot;0&quot; </span>
+<span class="sd">	marginheight=&quot;0&quot; </span>
+<span class="sd">	marginwidth=&quot;0&quot;&gt;</span>
+<span class="sd">	Loading...</span>
+<span class="sd">&lt;/iframe&gt;</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+
+<iframe 
+	src="https://cmse.msu.edu/cmse314-pc-survey" 
+	width="100%" 
+	height="1000px" 
+	frameborder="0" 
+	marginheight="0" 
+	marginwidth="0">
+	Loading...
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h3 id="Congratulations,-we're-done!">Congratulations, we're done!<a class="anchor-link" href="#Congratulations,-we're-done!">&#182;</a></h3>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14730,6 +15018,12 @@ The basic algorithm works as follows:</p>
 <h3 id="Course-Resources:">Course Resources:<a class="anchor-link" href="#Course-Resources:">&#182;</a></h3><ul>
 <li><a href="http://cmse.msu.edu/mth314">MTH314 Course Website</a></li>
 </ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
 
 </div>
 </div>
