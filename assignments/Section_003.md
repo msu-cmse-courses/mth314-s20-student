@@ -39,10 +39,10 @@
 | Mon, Mar 15 | [14--Fundamental_Spaces_pre-class-assignment](14--Fundamental_Spaces_pre-class-assignment.html) | [ipynb](14--Fundamental_Spaces_pre-class-assignment.ipynb) |
 | Tue, Mar 16 | [14-Fundamental_Spaces_in-class-assignment](14-Fundamental_Spaces_in-class-assignment.html) | [ipynb](14-Fundamental_Spaces_in-class-assignment.ipynb) |
 | Wed, Mar 17 | [15--Diagonalization_pre-class-assignment](15--Diagonalization_pre-class-assignment.html) | [ipynb](15--Diagonalization_pre-class-assignment.ipynb) |
-| Thu, Mar 18 | 15-Quiz3_Instructions |      |
+| Thu, Mar 18 | [15-Quiz3_Instructions](15-Quiz3_Instructions.html) | [ipynb](15-Quiz3_Instructions.ipynb) |
 | Tue, Mar 23 | [15-Diagonalization_in-class-assignment](15-Diagonalization_in-class-assignment.html) | [ipynb](15-Diagonalization_in-class-assignment.ipynb) |
-| Wed, Mar 24 | 16--Linear_Dynamical_Systems_pre-class-assignment |      |
-| Thu, Mar 25 | 16-Linear_Dynamical_Systems_in-class-assignment |      |
+| Wed, Mar 24 | [16--Linear_Dynamical_Systems_pre-class-assignment](16--Linear_Dynamical_Systems_pre-class-assignment.html) | [ipynb](16--Linear_Dynamical_Systems_pre-class-assignment.ipynb) |
+| Thu, Mar 25 | [16-Linear_Dynamical_Systems_in-class-assignment](16-Linear_Dynamical_Systems_in-class-assignment.html) | [ipynb](16-Linear_Dynamical_Systems_in-class-assignment.ipynb) |
 | Fri, Mar 26 | Homework 4 |      |
 | Mon, Mar 29 | 17--Decompositions_pre-class-assignment |      |
 | Tue, Mar 30 | 17-Decompositions_in-class-assignment |      |
