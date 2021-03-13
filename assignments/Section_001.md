@@ -43,7 +43,7 @@
 | Tue, Mar 23 | [15-Diagonalization_in-class-assignment](15-Diagonalization_in-class-assignment.html) | [ipynb](15-Diagonalization_in-class-assignment.ipynb) |
 | Wed, Mar 24 | [16--Linear_Dynamical_Systems_pre-class-assignment](16--Linear_Dynamical_Systems_pre-class-assignment.html) | [ipynb](16--Linear_Dynamical_Systems_pre-class-assignment.ipynb) |
 | Thu, Mar 25 | [16-Linear_Dynamical_Systems_in-class-assignment](16-Linear_Dynamical_Systems_in-class-assignment.html) | [ipynb](16-Linear_Dynamical_Systems_in-class-assignment.ipynb) |
-| Fri, Mar 26 | Homework 4 |      |
+| Fri, Mar 26 | [HW4-Quiz_Practice](HW4-Quiz_Practice-STUDENT.html) | [ipynb](HW4-Quiz_Practice-STUDENT.ipynb) |
 | Mon, Mar 29 | 17--Decompositions_pre-class-assignment |      |
 | Tue, Mar 30 | 17-Decompositions_in-class-assignment |      |
 | Wed, Mar 31 | 18--Inner_Product_pre-class-assignment |      |
