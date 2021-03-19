@@ -44,11 +44,11 @@
 | Tue, Mar 23 | [16--Linear_Dynamical_Systems_pre-class-assignment](16--Linear_Dynamical_Systems_pre-class-assignment.html) | [ipynb](16--Linear_Dynamical_Systems_pre-class-assignment.ipynb) |
 | Wed, Mar 24 | [16-Linear_Dynamical_Systems_in-class-assignment](16-Linear_Dynamical_Systems_in-class-assignment.html) | [ipynb](16-Linear_Dynamical_Systems_in-class-assignment.ipynb) |
 | Thu, Mar 25 | [HW4-Quiz_Practice](HW4-Quiz_Practice-STUDENT.html) | [ipynb](HW4-Quiz_Practice-STUDENT.ipynb) |
-| Sun, Mar 28 | 17--Decompositions_pre-class-assignment |      |
-| Mon, Mar 29 | 17-Decompositions_in-class-assignment |      |
-| Wed, Mar 31 | 18--Inner_Product_pre-class-assignment |      |
+| Sun, Mar 28 | [17--Decompositions_pre-class-assignment](17--Decompositions_pre-class-assignment.html) | [ipynb](17--Decompositions_pre-class-assignment.ipynb) |
+| Mon, Mar 29 | [17-Decompositions_in-class-assignment](17-Decompositions_in-class-assignment.html) | [ipynb](17-Decompositions_in-class-assignment.ipynb) |
+| Wed, Mar 31 | [18--Inner_Product_pre-class-assignment](18--Inner_Product_pre-class-assignment.html) | [ipynb](18--Inner_Product_pre-class-assignment.ipynb) |
 | Wed, Mar 31 | 18-Quiz4_Instructions |      |
-| Mon, Apr 5 | 18-Inner_Product_in-class-assignment |      |
+| Mon, Apr 5 | [18-Inner_Product_in-class-assignment](18-Inner_Product_in-class-assignment.html) | [ipynb](18-Inner_Product_in-class-assignment.ipynb) |
 | Tue, Apr 6 | 19--LSF_pre-class-assignment |      |
 | Wed, Apr 7 | 19-LSF_in-class-assignment |      |
 | Fri, Apr 9 | Homework 5 |      |
