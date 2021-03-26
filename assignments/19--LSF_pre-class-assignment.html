@@ -14259,41 +14259,45 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a href="17-Decompositions_in-class-assignment.ipynb">Link to this document's Jupyter Notebook</a></p>
+<p><a href="19--LSF_pre-class-assignment.ipynb">Link to this document's Jupyter Notebook</a></p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In order to successfully complete this assignment you need to participate both individually and in groups during class.   If you attend class in-person then have one of the instructors check your notebook and sign you out before leaving class. If you are attending asynchronously, turn in your assignment using D2L no later than <strong><em>11:59pm on the day of class</em></strong>. See links at the end of this document for access to the class timeline for your section.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In order to successfully complete this assignment you need to participate both individually and in groups during class.   If you attend class in-person then have one of the instructors check your notebook and sign you out before leaving class. If you are attending asyncronously, turn in your assignment using D2L no later than <strong><em>11:59pm on the day of class</em></strong>. See links at the end of this document for access to the class timeline for your section.</p>
+<p>In order to successfully complete this assignment you must do the required reading, watch the provided videos and complete all instructions.  The embedded survey form must be entirely filled out and submitted on or before <strong><em>11:59pm on on the day before class</em></strong>.  Students must come to class the next day prepared to discuss the material covered in this assignment.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h1 id="In-Class-Assignment:-Decompositions-and-Gaussian-Elimination">In-Class Assignment: Decompositions and Gaussian Elimination<a class="anchor-link" href="#In-Class-Assignment:-Decompositions-and-Gaussian-Elimination">&#182;</a></h1>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Agenda-for-today's-class-(80-minutes)">Agenda for today's class (80 minutes)<a class="anchor-link" href="#Agenda-for-today's-class-(80-minutes)">&#182;</a></h3><p>&lt;/p&gt;</p>
+<h3 id="Readings-for-this-topic-(Recommended-in-bold)">Readings for this topic (Recommended in bold)<a class="anchor-link" href="#Readings-for-this-topic-(Recommended-in-bold)">&#182;</a></h3><ul>
+<li><a href="http://joshua.smcvt.edu/linearalgebra/book.pdf">Heffron Chapter 3 pg 287-292</a></li>
+<li><a href="http://vmls-book.stanford.edu/vmls.pdf"><strong><em>Boyd Chapter 13 pg 225-239</em></strong></a></li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Pre-Class-Assignment:-Least-Squares-Fit-(Regression)">Pre-Class Assignment: Least Squares Fit (Regression)<a class="anchor-link" href="#Pre-Class-Assignment:-Least-Squares-Fit-(Regression)">&#182;</a></h1>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Goals-for-today's-pre-class-assignment">Goals for today's pre-class assignment<a class="anchor-link" href="#Goals-for-today's-pre-class-assignment">&#182;</a></h1><p>&lt;/p&gt;</p>
 <ol>
-<li><a href="#Pre-class_Review">(20 minutes) Pre-class Review</a></li>
-<li><a href="#Decompositions">(10 minutes) Decompositions</a></li>
-<li><a href="#LU">(50 minutes) LU Decomposition</a></li>
+<li><a href="#Least_Squares_Fit">Least Squares Fit</a></li>
+<li><a href="#Linear_Regression">Linear Regression</a></li>
+<li><a href="#One-to-one_and_Inverse_transform">One-to-one and Inverse transform</a></li>
+<li><a href="#Inverse_of_a_Matrix">Inverse of a Matrix</a></li>
+<li><a href="#Assignment_Wrap-up">Assignment Wrap-up</a></li>
 </ol>
 
 </div>
@@ -14301,203 +14305,71 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<p><a name="Pre-class_Review"></a></p>
-<h1 id="1.-Pre-Class-Review">1. Pre-Class Review<a class="anchor-link" href="#1.-Pre-Class-Review">&#182;</a></h1><ul>
-<li><a href="17--Decompositions_pre-class-assignment.ipynb">17--Decompositions_pre-class-assignment</a></li>
+<p><a name="Least_Squares_Fit"></a></p>
+<h1 id="1.-Least-Squares-Fit">1. Least Squares Fit<a class="anchor-link" href="#1.-Least-Squares-Fit">&#182;</a></h1><p><strong>Review Chapters Chapter 13 pg 225-239 of the Boyd textbook.</strong></p>
+<p>In this first part of this course, we try to solve the system of linear equations $Ax=b$ with an $m\times n$ matrix $A$ and a column vector $b$.</p>
+<p>There are three possible outcomes: an unique solution, no solution, and infinite many solutions. 
+(Review the material on this part if you are no familiar with when the three types of outcomes happen.)</p>
+<p>When $m&lt;n$, we call the matrix $A$ underdeterminated, because we can not have an unique solution for it. 
+When $m&gt;n$, we call the matrix $A$ overdeterminated, becasue we may not have a solution with high probability.</p>
+<p>However, if we still need to find a best $x$, even when there is no solution or infinite many solutions we use a technique called least squares fit (LSF). Least squares fit find $x$ such that $\|Ax-b\|$ is the smallest (i.e. we try to minimize the estimation error).</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>When there is no solution, we want to find $x$ such that $Ax-b$ is small (here, we want $\|Ax-b\|$ to be small). </li>
+<li>If the null space of $A$ is just $\{0\}$, we can find an unique $x$ to obtain the smallest $\|Ax-b\|$.<ul>
+<li>If there is a unique solution $x^*$ for $Ax=b$, then $x^*$ is the optimal $x$ to obtain the smallest $\|Ax-b\|$, which is 0.</li>
+<li>Because the null space of $A$ is just $\{0\}$, you can not have infinite many solutions for $Ax=b$.</li>
 </ul>
+</li>
+<li>If the null space of $A$ is not just $\{0\}$, we know that we can always add a nonzero point $x_0$ in the null space of $A$ to a best $x^*$, and $\|A(x^*+x_0)-b\|=\|Ax^*-b\|$. Therefore, when we have multiple best solutions, we choose to find the $x$ in the rowspace of $A$, and this is unique. </li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong><font color=red>QUESTION 1:</font></strong> Let $$A=\begin{bmatrix}1\\2\end{bmatrix},\quad b=\begin{bmatrix}1.5 \\ 2\end{bmatrix}$$
+Find the best $x$ such that $\|Ax-b\|$ has the smallest value.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong><font color=red>QUESTION 2:</font></strong> Compute $(A^\top A)^{-1}A^\top b$.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<p><a name="Decompositions"></a></p>
-<h1 id="2.-Decompositions">2. Decompositions<a class="anchor-link" href="#2.-Decompositions">&#182;</a></h1><p><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Diagonalization_as_rotation.gif" alt="image showing how a matris is just a change of basis "></p>
-<p>Animiated Image from Wikipedia: <a href="https://wikipedia.org/">https://wikipedia.org/</a></p>
-<p>In numerical linear algebra, we factorize matrices to facilitate efficient and/or accurate computations. There are many possible <strong>matrix decompositions</strong>. Some, e.g., the eigendecomposition, require the matrix to be square, while others, e.g., the $QR$ factorization, exist for arbitrary matrices. Among all possible decompositions (also called <em>factorizations</em>), some common examples include:</p>
-<ul>
-<li><strong>QR Factorization</strong> from Gram-Schmidt orthogonization: <ul>
-<li>$A = QR$</li>
-<li>$Q$ has orthonormal columns and $R$ is a upper-triangular matrix </li>
-<li>If there are zero rows in $R$, we can reduce the number of columns in $Q$</li>
-<li>Exists for arbitrary matrices</li>
-</ul>
-</li>
-<li><strong>LU / LDU Decomposition</strong> from Gauss Elimination: <ul>
-<li>$A = LU$ or $A = LDU$</li>
-<li>$L$ is lower-triangular, $U$ is upper-triangular, and $D$ is diagonal </li>
-<li>Exists for <strong>square</strong> matrices</li>
-<li>Is <em>related to Gaussian Elimination</em> </li>
-</ul>
-</li>
-<li><strong>Cholesky Decomposition</strong>: <ul>
-<li>$A = R^TR\quad (= LDL^T)$</li>
-<li>$R$ is upper-triangular </li>
-<li>Factorization of $A$ into $R^TR$ requires $A$ be <em>symmetric</em> and <em>positive-definite</em>. The latter simply requires $x^{T}Ax &gt; 0$ for every $x \in \mathbb{R}^n$. Note that $x^{T}Ax$ is always a scalar value (e.g., note that $x^TA = y^T$ for some vector $y\in\mathbb{R}^n$, and $y^Tx$ is the dot product between $x$ and $y$ and, hence, a real scalar).</li>
-</ul>
-</li>
-<li><strong>Schur Decomposition</strong>:   <ul>
-<li>$A = UTU^{T}$</li>
-<li>$U$ is orthogonal and $T$ is upper-triangular </li>
-<li>Exists for every square matrix and says every such matrix, $A$, is unitarily equivalent to an upper-triangular matrix, $T$ (i.e., there exists an orthonomal basis with respect to which $A$ is upper-triangular)</li>
-<li>Eigenvalues on diagonal of $T$</li>
-</ul>
-</li>
-<li><strong>Singular Value Decomposition</strong>: <ul>
-<li>$A = U\Sigma V^{T}$</li>
-<li>$U$ is orthogonal, $V$ is orthogonal, and $\Sigma$ is diagonal </li>
-<li>Exists for arbitrary matrices</li>
-</ul>
-</li>
-<li><strong>Eigenvalue Decomposition</strong>: <ul>
-<li>$A = X\Lambda X^{-1}$</li>
-<li>$X$ is invertible and $\Lambda$ is diagonal </li>
-<li>Exists for square matrices with linearly independent columns (e.g., full rank)</li>
-<li>Also called the eigendecomposition</li>
-</ul>
-</li>
-</ul>
+<p><a name="Linear_Regression"></a></p>
+<h1 id="2.-Linear-Regression">2. Linear Regression<a class="anchor-link" href="#2.-Linear-Regression">&#182;</a></h1><p>Watch the video for using Least Squares to do linear regression.</p>
 
 </div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr>
-<p><a name="LU"></a></p>
-<h2 id="3.-Focus-on-LU">3. Focus on LU<a class="anchor-link" href="#3.-Focus-on-LU">&#182;</a></h2><p>In this assignment we will create algorithms that factorize invertible matrices (i.e., square matrices with linearly independent columns), $A$, into the following decomposition (<strong>note</strong>: the terms <em>decomposition</em> and <em>factorization</em> are used interchangeably in literature):</p>
-<ul>
-<li>LU Decomposition: $A = LU$</li>
-</ul>
-<p>Each matrix in these decompositions is the <em>matrix product</em> of <a href="https://en.wikipedia.org/wiki/Elementary_matrix">elementary matrices</a>. Recall that <em>an elementary matrix differs from the identity matrix (the square matrix with $1$s on the diagonal and $0$s elsewhere) by an elementary row operation</em>.</p>
-<p>The use of these matrix decompositions in Numerical Linear Algebra is motivated by computational efficiency or reduction of <em>computational complexity</em> (recall "<strong>Big-O notation</strong>" and <strong>counting the loops in your matrix multiplication algorithm</strong>) and <em>numerical stability</em>. Solving our old friend $Ax = b$ by computing the inverse of $A$, denoted $A^{-1}$, and taking the matrix-vector product $A^{-1}b = x$ is computational resource intensive and numerically unstable, in general. If the $LU$ decomposition of $A$ exists, then it will be less costly and more stable to:</p>
-<ol>
-<li>Solve $Ly = b$ for $y$ by <em>forward-substitution</em>; and then</li>
-<li>Solve $Ux = y$ for $x$ by <em>backward-substitution</em></li>
-</ol>
-<p>A final note to relate this assignment to the beginning of the course: The algorithms presented here are of a different class than the <strong>Jacobi Algorithm</strong> and <strong>Gauss-Siedel Algorithm</strong>. These are <em>iterative algorithms</em>. As you now know, this means that the algorithmic procedure is applied once, twice, and so on, until the output is within a desired tolerance, or until the process has been executed a given number of times (e.g., 100 iterations).</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Gaussian-Elimination-&amp;-LU-Decomposition">Gaussian Elimination &amp; LU Decomposition<a class="anchor-link" href="#Gaussian-Elimination-&amp;-LU-Decomposition">&#182;</a></h3><p>Recall that Gaussian elimination converts an arbitrary matrix, $A$, into its <em>row echelon form</em>. For our purposes, let's suppose that $A$ is a square matrix and, therefore, an $n\times n$ matrix. To simplify our tasks, let us further impose the condition that $A$ is invertible. Thus, the columns of $A$ are linearly independent. This means that Gaussian elimination will yield an <strong><em>upper-triangular</em></strong> <em>matrix</em>. Let us denote this matrix $U$ for <strong><em>upper-triangular</em></strong>.</p>
-<p>If there were a function, $f$ that could take $A$ and output $U$, we could think of Gaussian Elimination as the following process:</p>
-$$f(A)=U$$<p>With this information, we may now rewrite our equation from above as:</p>
-$$L^{-1}A = U$$<p>You may have noticed the superscript in $L^{-1}$. This just says that $L^{-1}$ is the inverse of some matrix $L$. And for any invertible matrix, $L$, we have that the matrix products:</p>
-$$L^{-1}L = LL^{-1} = I$$<p>This is analogous to (for every real number $a\neq 0$):</p>
-$$a^{-1}\times a = a\times a^{-1} = 1$$<p>Using the rules of matrix multiplication, verify the formula above by computing the following:</p>
-$$
-L_{1}^{-1}L_{1} = 
-\left(
-    \begin{array}{*5{c}}
-         1 &amp;  0 &amp;  0 &amp;  0 &amp;  0 \\
-         -l_{21} &amp;  1 &amp;  0 &amp;  0 &amp;  0 \\
-         -l_{31} &amp;  0 &amp;  1 &amp;  0 &amp;  0 \\
-         -l_{41} &amp;  0 &amp;  0 &amp;  1 &amp;  0 \\
-         -l_{51} &amp;  0 &amp;  0 &amp;  0 &amp;  1 \\
-      \end{array}
-  \right) \left(
-    \begin{array}{*5{c}}
-         1 &amp;  0 &amp;  0 &amp;  0 &amp;  0 \\
-         l_{21} &amp;  1 &amp;  0 &amp;  0 &amp;  0 \\
-         l_{31} &amp;  0 &amp;  1 &amp;  0 &amp;  0 \\
-         l_{41} &amp;  0 &amp;  0 &amp;  1 &amp;  0 \\
-         l_{51} &amp;  0 &amp;  0 &amp;  0 &amp;  1 \\
-      \end{array}
-  \right)
-= 
-\left(
-    \begin{array}{*5{c}}
-         1 &amp;  0 &amp;  0 &amp;  0 &amp;  0 \\
-         0 &amp;  1 &amp;  0 &amp;  0 &amp;  0 \\
-         0 &amp;  0 &amp;  1 &amp;  0 &amp;  0 \\
-         0 &amp;  0 &amp;  0 &amp;  1 &amp;  0 \\
-         0 &amp;  0 &amp;  0 &amp;  0 &amp;  1 \\
-      \end{array}
-  \right)
-= I
-$$$$
-L_{2}^{-1}L_{2} = 
-\left(
-    \begin{array}{*5{c}}
-         1 &amp;  0 &amp;  0 &amp;  0 &amp;  0 \\
-         0 &amp;  1 &amp;  0 &amp;  0 &amp;  0 \\
-         0 &amp;  -l_{32} &amp;  1 &amp;  0 &amp;  0 \\
-         0 &amp;  -l_{42} &amp;  0 &amp;  1 &amp;  0 \\
-         0 &amp;  -l_{52} &amp;  0 &amp;  0 &amp;  1 \\
-      \end{array}
-  \right) \left(
-    \begin{array}{*5{c}}
-         1 &amp;  0 &amp;  0 &amp;  0 &amp;  0 \\
-         0 &amp;  1 &amp;  0 &amp;  0 &amp;  0 \\
-         0 &amp;  l_{32} &amp;  1 &amp;  0 &amp;  0 \\
-         0 &amp;  l_{42} &amp;  0 &amp;  1 &amp;  0 \\
-         0 &amp;  l_{52} &amp;  0 &amp;  0 &amp;  1 \\
-      \end{array}
-  \right)
-= 
-\left(
-    \begin{array}{*5{c}}
-         1 &amp;  0 &amp;  0 &amp;  0 &amp;  0 \\
-         0 &amp;  1 &amp;  0 &amp;  0 &amp;  0 \\
-         0 &amp;  0 &amp;  1 &amp;  0 &amp;  0 \\
-         0 &amp;  0 &amp;  0 &amp;  1 &amp;  0 \\
-         0 &amp;  0 &amp;  0 &amp;  0 &amp;  1 \\
-      \end{array}
-  \right)
-= I
-$$$$
-L_{4}^{-1}L_{4} = 
-\left(
-    \begin{array}{*5{c}}
-         1 &amp;  0 &amp;  0 &amp;  0 &amp;  0 \\
-         0 &amp;  1 &amp;  0 &amp;  0 &amp;  0 \\
-         0 &amp;  0 &amp;  1 &amp;  0 &amp;  0 \\
-         0 &amp;  0 &amp;  0 &amp;  1 &amp;  0 \\
-         0 &amp;  0 &amp;  0 &amp;  -l_{54} &amp;  1 \\
-      \end{array}
-  \right) \left(
-    \begin{array}{*5{c}}
-         1 &amp;  0 &amp;  0 &amp;  0 &amp;  0 \\
-         0 &amp;  1 &amp;  0 &amp;  0 &amp;  0 \\
-         0 &amp;  0 &amp;  1 &amp;  0 &amp;  0 \\
-         0 &amp;  0 &amp;  0 &amp;  1 &amp;  0 \\
-         0 &amp;  0 &amp;  0 &amp;  l_{54} &amp;  1 \\
-      \end{array}
-  \right)
-= 
-\left(
-    \begin{array}{*5{c}}
-         1 &amp;  0 &amp;  0 &amp;  0 &amp;  0 \\
-         0 &amp;  1 &amp;  0 &amp;  0 &amp;  0 \\
-         0 &amp;  0 &amp;  1 &amp;  0 &amp;  0 \\
-         0 &amp;  0 &amp;  0 &amp;  1 &amp;  0 \\
-         0 &amp;  0 &amp;  0 &amp;  0 &amp;  1 \\
-      \end{array}
-  \right)
-= I
-$$<p>To understand $L^{-1}$ more deeply, let's turn our attention back to Gaussian elimination for a moment. Take as a given that, for a "sufficiently nice" $n\times n$ matrix $A$, the matrix $L^{-1}$ that takes $A$ to its <strong><em>upper-triangular</em></strong> or <strong><em>row echelon form</em></strong>, $U$, has the structure:</p>
-$$L^{-1} = L_{n-1}L_{n-2}...L_{2}L_{1}$$<p>Each of the $L_{i}$s above is an elementary matrix that zeros out the subdiagonal entries of the $i^{th}$ column of $A$. This is <strong>the $i^{th}$ step of</strong> <strong><em>Gaussian Elimination</em></strong> <strong>applied to</strong> <strong><em>the entire $i^{th}$ column of A below the $i^{th}$ diagonal element</em></strong>.</p>
-<p>Let's show this by computation of $L_i$ for a "nice" matrix $A$.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Import all necessary packages</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span> <span class="nn">scipy.sparse</span> <span class="k">as</span> <span class="nn">sparse</span> <span class="c1">#this helps to speed up the algorithms, but you will not use it. </span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
-<span class="n">sym</span><span class="o">.</span><span class="n">init_printing</span><span class="p">(</span><span class="n">use_unicode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1">## These will allow us to see a cool simulation of the Heat Equation problem (if we compute our answers correctly!)</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">animation</span><span class="p">,</span> <span class="n">rc</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;Lx6CfgKVIuE&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">640</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">360</span><span class="p">,</span> <span class="n">cc_load_policy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14505,18 +14377,264 @@ $$L^{-1} = L_{n-1}L_{n-2}...L_{2}L_{1}$$<p>Each of the $L_{i}$s above is an elem
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+
+        <iframe
+            width="640"
+            height="360"
+            src="https://www.youtube.com/embed/Lx6CfgKVIuE?cc_load_policy=True"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Gaussian-Elimination-by-Elementary-Matrices,-$L_i$">Gaussian Elimination by Elementary Matrices, $L_i$<a class="anchor-link" href="#Gaussian-Elimination-by-Elementary-Matrices,-$L_i$">&#182;</a></h2><p>Let $A$ be the following matrix:</p>
-$$A = 
-\begin{bmatrix}
-    2 &amp;  1 &amp;  1 &amp;  0 \\
-    4 &amp;  3 &amp;  3 &amp;  1 \\
-    8 &amp;  7 &amp;  9 &amp;  5 \\
-    6 &amp;  7 &amp;  9 &amp;  8 \\
-\end{bmatrix}
-$$<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Create a $4 \times 4$ <strong>unit lower-triangular</strong> matrix, $L_1$ that eliminates all of the subdiagonal entries of the first column of $A$. Display the matrix $L_1$ using SymPy.</p>
+<p><strong><font color=red>QUESTION 3:</font></strong> How to tell it is a good fit or a bad one?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<p><a name="One-to-one_and_Inverse_transform"></a></p>
+<h1 id="3.-One-to-one-and-Inverse-transform">3. One-to-one and Inverse transform<a class="anchor-link" href="#3.-One-to-one-and-Inverse-transform">&#182;</a></h1><p>Read Section 4.9 of the textbook if you are not familiar with this part.</p>
+<p><strong>Definition:</strong> A transformation $T:U\mapsto V$ is said to be <em>one-to-one</em> if each element in the range is the image of just one element in the domain. That is, for two elements ($x$ and $y$) in $U$. $T(x)=T(y)$ happens only when $x=y$.</p>
+<p><strong>Theorem:</strong> Let $T:U\mapsto V$ be a one-to-one linear transformation. If $\{u_1,\dots,u_n\}$ is linearly independent in $U$, then $\{T(u_1),\dots,T(u_n)\}$ is linearly independent in $V$.</p>
+<p><strong>Definition:</strong> A linear transformation $T:U\mapsto V$ is said to be <em>invertible</em> if there exists a transformation $S:V\mapsto U$, such that 
+$$S(T(u))=u,\qquad T(S(v))=v,$$
+for any $v$ in $V$ and any $u$ in $U$.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong><font color=red>QUESTION 4:</font></strong> If linear transformation $T:U\mapsto V$ is invertible, and the dimension of $U$ is 2, what is the dimension of $V$? Why?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<p><a name="Inverse_of_a_Matrix"></a></p>
+<h1 id="4.-Inverse-of-a-Matrix">4. Inverse of a Matrix<a class="anchor-link" href="#4.-Inverse-of-a-Matrix">&#182;</a></h1><ul>
+<li>Recall the four fundamental subspaces of a $m\times n$ matrix $A$<ul>
+<li>The rowspace and nullspace of $A$ in $R^n$</li>
+<li>The columnspace and the nullspace of $A^\top$ in $R^m$</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>The two-sided inverse gives us the following
+$$ {A}{A}^{-1}=I={A}^{-1}{A} $$<ul>
+<li>For this we need $r = m = n$, here $r$ is the rank of the matrix.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>For a left-inverse, we have the following<ul>
+<li>Full column rank, with $r = n \leq m$ (but possibly more rows)</li>
+<li>The nullspace contains just the zero vector (columns are independent)</li>
+<li>The rows might not all be independent</li>
+<li>We thus have either no or only a single solution to $Ax=b$.</li>
+<li>$A^\top $ will now also have full row rank</li>
+<li>From $(A^\top A)^{-1}A^\top A = I$ follows the fact that $(A^\top A)^{-1}A^\top$ is a left-sided inverse</li>
+<li>Note that $(A^\top A)^{-1}A^\top$ is a $n\times m$ matrix and $A$ is of size $m\times n$, theire mulitiplication $(A^\top A)^{-1}A^\top A$ results in a $n\times n$ identity matrix</li>
+<li>The $A(A^\top A)^{-1}A^\top$ is a $m\times m$ matrix. BUT $A(A^\top A)^{-1}A^\top\neq I$ if $m\neq n$. The matrix $A(A^\top A)^{-1}A^\top$ is the projection matrix onto the column space of $A$. </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong><font color=red>QUESTION 5:</font></strong> What is the projection matrix that projects any vector onto the subspace spanned by $[1,2]^\top$. (What matrix will give the same result as projecting any point onto the vector $[1,2]^\top$.)</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong><font color=red>QUESTION 6:</font></strong> If $m=n$, is the left inverse the same as the inverse?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>Theorem:</strong> For a matrix $A$ with $r=n&lt;m$, the columnspace of $A$ has dimension $r(=n)$. The linear transfrom $A: R^n\mapsto R^m$ is one-to-one. In addition, the linear transformation $A$ from $R^n$ to the columnspace of $A$ is one-to-one and onto (it means that for any element in the columnspace of $A$, we can find $x$ in $R^n$ such that it equals $Ax$.) 
+Then the left inverse of $A$ is a one-to-one mapping from the columnspace of $A$ to $R^n$, and it can be considered as an inverse transform of $A$.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<p><a name="Assignment_Wrap-up"></a></p>
+<h1 id="3.-Assignment-wrap-up">3. Assignment wrap-up<a class="anchor-link" href="#3.-Assignment-wrap-up">&#182;</a></h1><p>Please fill out the form that appears when you run the code below.  <strong>You must completely fill this out in order to receive credit for the assignment!</strong></p>
+<p><a href="https://cmse.msu.edu/cmse314-pc-survey">Direct Link to Google Form</a></p>
+<p>If you have trouble with the embedded form, please make sure you log on with your MSU google account at <a href="https://googleapps.msu.edu">googleapps.msu.edu</a> and then click on the direct link above.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>Assignment-Specific QUESTION:</font></strong> There is no Assignment specific question for this notebook. You can just say "none".</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong>  Summarize what you did in this assignment.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong>  What questions do you have, if any, about any of the topics discussed in this assignment after working through the jupyter notebook?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong>  How well do you feel this assignment helped you to achieve a better understanding of the above mentioned topic(s)?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong> What was the <strong>most</strong> challenging part of this assignment for you?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong> What was the <strong>least</strong> challenging part of this assignment for you?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong>  What kind of additional questions or support, if any, do you feel you need to have a better understanding of the content in this assignment?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong>  Do you have any further questions or comments about this material, or anything else that's going on in class?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>QUESTION:</font></strong> Approximately how long did this pre-class assignment take?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Put your answer to the above question here</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14525,9 +14643,20 @@ $$<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Create a $4 \times
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">]])</span> <span class="c1"># Here is A for your convenience</span>
-<span class="n">As</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="n">As</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="n">HTML</span><span class="p">(</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&lt;iframe </span>
+<span class="sd">	src=&quot;https://cmse.msu.edu/cmse314-pc-survey&quot; </span>
+<span class="sd">	width=&quot;100%&quot; </span>
+<span class="sd">	height=&quot;1000px&quot; </span>
+<span class="sd">	frameborder=&quot;0&quot; </span>
+<span class="sd">	marginheight=&quot;0&quot; </span>
+<span class="sd">	marginwidth=&quot;0&quot;&gt;</span>
+<span class="sd">	Loading...</span>
+<span class="sd">&lt;/iframe&gt;</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14547,848 +14676,18 @@ $$<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Create a $4 \times
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+
+<iframe 
+	src="https://cmse.msu.edu/cmse314-pc-survey" 
+	width="100%" 
+	height="1000px" 
+	frameborder="0" 
+	marginheight="0" 
+	marginwidth="0">
+	Loading...
+</iframe>
 
-<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
-$\displaystyle \left[\begin{matrix}2 &amp; 1 &amp; 1 &amp; 0\\4 &amp; 3 &amp; 3 &amp; 1\\8 &amp; 7 &amp; 9 &amp; 5\\6 &amp; 7 &amp; 9 &amp; 8\end{matrix}\right]$
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Type your answer here ##</span>
-<span class="n">L1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,,,],[,</span><span class="mi">1</span><span class="p">,,],[,,</span><span class="mi">1</span><span class="p">,],[,,,</span><span class="mi">1</span><span class="p">]])</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## ANSWER ##</span>
-<span class="n">L1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
-<span class="n">L1s</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span>
-<span class="n">L1s</span>
-<span class="c1">## ANSWER ##</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
-$\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 0 &amp; 0\\-2 &amp; 1 &amp; 0 &amp; 0\\-4 &amp; 0 &amp; 1 &amp; 0\\-3 &amp; 0 &amp; 0 &amp; 1\end{matrix}\right]$
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We should now have the following:</p>
-$$L_{1}A = A^{(1)} =
-\begin{bmatrix}
-    2 &amp;  1 &amp;  1 &amp;  0 \\
-    0 &amp;  u_{22} &amp;  u_{23} &amp;  u_{24} \\
-    0 &amp;  x &amp;  x &amp;  x \\
-    0 &amp;  x &amp;  x &amp;  x \\
-\end{bmatrix}
-=
-\begin{bmatrix}
-    u_{11} &amp;  u_{12} &amp;  u_{13} &amp;  u_{14} \\
-    0 &amp;  u_{22} &amp;  u_{23} &amp;  u_{24} \\
-    0 &amp;  x &amp;  x &amp;  x \\
-    0 &amp;  x &amp;  x &amp;  x \\
-\end{bmatrix}
-$$<p>Since our first row remained unchanged, we know that our $u_{1i}$ (the first row entries of $U$) are now determined. Similarly, we have that the $u_{2i}$ (the second row entries of $U$) are determined as well. The $x$ elements are elements that have changed, but are not yet in their final form.  <strong>Note</strong>: Your $u_{ij}$ will be whole, or integer ($\mathbb{Z}$), numbers.</p>
-<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Left-multiply $A$ by $L_1$ to confirm that all of the subdiagonal entries of the first column of $A^{(1)}$ are zero. Display the result via SymPy.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Type your answer here ##</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## ANSWER ##</span>
-<span class="n">A1</span> <span class="o">=</span> <span class="n">L1</span><span class="o">*</span><span class="n">A</span>
-<span class="n">A1s</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">A1</span><span class="p">)</span>
-<span class="n">A1s</span>
-<span class="c1">## ANSWER ##</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
-$\displaystyle \left[\begin{matrix}2 &amp; 1 &amp; 1 &amp; 0\\0 &amp; 1 &amp; 1 &amp; 1\\0 &amp; 3 &amp; 5 &amp; 5\\0 &amp; 4 &amp; 6 &amp; 8\end{matrix}\right]$
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Our next step will be to eliminate all nonzero entries from the second column of $A^{(1)} = L_{1}A$ by left multiplication of $L_{2}$. This should yield:</p>
-$$\begin{align}A^{(2)} &amp;= L_{2}A^{(1)} \\
-&amp;= L_{2}L_{1}A \\
-&amp;=
-\begin{bmatrix}
-    u_{11} &amp;  u_{12} &amp;  u_{13} &amp;  u_{14} \\
-    0 &amp;  u_{22} &amp;  u_{23} &amp;  u_{24} \\
-    0 &amp;  0 &amp;  u_{33} &amp;  u_{34} \\
-    0 &amp;  0 &amp;  x &amp;  x \\
-\end{bmatrix}
-\end{align}
-$$<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Create a $4 \times 4$ <strong>unit lower-triangular</strong> matrix, $L_2$ that eliminates all of the subdiagonal entries of the second column of $A^{(1)}$ yielding $A^{(2)}$ as above. Display the matrix $L_2$ using SymPy.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Type your answer here ##</span>
-<span class="n">L2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,,,],[,</span><span class="mi">1</span><span class="p">,,],[,,</span><span class="mi">1</span><span class="p">,],[,,,</span><span class="mi">1</span><span class="p">]])</span> <span class="c1"># for your convenience</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## ANSWER ##</span>
-<span class="n">L2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
-<span class="n">L2s</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">L2</span><span class="p">)</span>
-<span class="n">L2s</span>
-<span class="c1">## ANSWER ##</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
-$\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 1 &amp; 0 &amp; 0\\0 &amp; -3 &amp; 1 &amp; 0\\0 &amp; -4 &amp; 0 &amp; 1\end{matrix}\right]$
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Left-multiply $A^{(1)}$ by $L_2$ to confirm that all of the subdiagonal entries of column 2 of $A^{(2)}$ are zero. Display the result via SymPy. <strong>Note</strong>: Your $u_{ij}$ will be whole, or Integer ($\mathbb{Z}$), numbers.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Type your answer here ##</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## ANSWER ##</span>
-<span class="n">A2</span> <span class="o">=</span> <span class="n">L2</span><span class="o">*</span><span class="n">A1</span>
-<span class="n">A2s</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">A2</span><span class="p">)</span>
-<span class="n">A2s</span>
-<span class="c1"># sym.latex(A2s)</span>
-<span class="c1">## ANSWER ##</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
-$\displaystyle \left[\begin{matrix}2 &amp; 1 &amp; 1 &amp; 0\\0 &amp; 1 &amp; 1 &amp; 1\\0 &amp; 0 &amp; 2 &amp; 2\\0 &amp; 0 &amp; 2 &amp; 4\end{matrix}\right]$
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We should now have:</p>
-$$
-\begin{align}A^{(2)} &amp;= L_{2}A^{(1)} \\
-&amp;= L_{2}L_{1}A \\
-&amp;=
-\begin{bmatrix}
-    u_{11} &amp;  u_{12} &amp;  u_{13} &amp;  u_{14} \\
-    0 &amp;  u_{22} &amp;  u_{23} &amp;  u_{24} \\
-    0 &amp;  0 &amp;  u_{33} &amp;  u_{34} \\
-    0 &amp;  0 &amp;  x &amp;  x \\
-\end{bmatrix}
-\end{align}
-$$<p>We now want to build the final matrix $L_{3}$ that will take our matrix $A^{(2)}$ to <strong><em>upper-triangular</em></strong> <strong>form</strong>. So, let's do that!</p>
-<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Create a $4 \times 4$ <strong>unit lower-triangular</strong> matrix, $L_3$ that eliminates all of the subdiagonal entries of the third column of $A^{(2)}$ yielding:</p>
-$$
-\begin{align}A^{(3)} &amp;= L_{3}A^{(2)} \\ 
-&amp;= L_{3}L_{2}A^{(1)} \\
-&amp;= L_{3}L_{2}L_{1}A \\
-&amp;= U
-\end{align}
-$$<p>.</p>
-<p>Display the matrix $L_3$ using SymPy.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Type your answer here ##</span>
-<span class="n">L3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,,,],[,</span><span class="mi">1</span><span class="p">,,],[,,</span><span class="mi">1</span><span class="p">,],[,,,</span><span class="mi">1</span><span class="p">]])</span> <span class="c1"># for your convenience</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## ANSWER ##</span>
-<span class="n">L3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
-<span class="n">L3s</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">L3</span><span class="p">)</span>
-<span class="n">L3s</span>
-<span class="c1"># L3s*A2s</span>
-<span class="c1">## ANSWER ##</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
-$\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 1 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; -1 &amp; 1\end{matrix}\right]$
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Left-multiply $A^{(2)}$ by $L_3$ to confirm that all of the subdiagonal entries of column 3 of $A^{(3)}$ are zero. Display the result via SymPy. <strong>Note</strong>: Your $u_{ij}$ will be whole, or integer ($\mathbb{Z}$), numbers. You should now notice that $A^{(3)} = U$ is in <strong>row echelon form</strong>, and, hence, $U$ is an <strong>upper-triangular matrix</strong> with $0$s below the diagonal!</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Type your answer here ##</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## ANSWER ##</span>
-<span class="n">A3</span> <span class="o">=</span> <span class="n">L3</span><span class="o">*</span><span class="n">A2</span>
-<span class="n">A3s</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">A3</span><span class="p">)</span>
-<span class="n">A3s</span>
-<span class="c1"># sym.latex(A2s)</span>
-<span class="c1">## ANSWER ##</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
-$\displaystyle \left[\begin{matrix}2 &amp; 1 &amp; 1 &amp; 0\\0 &amp; 1 &amp; 1 &amp; 1\\0 &amp; 0 &amp; 2 &amp; 2\\0 &amp; 0 &amp; 0 &amp; 2\end{matrix}\right]$
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Congratulations!">Congratulations!<a class="anchor-link" href="#Congratulations!">&#182;</a></h3><p>You have just decomposed your first matrix via the process below (and should now have a matrix, $U$, that looks like the one below):</p>
-$$
-\begin{align}L^{-1}A &amp;= L_{3}L_{2}L_{1}A \\
-&amp;= L_{3}L_{2}A^{(1)} \\
-&amp;= L_{3}A^{(2)} \\
-&amp;= A^{(3)} \\
-&amp;= U \\
-&amp;=
-\begin{bmatrix}
-    2 &amp; 1 &amp; 1 &amp; 0 \\
-    0 &amp; 1 &amp; 1 &amp; 1 \\
-    0 &amp; 0 &amp; 2 &amp; 2 \\
-    0 &amp; 0 &amp; 0 &amp; 2
-\end{bmatrix}
-\end{align}
-$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989; <strong><font color=red>DO THIS:</font></strong></p>
-<p>Finally, let's explicitly generate the matrices $L^{-1}$ and $L$. Then, display them using SymPy.</p>
-<p>It will be helpful to use the following:</p>
-$$\begin{align}L^{-1} &amp;= L_{n-1}L_{n-2}...L_{2}L_{1}\end{align}$$<p>and
-$$\begin{align}L &amp;= (L^{-1})^{-1} \\
-&amp;= (L_{n-1}L_{n-2}...L_{2}L_{1})^{-1} \\
-&amp;= L_{1}^{-1}L_{2}^{-1}...L_{n-2}^{-1}L_{n-1}^{-1}
-\end{align}
-$$</p>
-<p>If you're stuck, refer to the paragraph at the beginning of this section for the explicit formula. Recall: $L^{-1}L = LL^{-1} = I$.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Type your answer here ##</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## ANSWER ##</span>
-<span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">L2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">L3</span><span class="p">)</span>
-<span class="n">Ls</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">Ls</span><span class="p">)</span>
-<span class="n">Linv</span> <span class="o">=</span> <span class="n">L3</span><span class="o">*</span><span class="n">L2</span><span class="o">*</span><span class="n">L1</span>
-<span class="n">Linvs</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">Linv</span><span class="p">)</span>
-
-<span class="c1"># Ls</span>
-
-<span class="c1"># sym.latex(A2s)</span>
-<span class="c1">## ANSWER ##</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Matrix([[1.00000000000000, 0.0, 0.0, 0.0], [2.00000000000000, 1.00000000000000, 0.0, 0.0], [4.00000000000000, 3.00000000000000, 1.00000000000000, 0.0], [3.00000000000000, 4.00000000000000, 1.00000000000000, 1.00000000000000]])
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Look at all the matrices $L_i$ and see the connections between the final $L$.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[[ 1  0  0  0]
- [-2  1  0  0]
- [-4  0  1  0]
- [-3  0  0  1]]
-[[ 1  0  0  0]
- [ 0  1  0  0]
- [ 0 -3  1  0]
- [ 0 -4  0  1]]
-[[ 1  0  0  0]
- [ 0  1  0  0]
- [ 0  0  1  0]
- [ 0  0 -1  1]]
-[[1. 0. 0. 0.]
- [2. 1. 0. 0.]
- [4. 3. 1. 0.]
- [3. 4. 1. 1.]]
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>For our last bit of LU decomposition fun, let's confirm that your matrices $L$ and $U$ fulfill the equality:</p>
-$$A = LU$$<p>Indeed, there is a function in SymPy that will compute the LU decomposition for us.</p>
-<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Run the following function and print its outputs:</p>
-$$\texttt{L_actual, U_actual, _ = As.LUdecomposition()}$$<p>Then, compute:</p>
-$$\texttt{L_actual*U_actual - As}$$<p>and confirm that it outputs the zero matrix.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Type your answer here ##</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## ANSWER ##</span>
-<span class="n">L_actual</span><span class="p">,</span> <span class="n">U_actual</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">As</span><span class="o">.</span><span class="n">LUdecomposition</span><span class="p">()</span>
-<span class="n">L_actual</span><span class="o">*</span><span class="n">U_actual</span> <span class="o">-</span> <span class="n">As</span>
-<span class="c1">## ANSWER ##</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
-$\displaystyle \left[\begin{matrix}0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0\end{matrix}\right]$
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="General-LU-Decomposition-Algorithm">General LU Decomposition Algorithm<a class="anchor-link" href="#General-LU-Decomposition-Algorithm">&#182;</a></h3><p>&#9989; <strong><font color=red>DO THIS:</font></strong>  Using the scaffolded code below, complete the LU decomposition algorithm. (It may be helpful to test your code on the matrix $A$ from above.)</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Type your answer here ##</span>
-<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">]])</span> <span class="c1"># to test</span>
-
-<span class="k">def</span> <span class="nf">LU_decomp</span><span class="p">(</span><span class="n">B</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
-    <span class="n">U</span> <span class="o">=</span> <span class="n">B</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-    <span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-            <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span>
-            <span class="n">U</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">:</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">U</span><span class="p">[,:]</span> <span class="o">-</span> <span class="n">L</span><span class="p">[,]</span><span class="o">*</span><span class="n">U</span><span class="p">[,:]</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mat</span><span class="p">(</span><span class="n">L</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">mat</span><span class="p">(</span><span class="n">U</span><span class="p">)</span>
-
-<span class="n">L1</span><span class="p">,</span><span class="n">U1</span> <span class="o">=</span> <span class="n">LU_dec</span><span class="p">(</span><span class="n">C</span><span class="p">)</span> <span class="c1"># syntax for returning matrices</span>
-<span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">L1</span><span class="o">*</span><span class="n">U1</span> <span class="o">-</span> <span class="n">A</span><span class="p">)</span> <span class="c1"># Test: should return 0</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## ANSWER ##</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">]])</span> <span class="c1"># to test</span>
-
-<span class="k">def</span> <span class="nf">LU_decomp</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-    <span class="n">U</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-    <span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-            <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">U</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">]</span><span class="o">/</span><span class="n">U</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="p">]</span>
-            <span class="n">U</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">:</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">U</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">:</span><span class="n">n</span><span class="p">]</span> <span class="o">-</span> <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">]</span><span class="o">*</span><span class="n">U</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="p">:</span><span class="n">n</span><span class="p">]</span>
-            
-    <span class="k">return</span> <span class="n">L</span><span class="p">,</span> <span class="n">U</span>
-
-<span class="n">L2</span><span class="p">,</span><span class="n">U2</span> <span class="o">=</span> <span class="n">LU_decomp</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">L2</span><span class="p">,</span> <span class="n">U2</span><span class="p">)</span>
-<span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">L2</span><span class="o">*</span><span class="n">U2</span> <span class="o">-</span> <span class="n">A</span><span class="p">)</span> <span class="c1"># Test: should return 0</span>
-<span class="c1">## ANSWER ##</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[[1. 0. 0. 0.]
- [2. 1. 0. 0.]
- [4. 3. 1. 0.]
- [3. 4. 1. 1.]] [[2 1 1 0]
- [0 1 1 1]
- [0 0 2 2]
- [0 0 0 2]]
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
-
-
-
-
-<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
-$\displaystyle 0.0$
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Solve-$Ax=b$-via-LU-Decomposition">Solve $Ax=b$ via LU Decomposition<a class="anchor-link" href="#Solve-$Ax=b$-via-LU-Decomposition">&#182;</a></h3><p>You may wish to refer to the introduction of this assignment for a general overview of how to use LU Decomposition to solve $Ax = b$.</p>
-<p>&#9989; <strong><font color=red>DO THIS:</font></strong>  Using the scaffolded code below, complete the LU solver algorithm. The algorithm should solve $Ly = b$ for $y$ via Forward-Substitution and then $Ux=y$ for $x$ by Backward-Substitution. (It may be helpful to test your code on a matrix $A$ and vector $b$ from homework 1 or another source.)</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Type your answer here ##</span>
-<span class="k">def</span> <span class="nf">LU_Axb_solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-    <span class="n">L</span><span class="p">,</span><span class="n">U</span> <span class="o">=</span> <span class="n">LU_decomp</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-    <span class="c1"># Forward-Substitution: Ly = b for y</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((,))</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">i</span><span class="p">):</span>
-            <span class="n">y</span><span class="p">[]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[]</span> <span class="o">-</span> <span class="n">L</span><span class="p">[,]</span><span class="o">*</span><span class="n">y</span><span class="p">[]</span>
-       
-    <span class="c1"># Backward-Substitution: Ux = y for x</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">x</span><span class="p">[]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-            <span class="n">x</span><span class="p">[]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[]</span> <span class="o">-</span> <span class="n">U</span><span class="p">[,]</span><span class="o">*</span><span class="n">x</span><span class="p">[]</span>
-        <span class="n">x</span><span class="p">[]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[]</span><span class="o">/</span><span class="n">U</span><span class="p">[,]</span>
-    
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mat</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## ANSWER ##</span>
-<span class="k">def</span> <span class="nf">LU_Axb_solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-    <span class="n">L</span><span class="p">,</span><span class="n">U</span> <span class="o">=</span> <span class="n">LU_decomp</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-    <span class="c1"># Forward-Substitution: Ly = b for y</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">i</span><span class="p">):</span>
-            <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">y</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-       
-    <span class="c1"># Backward-Substitution: Ux = y for x</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-            <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">U</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-        <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">U</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span>
-    
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mat</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">]])</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">LU_Axb_solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> 
-<span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-<span class="c1">## ANSWER ##</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>True</pre>
 </div>
 
 </div>
@@ -15401,8 +14700,7 @@ $\displaystyle 0.0$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h3 id="Congratulations,-we're-done!">Congratulations, we're done!<a class="anchor-link" href="#Congratulations,-we're-done!">&#182;</a></h3><p>If you attend class in-person then have one of the instructors check your notebook and sign you out before leaving class. If you are attending asynchronously, turn in your assignment using D2L.</p>
-
+<h3 id="Congratulations,-we're-done!">Congratulations, we're done!<a class="anchor-link" href="#Congratulations,-we're-done!">&#182;</a></h3>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -15410,6 +14708,12 @@ $\displaystyle 0.0$
 <h3 id="Course-Resources:">Course Resources:<a class="anchor-link" href="#Course-Resources:">&#182;</a></h3><ul>
 <li><a href="http://cmse.msu.edu/mth314">MTH314 Course Website</a></li>
 </ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
 
 </div>
 </div>

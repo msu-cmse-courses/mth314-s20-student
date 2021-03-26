@@ -49,8 +49,8 @@
 | Wed, Mar 31 | [18--Inner_Product_pre-class-assignment](18--Inner_Product_pre-class-assignment.html) | [ipynb](18--Inner_Product_pre-class-assignment.ipynb) |
 | Wed, Mar 31 | 18-Quiz4_Instructions |      |
 | Mon, Apr 5 | [18-Inner_Product_in-class-assignment](18-Inner_Product_in-class-assignment.html) | [ipynb](18-Inner_Product_in-class-assignment.ipynb) |
-| Tue, Apr 6 | 19--LSF_pre-class-assignment |      |
-| Wed, Apr 7 | 19-LSF_in-class-assignment |      |
+| Tue, Apr 6 | [19--LSF_pre-class-assignment](19--LSF_pre-class-assignment.html) | [ipynb](19--LSF_pre-class-assignment.ipynb) |
+| Wed, Apr 7 | [19-LSF_in-class-assignment](19-LSF_in-class-assignment.html) | [ipynb](19-LSF_in-class-assignment.ipynb) |
 | Fri, Apr 9 | Homework 5 |      |
 | Sun, Apr 11 | 20--Solve_Systems_pre-class-assignment |      |
 | Mon, Apr 12 | 20-Solve_Systems_in-class-assignment |      |
