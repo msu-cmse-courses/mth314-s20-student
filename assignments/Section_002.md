@@ -51,10 +51,11 @@
 | Mon, Apr 5 | [18-Inner_Product_in-class-assignment](18-Inner_Product_in-class-assignment.html) | [ipynb](18-Inner_Product_in-class-assignment.ipynb) |
 | Tue, Apr 6 | [19--LSF_pre-class-assignment](19--LSF_pre-class-assignment.html) | [ipynb](19--LSF_pre-class-assignment.ipynb) |
 | Wed, Apr 7 | [19-LSF_in-class-assignment](19-LSF_in-class-assignment.html) | [ipynb](19-LSF_in-class-assignment.ipynb) |
-| Fri, Apr 9 | Homework 5 |      |
-| Sun, Apr 11 | 20--Solve_Systems_pre-class-assignment |      |
-| Mon, Apr 12 | 20-Solve_Systems_in-class-assignment |      |
+| Fri, Apr 9 | HW5-Polynomials |      |
+| Sun, Apr 11 | No Pre-class |      |
+| Mon, Apr 12 | 20-LSF_Practice_in-class-assignment |      |
 | Wed, Apr 14 | 21-Quiz5_Instructions |      |
-| Mon, Apr 19 | 21-Course Review |      |
+| Sun, Apr 18 | 21--Solve_Systems_pre-class-assignment |      |
+| Mon, Apr 19 | 21-Solve_Systems_in-class-assignment |      |
 | Wed, Apr 21 | 21-Course_Review |      |
 | Monday, April 26 12:45pm - 2:45pm  | Final Exam |      |
