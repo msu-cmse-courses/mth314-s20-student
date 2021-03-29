@@ -51,7 +51,7 @@
 | Tue, Apr 6 | [18-Inner_Product_in-class-assignment](18-Inner_Product_in-class-assignment.html) | [ipynb](18-Inner_Product_in-class-assignment.ipynb) |
 | Wed, Apr 7 | [19--LSF_pre-class-assignment](19--LSF_pre-class-assignment.html) | [ipynb](19--LSF_pre-class-assignment.ipynb) |
 | Thu, Apr 8 | [19-LSF_in-class-assignment](19-LSF_in-class-assignment.html) | [ipynb](19-LSF_in-class-assignment.ipynb) |
-| Fri, Apr 9 | HW5-Polynomials |      |
+| Fri, Apr 9 | HW5-Polynomial_Fit |      |
 | Mon, Apr 12 | No Pre-class |      |
 | Tue, Apr 13 | 20-LSF_Practice_in-class-assignment |      |
 | Thu, Apr 15 | 21-Quiz5_Instructions |      |
