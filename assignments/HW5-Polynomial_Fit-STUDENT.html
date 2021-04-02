@@ -13561,7 +13561,7 @@ $y = C_0 + C_1x+ C_2x^2$. Generate a system of linear equations as an augmented 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7f35ddeb3908&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f8b19879048&gt;]</pre>
 </div>
 
 </div>
@@ -13784,6 +13784,14 @@ $$\left[\begin{array}{cccccccccccccccc}1.0 & -2.0 & 4.0 & -8.0 & 0.0 & 0.0 & 0.0
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>NOTE</em></strong>:  There are many valid $16 \times 16$ matrices for $A$ which will produce the correct results.  The following answer check assumes that you built $A$ as described above.  By summing the columns it should not matter which order the rows are in.  If you find a different $A$ that is valid, you will be given full credit.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
@@ -13791,7 +13799,7 @@ $$\left[\begin{array}{cccccccccccccccc}1.0 & -2.0 & 4.0 & -8.0 & 0.0 & 0.0 & 0.0
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">answercheck</span> <span class="k">import</span> <span class="n">checkanswer</span>
 <span class="n">checkanswer</span><span class="o">.</span><span class="n">detailedwarnings</span><span class="o">=</span><span class="kc">False</span>
-<span class="n">checkanswer</span><span class="o">.</span><span class="n">eq_matrix</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="s2">&quot;d3e5ea5762b218a208dd01093301fa52&quot;</span><span class="p">,</span><span class="n">decimal_accuracy</span><span class="o">=</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">checkanswer</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span><span class="s2">&quot;b7b77668a8f1913366278c37225d5dad&quot;</span><span class="p">,</span><span class="n">decimal_accuracy</span><span class="o">=</span><span class="mi">3</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -14229,7 +14237,7 @@ $$<p>Basically we want to solve for our coefficient $C_0$ and $C_1$ that minimiz
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7f35ddcc74e0&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f8b196f4f98&gt;]</pre>
 </div>
 
 </div>

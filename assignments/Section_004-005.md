@@ -54,8 +54,8 @@
 | Fri, Apr 9 | [HW5-Polynomial_Fit](HW5-Polynomial_Fit-STUDENT.html) | [ipynb](HW5-Polynomial_Fit-STUDENT.ipynb) |
 | Sun, Apr 11 | No Pre-class |      |
 | Mon, Apr 12 | 20-LSF_Practice_in-class-assignment |      |
+| Tue, Apr 13 | 21--Review_pre-class-assignment |      |
 | Wed, Apr 14 | 21-Quiz5_Instructions |      |
-| Sun, Apr 18 | 21--Solve_Systems_pre-class-assignment |      |
-| Mon, Apr 19 | 21-Solve_Systems_in-class-assignment |      |
-| Wed, Apr 21 | 21-Course_Review |      |
+| Mon, Apr 19 | 21-Review_in-class-assignment |      |
+| Wed, Apr 21 | No Class |      |
 | Monday, Apr 26 12:45pm - 2:45pm  | Final Exam |      |
