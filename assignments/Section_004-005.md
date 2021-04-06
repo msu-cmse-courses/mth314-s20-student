@@ -53,7 +53,7 @@
 | Wed, Apr 7 | [19-LSF_in-class-assignment](19-LSF_in-class-assignment.html) | [ipynb](19-LSF_in-class-assignment.ipynb) |
 | Fri, Apr 9 | [HW5-Polynomial_Fit](HW5-Polynomial_Fit-STUDENT.html) | [ipynb](HW5-Polynomial_Fit-STUDENT.ipynb) |
 | Sun, Apr 11 | No Pre-class |      |
-| Mon, Apr 12 | 20-LSF_Practice_in-class-assignment |      |
+| Mon, Apr 12 | [20-LSF_Practice_in-class-assignment](20-LSF_Practice_in-class-assignment.html) | [ipynb](20-LSF_Practice_in-class-assignment.ipynb) |
 | Tue, Apr 13 | 21--Review_pre-class-assignment |      |
 | Wed, Apr 14 | 21-Quiz5_Instructions |      |
 | Mon, Apr 19 | 21-Review_in-class-assignment |      |
