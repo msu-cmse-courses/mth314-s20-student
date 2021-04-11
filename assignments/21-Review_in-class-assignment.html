@@ -3,30 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script>
-(function() {
-  function addWidgetsRenderer() {
-    var mimeElement = document.querySelector('script[type="application/vnd.jupyter.widget-view+json"]');
-    var scriptElement = document.createElement('script');
-    var widgetRendererSrc = '@jupyter-widgets/html-manager@/dist/embed-amd.js';
-    var widgetState;
-
-    // Fallback for older version:
-    try {
-      widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
-
-      if (widgetState && (widgetState.version_major < 2 || !widgetState.version_major)) {
-        widgetRendererSrc = 'jupyter-js-widgets@*/dist/embed.js';
-      }
-    } catch(e) {}
-
-    scriptElement.src = widgetRendererSrc;
-    document.body.appendChild(scriptElement);
-  }
-
-  document.addEventListener('DOMContentLoaded', addWidgetsRenderer);
-}());
-</script>
+<title>Notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14282,7 +14259,7 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a href="19-LSF_in-class-assignment.ipynb">Link to this document's Jupyter Notebook</a></p>
+<p><a href="21-Review_in-class-assignment.ipynb">Link to this document's Jupyter Notebook</a></p>
 
 </div>
 </div>
@@ -14300,82 +14277,20 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="In-Class-Assignment:-Least-Squares-Fit-(LSF)">In-Class Assignment: Least Squares Fit (LSF)<a class="anchor-link" href="#In-Class-Assignment:-Least-Squares-Fit-(LSF)">&#182;</a></h1><p><img alt="image showing a 3D vector projected onto a 2D plane" src="https://lh5.googleusercontent.com/RFgtgkULxOPzUC8lwl1j265FjpzaD2YIDHjy94VyqOOU7xIQf03bsHDSmxYNOmYDXeLPn7iMTg=w740" width="50%">
-&lt;/p&gt;</p>
+<h1 id="In-Class-Assignment:-Solve-Linear-Systems-of-Equations-using-QR-Decomposition">In-Class Assignment: Solve Linear Systems of Equations using QR Decomposition<a class="anchor-link" href="#In-Class-Assignment:-Solve-Linear-Systems-of-Equations-using-QR-Decomposition">&#182;</a></h1><p><img alt="Image of a multi-headed Hydra. Designed to represent parallel codes" src="https://upload.wikimedia.org/wikipedia/commons/2/24/Hydra1.gif"></p>
+<p>Image From: <a href="https://en.wikipedia.org/wiki/Hydra">https://en.wikipedia.org/wiki/Hydra</a></p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Agenda-for-today's-class-(80-minutes)">Agenda for today's class (80 minutes)<a class="anchor-link" href="#Agenda-for-today's-class-(80-minutes)">&#182;</a></h3><ol>
-<li><a href="#Pre-class_Review">(20 minutes) LSF Pre-class Review</a></li>
-<li><a href="#Finding_the_best_solution_in_an_overdetermined_system">(30 minutes) Finding the best solution in an overdetermined system</a></li>
-<li><a href="#Pseudoinverse">(30 minutes) Pseudoinverse</a></li>
+<h3 id="Agenda-for-today's-class-(80-minutes)">Agenda for today's class (80 minutes)<a class="anchor-link" href="#Agenda-for-today's-class-(80-minutes)">&#182;</a></h3><p>&lt;/p&gt;</p>
+<ol>
+<li><a href="#Pre-class_Review">(20 minutes) Pre-class_Review</a></li>
+<li><a href="#Solve_Linear_Systems">(20 minutes) Solve Linear Systems</a></li>
+<li><a href="#Overdetermined_Systems">(30 minutes) Overdetermined Systems</a></li>
+<li><a href="#Underdetermined_Systemss">(30 minutes) Underdetermined Systems</a></li>
 </ol>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr>
-<p><a name="Pre-class_Review"></a></p>
-<h1 id="1.-LSF-Pre-class-Review">1. LSF Pre-class Review<a class="anchor-link" href="#1.-LSF-Pre-class-Review">&#182;</a></h1><ul>
-<li><a href="19--LSF_pre-class-assignment.ipynb">19--LSF_pre-class-assignment.ipynb</a></li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr>
-<p><a name="Finding_the_best_solution_in_an_overdetermined_system"></a></p>
-<h1 id="2.-Finding-the-best-solution-in-an-overdetermined-system">2. Finding the best solution in an overdetermined system<a class="anchor-link" href="#2.-Finding-the-best-solution-in-an-overdetermined-system">&#182;</a></h1><p>Let $Ax = y$ be a system of $m$ linear equations in $n$ variables. A <em>least squares solution</em> of $Ax = y$ is an solution $\hat{x}$ in $R^n$ such that:</p>
-$$ \min_{\hat{x}}\|y - A\hat{x}\|.$$<p>Note we substitute $y$ for our typical variable $b$ here because we will use $b$ later to represent the intercept to a line and we want to try and avoid confusion in notation. It also consistent with the picture above.</p>
-<p>In other words, $\hat{x}$ is a value of $x$ for which $Ax$ is as close as possible to $y$. From previous lectures, we know this to be true if the vector $$y - A\hat{x}$$ is orthogonal (perpendicular) to the column space of $A$.</p>
-<p>We also know that the dot product is zero if two vectors are orthogonal. So we have<br>
-$$a \cdot (Ax - y)  = 0, $$
-for all vectors $a$ in the column spaces of $A$.</p>
-<p>The columns of $A$ span the column space of $A$. Denote the columns of $A$ as 
-$$A = [a_1, \cdots, a_n].$$ 
-Then we have 
-$$a_1^\top (Ax - y)  = 0, \\ a_2^\top(Ax-y)=0\\\vdots \\a_n^\top(Ax-y)=0.$$
-It is the same as taking the transpose of $A$ and doing a matrix multiply:
-$$A^\top (Ax - y) = 0.$$</p>
-<p>That is:</p>
-<p><font size=40>$$A^\top Ax = A^\top y$$</font></p>
-<p>The above equation is called the <em>least squares solution</em> to the original equation $Ax=y$.  The matrix $A^\top A$ is symmetric and invertable. Then solving for $\hat{x}$ can be calculated as follows:</p>
-$$x = (A^\top A)^{-1}A^\top y$$<p>The matrix $(A^\top A)^{-1}A^\top$ is also called the left inverse.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Example:</strong> A researcher has conducted experiments of a particular Hormone dosage in a population of rats. The table shows the number of fatalities at each dosage level tested. Determine the least squares line and use it to predict the number of rat fatalities at hormone dosage of 22.</p>
-<table>
-<thead><tr>
-<th>Hormone level</th>
-<th>20</th>
-<th>25</th>
-<th>30</th>
-<th>35</th>
-<th>40</th>
-<th>45</th>
-<th>50</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Fatalities</td>
-<td>101</td>
-<td>115</td>
-<td>92</td>
-<td>64</td>
-<td>60</td>
-<td>50</td>
-<td>49</td>
-</tr>
-</tbody>
-</table>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14384,12 +14299,11 @@ $$x = (A^\top A)^{-1}A^\top y$$<p>The matrix $(A^\top A)^{-1}A^\top$ is also cal
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="n">sym</span><span class="o">.</span><span class="n">init_printing</span><span class="p">(</span><span class="n">use_unicode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##TODO##</span>
+
+<span class="n">Add</span> <span class="n">SIRS</span> <span class="n">link</span>
+
+<span class="c1">##TODO##</span>
 </pre></div>
 
      </div>
@@ -14397,19 +14311,76 @@ $$x = (A^\top A)^{-1}A^\top y$$<p>The matrix $(A^\top A)^{-1}A^\top$ is also cal
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">50</span><span class="p">]</span>
-<span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="mi">101</span><span class="p">,</span><span class="mi">115</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">49</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+</pre></div>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">H</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Hormone Level&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Fatalities&#39;</span><span class="p">)</span>
-<span class="n">f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>In this assignment, we try to solve the linear systems $Ax  =  b$ in three different categories.</p>
+<ul>
+<li>$A$ is a square matrix. Unique solution when $A$ is invertible</li>
+<li>overdetermined (more equations than unknowns): If $A$ has full column rank, the system has an unique solution when $b$ is in the column space of $A$, otherwise no solution. </li>
+<li>underdetermined (more unknowns than equations): If $A$ has full row rank, there are infinite many solutions. </li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<p><a name="Pre-class_Review"></a></p>
+<h1 id="1.-Pre-Class-Review">1. Pre-Class Review<a class="anchor-link" href="#1.-Pre-Class-Review">&#182;</a></h1><ul>
+<li><a href="21--Review_pre-class-assignment.ipynb">21--Review_pre-class-assignment.ipynb</a></li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<p><a name="Solve_Linear_Systems"></a></p>
+<h1 id="2.-Solve-Linear-Systems">2. Solve Linear Systems<a class="anchor-link" href="#2.-Solve-Linear-Systems">&#182;</a></h1><p>When we have the same number of equations as unknowns, we have the following system 
+$$Ax= b$$
+with a squre matrix $A$. 
+In this section, we assume that the matrix $A$ has full rank. That is the system has an unique solution. We talked about many ways to solve this system of equations. Some examples are:</p>
+<ul>
+<li>Jacobian iteration/ Gauss-Seidel iteration</li>
+<li>$x = A^{-1} b$</li>
+<li>Gaussian elimination</li>
+<li>LU decomposition</li>
+</ul>
+<p>In this assignment, we will show that we can solve it by QR decomposion.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Consider the following system of equations:</p>
+$$\begin{bmatrix}5&amp;-2&amp;2 \\ 4 &amp; -3 &amp;4 \\ 4&amp; -6 &amp;7 \end{bmatrix}\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}=\begin{bmatrix}1\\2\\3\end{bmatrix}$$
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">]])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14430,10 +14401,22 @@ $$x = (A^\top A)^{-1}A^\top y$$<p>The matrix $(A^\top A)^{-1}A^\top$ is also cal
 
 
 
-<div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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
-"
->
+<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
+$\displaystyle \left[\begin{matrix}5 &amp; -2 &amp; 2\\4 &amp; -3 &amp; 4\\4 &amp; -6 &amp; 7\end{matrix}\right]$
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
+$\displaystyle \left[\begin{matrix}1\\2\\3\end{matrix}\right]$
 </div>
 
 </div>
@@ -14445,37 +14428,22 @@ $$x = (A^\top A)^{-1}A^\top y$$<p>The matrix $(A^\top A)^{-1}A^\top$ is also cal
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We want to determine a line that is expressed by the following equation</p>
-$$f = aH + b,$$<p>to approximate the connection between Hormone dosage ($H$) and Fatalities $f$. 
-That is, we want to find $a$ (slope) and $b$ (y-intercept) for this line. First we define the variable $ 
-x = \left[
-\begin{matrix}
-    a  \\
-    b  
-\end{matrix}
-\right] 
-$ as the column vector that needs to be solved.</p>
-<p>&#9989;<strong><font color=red>DO THIS:</font></strong> Rewrite the system of equations to the form $Ax=y$ by defining your <code>numpy</code> matrices <code>A</code> and <code>y</code> using the data from above:</p>
+<p><strong>Back substitution.</strong> Let's first implement the back substitution in Python.  The back substitution function <code>back_subst</code> solves the system 
+$$R x = b$$
+where $R$ is an upper-triangular matrix.</p>
+<p>When we solve for $x$, we start with $x_n$: 
+$$x_n = {b_n\over R_{n,n}}$$
+Then we solve for $x_{n-1}$ as 
+$$x_{n-1} = {b_{n-1}-R_{n-1,n}x_n\over R_{n-1,n-1}}$$
+$$x_{n-2} = {b_{n-2}-R_{n-2,n-1}x_{n-1}-R_{n-2,n}x_n\over R_{n-2,n-2}}$$
+Then we can find $x_{n-2},\cdots,x_1$.
+We can solve for all components of $x$ in the reserved order. So this is call back substitution.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#put your code here</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989; <strong><font color=red>QUESTION:</font></strong> Calculate the square matrix $C = A^\top A$ and the modified right hand side vector as $A^\top y$ (Call it <code>Aty</code>):</p>
+<p>&#9989; <strong><font color=red>DO THIS:</font></strong>  Complete the following code for back substitution.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14484,7 +14452,16 @@ $ as the column vector that needs to be solved.</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#put your code here</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">back_subst</span><span class="p">(</span><span class="n">R</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)):</span>
+        <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>            
+<span class="c1">## Your code starts ##            </span>
+            <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span>   <span class="c1"># Complet this line of code.</span>
+<span class="c1">## Your code ends ##            </span>
+        <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">R</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
 </pre></div>
 
      </div>
@@ -14495,7 +14472,18 @@ $ as the column vector that needs to be solved.</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989;<strong><font color=red>QUESTION:</font></strong> Find the <em>least squares solution</em> by solving $Cx=A^\top y$ for $x$.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>DO THIS:</font></strong>  When we solve for $Ax=b$ with QR decomposition. We have the following steps:</p>
+<ul>
+<li>Find the QR decomposition of $A$</li>
+<li>From $QRx=b$, we obtain $Rx =Q^\top b$ </li>
+<li>Solve for $x$ using back substitution.</li>
+</ul>
+<p>Use these steps to solve $Ax=b$ with the given $A$ and $b$. Compare the result with <code>np.linalg.solve</code>.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14504,7 +14492,11 @@ $ as the column vector that needs to be solved.</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Put your code here</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Your code starts ##</span>
+<span class="n">x</span> <span class="o">=</span>  
+<span class="c1">## Your code ends ##</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>   <span class="c1"># x is a column vector in the np.matrix type</span>
+<span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14515,83 +14507,36 @@ $ as the column vector that needs to be solved.</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989;<strong><font color=red>QUESTION:</font></strong> Given the solution above, define the two scalars slope <code>a</code> and y-intercept <code>b</code>.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#put your code here</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The following code will Plot the original data and the line estimated by the coefficients found in the above quation.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">50</span><span class="p">]</span>
-<span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="mi">101</span><span class="p">,</span><span class="mi">115</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">49</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">H</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
-
-<span class="n">H2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">H</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">H</span><span class="p">))</span>
-
-<span class="n">f2</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">H2</span> <span class="o">+</span> <span class="n">b</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H2</span><span class="p">,</span> <span class="n">f2</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989;<strong><font color=red>QUESTION:</font></strong>  Repeat the above analysis but now with a eight-order polynomial.</p>
+<hr>
+<p><a name="Overdetermined_Systems"></a></p>
+<h1 id="3.-Overdetermined-Systems">3. Overdetermined Systems<a class="anchor-link" href="#3.-Overdetermined-Systems">&#182;</a></h1><p>When we have more equations than unknowns, we have the overdetermined system 
+$$Ax\approx b$$
+In this assignment, we assume that the matrix $A$ has full column rank. Therefore, the system may not be feasible, i.e., we can not find $x$ such that $Ax=b$. Then we want to find the $x$ to minimize $\|Ax-b\|^2$, which is the least squares problem. We mentioned in previous assignments that we can solve this least squares problem by finding the left inverse of the matrix $A$. That is 
+$$x=(A^\top A)^{-1}A^\top b$$</p>
+<p>In this assignment, we show that we can solve it by QR decomposion.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989;<strong><font color=red>QUESTION:</font></strong>  Play with the interactive function below by adjusting the degree of the least-squares fit approximation. Then extend the <code>x_min</code> and <code>x_max</code> parameters. Do you think that an eight-order polynomial is a good model for this dataset? Why or why not?</p>
+<p>Consider the following system of equations:</p>
+$$\begin{bmatrix}5&amp;-2&amp;2 \\ 4 &amp; -3 &amp;4 \\ 4&amp; -6 &amp;7 \\ 6 &amp; 3 &amp; -3\end{bmatrix}\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}=\begin{bmatrix}1\\2\\3\\-1\end{bmatrix}$$<p>&#9989; <strong><font color=red>DO THIS:</font></strong> We solve the least squares problem in the following steps</p>
+<ul>
+<li>Find the QR decomposition of the matrix $A$ such that $R$ is a square upper-triangular matrix. ($Q$ is not a square matrix any more) </li>
+<li>Use the <code>back_subst</code> function we defined before to solve $Rx = Q^\top b$</li>
+</ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">fixed</span>
-<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
-
-<span class="nd">@interact</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">fixed</span><span class="p">(</span><span class="n">H</span><span class="p">),</span> <span class="n">y</span><span class="o">=</span><span class="n">fixed</span><span class="p">(</span><span class="n">f</span><span class="p">),</span> <span class="n">degree</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">8</span><span class="p">),</span> <span class="n">x_min</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">H</span><span class="p">)</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">H</span><span class="p">),</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">H</span><span class="p">)),</span> <span class="n">x_max</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">H</span><span class="p">),</span> <span class="nb">max</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">H</span><span class="p">)</span><span class="o">+</span><span class="mi">10</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">H</span><span class="p">)))</span>
-<span class="k">def</span> <span class="nf">graphPolyN</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">degree</span><span class="p">):</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
-    <span class="n">f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-    
-    <span class="n">x_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x_pred</span><span class="p">)</span>
-    
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_pred</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-    
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">],[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14612,208 +14557,112 @@ $ as the column vector that needs to be solved.</p>
 
 
 
+<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
+$\displaystyle \left[\begin{matrix}5 &amp; -2 &amp; 2\\4 &amp; -3 &amp; 4\\4 &amp; -6 &amp; 7\\6 &amp; 3 &amp; -3\end{matrix}\right]$
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
 
-<div id="87e1e7e8-e625-4c26-800d-e18a6e345749" class="jupyter-widgets jp-OutputArea-output ">
-<script type="text/javascript">
-var element = document.getElementById('87e1e7e8-e625-4c26-800d-e18a6e345749');
-</script>
-<script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "2c82b2de34ef47e48aa16da865197344"}
-</script>
+
+<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
+$\displaystyle \left[\begin{matrix}1\\2\\3\\-1\end{matrix}\right]$
 </div>
 
 </div>
 
 </div>
 
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Your code starts ##</span>
+<span class="n">x</span> <span class="o">=</span>  
+<span class="c1">## Your code ends ##</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>   <span class="c1"># x is a column vector in the np.matrix type</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
 </div>
 
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Put your answer to the above question here</p>
+<p>We can not use the <code>np.linalg.solve</code> because the matrix $A$ is not a square matrix (you can try if you do not believe it). However, we can use the <code>np.linalg.lstsq</code> function to find the least squares solution to minimize $\|Ax-b\|^2$. The next cell compares the result from <code>lstsq</code> and our result from the QR decomposition. (If everything is correct, you will expect a <code>True</code> result.)</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">lstsq</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Explain why we can use the QR decomposition to solve the least squares problem.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989;<strong><font color=red>QUESTION:</font></strong>  Check the rank of $C=A^\top A$ for the previous case. What do you get? Why?</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Put your answer to the above question here</p>
+<p>Put Your Answer Here</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<p><a name="Pseudoinverse"></a></p>
-<h1 id="3.-Pseudoinverse">3. Pseudoinverse<a class="anchor-link" href="#3.-Pseudoinverse">&#182;</a></h1><p>In this class we often talk about solving problems of the form:</p>
-$$Ax = b$$<p>Currently we have determined that this problem becomes very nice when the $n \times n$ matrix $A$ has an inverse. We can easily multiply each side by the inverse:</p>
-$$A^{-1}Ax = A^{-1}b$$<p>Since $A^{-1}A = I$ the solution for $x$ is simply:</p>
-$$x = A^{-1}b$$<p>Now, let us consider a a more general problem where the $m \times n$ matrix $A$ is not square, i.e. $m \neq n$ and its rank $r$ maybe less than $m$ and/or $n$.  In this case we want to find a Pseudoinverse (which we denote as $A^+$) which acts like an inverse for a non-square matrix. In other words we want to find an $A^+$ for $A$ such that:</p>
-$$A^+A \approx I$$<p>Assuming we can find the $n \times m$ matrix $A^+$, we should then be able to solve for $x$ as follows:</p>
-$$Ax = b$$$$A^+Ax = A^+b$$$$x \approx A^+b$$<h2 id="How-do-we-know-there-is-a-Psudoinverse">How do we know there is a Psudoinverse<a class="anchor-link" href="#How-do-we-know-there-is-a-Psudoinverse">&#182;</a></h2><p>Assuming the general case of a $m\times n$ matrix $A$ where its rank $r$ maybe less than $m$ and/or $n$ ($r\leq m$ and $r\leq n$). We can conclude the following about the fundamental spaces of $A$:</p>
+<p><a name="Underdetermined_Systemss"></a></p>
+<h1 id="4.-Underdetermined-Systems">4. Underdetermined Systems<a class="anchor-link" href="#4.-Underdetermined-Systems">&#182;</a></h1><p>When we have more unknowns than equations, we have the underdeterminated system 
+$$Ax= b$$
+In this assignment, we assume that the matrix $A$ has full row rank. This system has infinite many solution, i.e., we can not find an unique $x$ such that $Ax=b$. Then we want to find the smallest $x$ (by smallest, we mean the smallest $\|x\|^2$) such that $Ax=b$, which is also the least squares problem.</p>
+<p>In this assignment, we show that we can also solve it by QR decomposion.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Consider the following system of equations:</p>
+$$\begin{bmatrix}5&amp;-2&amp;2 &amp; 1 \\ 4 &amp; -3 &amp;4 &amp;2  \\ 4&amp; -6 &amp;7  &amp; 4\end{bmatrix}\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=\begin{bmatrix}1\\2\\3\end{bmatrix}$$<p>&#9989; <strong><font color=red>DO THIS:</font></strong> We solve the least squares problem in the following steps</p>
 <ul>
-<li>The rowspace of $A$ is in $R^n$ with dimension $r$ </li>
-<li>The columnspace of $A$ is in $R^m$ also with dimension $r$.</li>
-<li>The nullspace of $A$ is in $R^n$ with dimension $n-r$</li>
-<li>The nullspace of $A^T$ is in $R^m$ with dimension $m-r$.</li>
+<li>Find the QR decomposition of the matrix $A^\top$ such that $R$ is a square upper-triangular matrix. </li>
+<li>Use the <code>forward_subst</code> function defined below to solve $x = Q (R^\top)^{-1}b$</li>
 </ul>
-<p>Because the rowspace of $A$ and the column space $A$ have the same dimension then $A$ is a the one-to-one mapping from the row space to the columnspace. In other words:</p>
-<ul>
-<li>For any $x$ in the rowspace, we have that $Ax$ is one point in the columnspace. If $x'$ is another point in the row space different from $x$, we have $Ax\neq Ax'$ (The mapping is one-to-one). </li>
-<li>For any $y$ in the columnspace, we can find $x$ in the rowspace such that $Ax=y$ (The mapping is onto). </li>
-</ul>
-<p>The above is not really a proof but hopefully there is sufficient information to convince yourself that this is true.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="How-to-compute-pseudoinverse">How to compute pseudoinverse<a class="anchor-link" href="#How-to-compute-pseudoinverse">&#182;</a></h2><p>We want to find the $n\times m$ matrix that maps from columnspace to the rowspace of $A$, and $x=A^+Ax,$ if $x$ is in the rowspace.</p>
-<ul>
-<li><p>Let's apply SVD on $A$: $$A= U\Sigma V^\top,$$
-where $U$ is a $m\times m$ matrix, $V^\top$ is a $n\times n$ matrix, and $\Sigma$ is a diagonal $m\times n$ matrix. 
-We can decompose the matrices as 
-$$A = \begin{bmatrix}\vdots &amp; \vdots \\ U_1 &amp; U_2 \\ \vdots &amp;\vdots\end{bmatrix} \begin{bmatrix}\Sigma_1 &amp; 0 \\ 0 &amp; 0\end{bmatrix}  \begin{bmatrix}\cdots &amp; V_1^\top &amp; \cdots \\ \cdots &amp; V_2^\top &amp;\cdots \end{bmatrix}.$$
-Here $U_1$ is of $m\times r$, $U_2$ is of $m\times (m-r)$, $\Sigma_1$ is of $r\times r$, $V_1^\top$ is of $r\times n$, and $V_2^\top$ is of $(n-r)\times n$.</p>
-<ul>
-<li>The columnspace of $U_1$ is the columnspace of $A$, and columnspace of $U_2$ is the nullspace of $A^\top$. </li>
-<li>The rowspace of $V_1$ is the rowspace of $A$, and rowspae of $V_2$ is the nullspace of $A$.</li>
-</ul>
-</li>
-<li><p>If $x$ is in the rowspace of $A$, we have that $V_2^\top x=0$. We have $Ax = U_1\Sigma_1 V_1^\top x$.</p>
-<ul>
-<li>If we define a matrix $B=V_1\Sigma_1^{-1}U_1^\top$, we have that $BAx=V_1\Sigma_1^{-1}U_1^\top U_1\Sigma_1 V_1^\top x=V_1V_1^\top x$. That is $BAx=x$ is $x$ is in the rowspace of $A$. </li>
-</ul>
-</li>
-<li><p>The matrix $B$ is the pseudoinverse of matrix $A$. 
-$$A^+ = V_1\Sigma_1^{-1}U_1^\top$$
-$$A^+ = \begin{bmatrix}\vdots &amp; \vdots \\ V_1 &amp; V_2 \\ \vdots &amp;\vdots\end{bmatrix} \begin{bmatrix}\Sigma_1^{-1} &amp; 0 \\ 0 &amp; 0\end{bmatrix}  \begin{bmatrix}\cdots &amp; U_1^\top &amp; \cdots \\ \cdots &amp; U_2^\top &amp;\cdots \end{bmatrix}.$$</p>
-</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Example 1:</strong> Let $$A=[1,2]$$
-we know that 
-$r=m=1$ and $n=2$.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989;<strong><font color=red>TODO:</font></strong>  Calculate the pseudoinverse $A^+$ of $A$ using the <code>numpy.linalg</code> function <code>pinv</code>:</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#put your code here</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989;<strong><font color=red>DO THIS:</font></strong>  Compute $AA^+$ and $A^+A$</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#put your code here</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989;<strong><font color=red>QUESTION:</font></strong> If $x$ is in the nullspace of $A$ what is the effect of $A^+Ax$?</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Put your answer to the above question here</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989;<strong><font color=red>QUESTION:</font></strong>  If $x$ is in the rowspace of $A$ what is the effect of $A^+Ax$?</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Put your answer to the above question here</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Left-inverse-is-pseudoinverse">Left inverse is pseudoinverse<a class="anchor-link" href="#Left-inverse-is-pseudoinverse">&#182;</a></h2><p>We can compute the left inverse of $A$ if $r=n\leq m$. In this case, we may have more rows than columns, and the matrix $A$ has full column rank.</p>
-<p>In this case, the SVD of $A$ is 
-$$A = U\Sigma V^\top   .$$
-Here $U$ is of $m\times n$, $\Sigma$ is of $n\times n$ and nonsingular, $V^\top$ is of $n\times n$. 
-The pseudoinverse of $A$ is $$A^+ = V\Sigma^{-1}U^\top$$</p>
-<p>The left inverse of $A$ is 
-$$(A^\top A)^{-1}A^\top= (V\Sigma U^\top U\Sigma V^\top  )^{-1} V\Sigma U^\top = V(\Sigma \Sigma )^{-1} V^\top V\Sigma U^\top =  V\Sigma ^{-1} U^\top =A^+$$</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Example 2:</strong> Let $$A=\begin{bmatrix}1\\2\end{bmatrix}$$
-we know that 
-$r=n=1$ and $m=2$. Then we have the left inverse.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">]])</span>
-<span class="n">A</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">]])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14829,44 +14678,104 @@ $r=n=1$ and $m=2$. Then we have the left inverse.</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
 
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>matrix([[1],
-        [2]])</pre>
+<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
+$\displaystyle \left[\begin{matrix}5 &amp; -2 &amp; 2 &amp; 1\\4 &amp; -3 &amp; 4 &amp; 2\\4 &amp; -6 &amp; 7 &amp; 4\end{matrix}\right]$
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
+$\displaystyle \left[\begin{matrix}1\\2\\3\end{matrix}\right]$
 </div>
 
 </div>
 
 </div>
 
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">forward_subst</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>  <span class="c1"># This function solves $L x= b$ when $L$ is the lower-trigular matrix</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+            <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>  
+        <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Your code starts ##</span>
+<span class="n">x</span> <span class="o">=</span>  
+<span class="c1">## Your code ends ##</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>   <span class="c1"># x is a column vector in the np.matrix type</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
 </div>
 
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989;<strong><font color=red>DO THIS:</font></strong> Calculate the pseudoinverse $A^+$ of $A$.</p>
+<p>We can not use the <code>np.linalg.solve</code> because the matrix $A$ is not a square matrix. However, we can use the <code>np.linalg.lstsq</code> function to find the least squares solution to minimize $\|Ax-b\|^2$ with underdeterminated systems. The next cell compares the result from <code>lstsq</code> and our result from the QR decomposition. (If everything is correct, you will expect a <code>True</code> result.)</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">lstsq</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>&#9989; <strong><font color=red>DO THIS:</font></strong> Explain why we can use the QR decomposition to solve the least squares problem. (HINT: you may need the orhogonal decomposition to the four fundamental spaces of $Q$.)</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Put your answer to the above question here</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>&#9989;<strong><font color=red>DO THIS:</font></strong>  Calculate the left inverse of $A$, and verify that it is the same as $A^+$.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Put your answer to the above question here</p>
+<p>Put Your Answer Here</p>
 
 </div>
 </div>
@@ -14887,7 +14796,7 @@ $r=n=1$ and $m=2$. Then we have the left inverse.</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Written by Dr. Dirk Colbry and David Yonkers, Michigan State University
+<p>Written by Dr. Dirk Colbry, Michigan State University
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
 
 </div>
@@ -14904,10 +14813,6 @@ $r=n=1$ and $m=2$. Then we have the left inverse.</p>
 
 
 
-
-<script type="application/vnd.jupyter.widget-state+json">
-{"state": {"81b5d8a8d1c8413bb6f00168a310bca4": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "2a036a23f2fb45ce89919c138c43efb2": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "20dee18a20d1439bafabcfbb9da3d2bc": {"model_name": "IntSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "IntSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "IntSliderView", "continuous_update": true, "description": "degree", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_81b5d8a8d1c8413bb6f00168a310bca4", "max": 8, "min": 1, "orientation": "horizontal", "readout": true, "readout_format": "d", "step": 1, "style": "IPY_MODEL_2a036a23f2fb45ce89919c138c43efb2", "value": 8}}, "4f40f557581f4ed4bca032a122ed9510": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "af5504670b1a43d4b6207cc32e3dbb0e": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "bdf5fe3f180d4ee2927543b5d2841953": {"model_name": "IntSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "IntSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "IntSliderView", "continuous_update": true, "description": "x_min", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_4f40f557581f4ed4bca032a122ed9510", "max": 20, "min": 10, "orientation": "horizontal", "readout": true, "readout_format": "d", "step": 1, "style": "IPY_MODEL_af5504670b1a43d4b6207cc32e3dbb0e", "value": 20}}, "84c6d82dca0849abb1ce812c47a67e8a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "688218845f884913be608ef93df94305": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "23fad4b84be84d56972d421f0923e9d2": {"model_name": "IntSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "IntSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "IntSliderView", "continuous_update": true, "description": "x_max", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_84c6d82dca0849abb1ce812c47a67e8a", "max": 60, "min": 50, "orientation": "horizontal", "readout": true, "readout_format": "d", "step": 1, "style": "IPY_MODEL_688218845f884913be608ef93df94305", "value": 50}}, "5dbbf647596b4db7b58888aec0a8f538": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "2c82b2de34ef47e48aa16da865197344": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": ["widget-interact"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_bdf5fe3f180d4ee2927543b5d2841953", "IPY_MODEL_23fad4b84be84d56972d421f0923e9d2", "IPY_MODEL_20dee18a20d1439bafabcfbb9da3d2bc", "IPY_MODEL_8ec0b1ea270c467386104dea3d487fda"], "layout": "IPY_MODEL_5dbbf647596b4db7b58888aec0a8f538"}}, "ac23ecfd249d4defb86d3286a8ecde4f": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "8ec0b1ea270c467386104dea3d487fda": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_ac23ecfd249d4defb86d3286a8ecde4f", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stderr", "text": "/opt/anaconda3/lib/python3.7/site-packages/ipywidgets/widgets/interaction.py:256: RankWarning: Polyfit may be poorly conditioned\n  self.result = self.f(**self.kwargs)\n"}, {"output_type": "display_data", "metadata": {"needs_background": "light"}, "data": {"text/plain": "<Figure size 432x288 with 1 Axes>", "image/png": "iVBORw0KGgoAAAANSUhEUgAAAXcAAAD4CAYAAAAXUaZHAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjMuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8vihELAAAACXBIWXMAAAsTAAALEwEAmpwYAAAoUElEQVR4nO3dd3xV9f3H8dfnZpKEACEhzBD2HkIEFZWqRUFR3CtatFa01Vprf1WcdZSWtlbbah1oW2mNe+FWinsABgUJeyVsCAkQSMj+/v7I1aY2QODe5Nx7834+HjxO7sm997yP58Gb4/csc84hIiKRxed1ABERCT6Vu4hIBFK5i4hEIJW7iEgEUrmLiESgaK8DAKSmprrMzEyvY4iIhJUFCxbscM6lNfS7kCj3zMxMcnNzvY4hIhJWzKxgf7/TsIyISARSuYuIRCCVu4hIBFK5i4hEIJW7iEgEUrmLiEQglXsoyMmBzEzw+eqmOTleJxKRMBcS57lHurLKatZsLyW/qJTCPRXsq6qhusaRGBdF8sIFZP7lPnoW7iLVOSgogClT6j6Yne1tcBEJWxYK93PPyspykXQRk3OOrzbs4p28rcxdV0zept3U1B78v3PGzi2M2pjHySvnMrZmB3FrVzdDWhEJV2a2wDmX1dDvtOceRDv2VvDk3AKez93Ipl37iI3yMbxbW64e25MhXdrQvX0iHZPjSYiLItrno7Symp2du5PfthOrUjOY33UQs3sfxQtDxtG6fC+nv7yYK47tQa+0JK9XTUTCjPbcg2DL7n38Zc5qXvxyI5XVtRzXJ5Uzh3fh5EHptI6POfCHMzPrhmL8qnxRfNp9GK8eeSpv9DmGiupavj8gnRvG9WVg5+SmXRERCSsH2nNXuQegpLyKhz9Yw98/WYdzcM7IrlxxbA96dziEPe2cnLox9rKy/8xLSIAZM9gx6Vz+9XkBMz/PZ/e+Ks4d0ZX/O6Uf6cnxwV8ZEQk7KvcmMHvpNm57ZTHbSio464gu3DCuL91SEg7vy3Jy4NZbYf16yMiAadP+62Dq7rIqHnx/FU98lk98TBS3TxzIeSO7YmZBWhsRCUcq9yDaWVrJ7bPyeP3rLfRLb830c4ZwREa7Zln2uh2l3PTi18xfV8zYvmnce94w0lrHNcuyRST0qNyDZEFBMT996isK91bw0xP7cPXYXsRGN++lArW1jn/NLeC3by0jOT6GBy8ewageKc2aQURCw4HKXRcxNYJzjkc+XMP5j84lOsrHiz8+hutO6tPsxQ7g8xmTj8nk5Z+MITEumosem8vjH68lFP6RFpHQoXI/iPKqGn7+7EKmv7WcUwal8/p1xzK0a1uvYzGgUzKzrh3DuAHp/PqNZdw+K4/qmlqvY4lIiNB57gewY28FV/1rAQsKdvJ/J/flmhN6h9RBzOT4GB7KHsHv31nBIx+uYcuuch64+AgSYrVZRVq6g+65m9nfzWy7meXVm3eemS0xs1ozy/rO+282s9VmtsLMTmmK0M1h3Y5SzvzrpyzZvJuHskdw7Yl9QqrYv+HzGVMn9OeeMwfz/ortZD8+j5LyKq9jiYjHGjMs8wQw/jvz8oCzgY/qzzSzgcCFwCD/Zx4ys6jAYzavpZtLOO+RzymrrOHZKUdz6pBOXkc6qEuP6s5D2SPJ27SbSx+fx+4yFbxIS3bQcnfOfQQUf2feMufcigbePgl4xjlX4ZxbB6wGRgUlaTNZUFDMhTM+JybKeO6qoxnWra3XkRpt/OCOPJw9kmVb9nDRY3PZWVrpdSQR8UiwD6h2ATbUe73RP+9/mNkUM8s1s9zCwsIgxzg8n63ewSWPzyclMZbnrz760K40DRHfH5jOjB+MZHXhXi574gv2VlR7HUlEPBDscm9oULrBc/ScczOcc1nOuay0tLQgxzh089YWccXMXDJSEnj+6mPo2u4wrzYNAd/r14EHLzqCvE27uepfuVRU13gdSUSaWbDLfSPQrd7rrsDmIC8j6BYU7OSHT3xB57bx5Fw5OiKu+jx5UEd+d85QPl1dxPXPLGzULYdFJHIEu9xfBS40szgz6wH0AeYHeRlBtWjDLi77+3w6JMfz9JVHkZoU/sX+jXNHduW20wbwVt5W7nptiddxRKQZHfSEaDN7GvgekGpmG4FfUXeA9QEgDXjDzBY6505xzi0xs+eApUA1cI1zLmTHBJZuLuHSv82jXWIsT105mg4ReLfFHx3Xk20l5Tz28Tp6d0jiB0dneh1JRJrBQcvdOXfRfn718n7ePw2YFkio5rBxZxmX/WM+iXHRPHXlaDq1aeV1pCYzdcIA1u0o5a7XltK9fSJj+3p/jENEmlaLvP3ArrJKLvvHF5RX1TDzh6PC+uBpY0T5jD9feAR901tzbc6XrNq2x+tIItLEWly5l1fV8KOZuawvKmPGD7Lom97a60jNIjEumr9NziI+Noof/TOX3ft0kZNIJGtR5V5T67j+mYUsWL+T+y4YxlE923sdqVl1btuKRy4Zwaad+/jFc4uo1Rk0IhGrxZS7c467X1vC20u2cvtpA5k4tLPXkTwxsnsKt5w6gH8v28YjH63xOo6INJEWU+6PfrSWmZ8XcOVxPfjhsT28juOpy8dkMnFoJ+59ZwWfrd7hdRwRaQItotxf+WoT099azunDOnPzhAFex/GcmfG7c4bSMy2Jnz79FVt3l3sdSUSCLOLL/ZNVO/jlC4s4umd77j1vKD5f6N221wuJcdE8cskI9lXVcP2zX+kKVpEIE9HlvmTzbq5+cgG90pJ45NKRxEWH3d2Hm1TvDq2564xBzF1bzCMfavxdJJJEbLlv3FnG5f/4gtbx0fzj8iNp0yrG60gh6dyRXZk4tBP3z17Jwg27vI4jIkESkeW+q6ySyX+f/+1FSpF89WmgzIxpZw0hPTmenz3zlW4RLBIhIq7cv7lIaUPxPh5rQRcpBaJNqxjuv2A4G4rL+NUs3WBMJBJEVLnXv0jp/guGM7qFXaQUiFE9Urj2xD68+OVGXv865O/SLCIHETHl7pzjjll5316kdNrQ0H/uaai57sTeDOvWlttfyaNwT4XXcUQkABFT7g+8t5qceeu5emyvFn+R0uGKjvLxx/OGUlpZwy0vL8Y5nR4pEq7Cu9xzciAzk2eGj+e+2Ss5u20lN43v53WqsNa7Q2t+eXI/Zi/dxqyFGp4RCVfhW+45OTBlCrNj0rnl5J8wdm0uv5s2GXvqKa+Thb0fHtuDkd3bccesPLaV6OpVkXB00HI3s7+b2XYzy6s3L8XMZpvZKv+0Xb3f3Wxmq81shZmd0lTBufVWFrbpyrVn3MSQrWt46JXpxOzdA7fe2mSLbCmifMa95w2jsqaWm1/S8IxIOGrMnvsTwPjvzJsKzHHO9QHm+F9jZgOBC4FB/s88ZGZNc1no+vX0KN7E6cs/4u8v3EliVfm38yVwPVITuWl8f95bvp3nF2z0Oo6IHKKDlrtz7iPqnpla3yRgpv/nmcCZ9eY/45yrcM6tA1YDo4IT9TsyMmhTUcq9b/6Z9vtK/mu+BMfkozMZ1SOFX7++lO17NDwjEk4Od8w93Tm3BcA/7eCf3wXYUO99G/3z/oeZTTGzXDPLLSwsPPQE06ZBwncej5eQUDdfgsLnM3579hDKq2u567WlXscRkUMQ7AOqDd1yscEBW+fcDOdclnMuKy3tMB7YnJ0NM2ZA9+5gVjedMaNuvgRNr7QkrjuxN298vYV/L93mdRwRaaTDLfdtZtYJwD/d7p+/EehW731dgaY7ny47G/Lzoba2bqpibxJTju9Fv/TW3D4rjz3levaqSDg43HJ/FZjs/3kyMKve/AvNLM7MegB9gPmBRRSvxUb7mH7OELaWlHPvOyu8jiMijdCYUyGfBj4H+pnZRjO7ApgOjDOzVcA4/2ucc0uA54ClwNvANc65mqYKL83niIx2TD46k3/OLWBBwU6v44jIQVgonMOclZXlcnNzvY4hB7G3opqT7/uQpPhoXv/pccRGh+81cCKRwMwWOOeyGvqd/nZKoyXFRfPrswazctteHtWTm0RCmspdDsmJ/dM5bWgnHnx/NeuLyryOIyL7oXKXQ3b7aQOJ9hm/ejVPtyYQCVEqdzlkHdvE8/NxfXl/RSHvLNG57yKhSOUuh+WyYzLp37E1d7+2hFI9d1Uk5Kjc5bBER/mYdtZgNu8u5y9zVnkdR0S+Q+Uuh21k9xQuyOrG3z5Zx4qte7yOIyL1qNwlIDdN6E9SfDS3v6KDqyKhROUuAUlJjGXq+P7Mzy/mxS83eR1HRPxU7hKw87O6MSKjLb99cxm7yiq9jiMiqNwlCHw+49dnDmFnWSW/143FREKCyl2CYmDnZC47pgdPzytg0YjjweeDzMy6B5mLSLNTuUvQ/HznV6SW7uL2IWdRg0FBAUyZooIX8YDKXYKm9R23ctucx/m6U1+eHnZK3cyyMrj1Vm+DibRAKncJnvXrOWPZhxxV8DV/OP4HFLVK/na+iDQvlbsET0YGBtwz+2FKY1vxu+9d9u18EWleAZW7mf3MzPLMbImZXe+fl2Jms81slX/aLihJJfRNmwYJCfQp2sAVubN4bujJLOg5vG6+iDSrwy53MxsMXAmMAoYBE82sDzAVmOOc6wPM8b+WliA7G2bMgO7due6zZ+hYtpPbL72T6gsv8jqZSIsTyJ77AGCuc67MOVcNfAicBUwCZvrfMxM4M6CEEl6ysyE/n8SKMm7/0UksLY/mybkFXqcSaXECKfc84Hgza29mCcCpQDcg3Tm3BcA/7dDQh81sipnlmlluYWFhADEkVJ06pCPH9Unlj++uZPuecq/jiLQoh13uzrllwO+A2cDbwCKg0Tf2ds7NcM5lOeey0tLSDjeGhDAz484zBlFeXcP0N5d7HUekRQnogKpz7m/OuRHOueOBYmAVsM3MOgH4p9sDjynhqldaElOO78lLX21i3toir+OItBiBni3TwT/NAM4GngZeBSb73zIZmBXIMiT8XXtCH7q0bcUds5ZQVVPrdRyRFiHQ89xfNLOlwGvANc65ncB0YJyZrQLG+V9LC9YqNoo7Th/Iim17mPlZvtdxRFqE6EA+7Jw7roF5RcBJgXyvRJ6TB6ZzQr807p+9kolDO9OxTbzXkUQimq5QlWbxzcHVqlrHtDeXeR1HJOKp3KXZdG+fyI/H9uK1RZv5dPUOr+OIRDSVuzSrH3+vFxkpCdwxK4/Kah1cFWkqKndpVvExUdx5xkDWFJbyt0/WeR1HJGKp3KXZndg/nXED0/nLnFVs2rXP6zgiEUnlLp64Y+JAHI5fv77U6ygiEUnlLp7olpLAtSf05q28rXy4UvcWEgk2lbt45srje9IjNZFfzcqjorrG6zgiEUXlLp6Ji47irjMGkV9UxowP13odRySiqNzFU8f3TePUIR158P3VbCgu8zqOSMRQuYvnbjttIFE+467XdHBVJFhU7uK5zm1bcd1Jffj3sm3MWbbN6zgiEUHlLiHhh2N60LtDEne+toTyKh1cFQmUyl1CQmy0j7snDWJD8T4e+mCN13FEwp7KXULGMb1SOWNYZx75cA35O0q9jiMS1lTuElJuPW0AsVE+7nxtCc45r+OIhK1AH7P3czNbYmZ5Zva0mcWbWYqZzTazVf5pu2CFlciXnhzP9d/vwwcrCnlniQ6uihyuwy53M+sCXAdkOecGA1HAhcBUYI5zrg8wx/9apNEuOyaT/h1bc8/rSymrrPY6jkhYCnRYJhpoZWbRQAKwGZgEzPT/fiZwZoDLkBYmOsrH3ZMGs2nXPh54b7XXcUTC0mGXu3NuE3AvsB7YAux2zr0LpDvntvjfswXo0NDnzWyKmeWaWW5hoW4cJf9tVI8Uzh3Zlcc+WsuSzbu9jiMSdgIZlmlH3V56D6AzkGhmlzT28865Gc65LOdcVlpa2uHGkAh222kDaJsQw00vfk11jZ7aJHIoAhmW+T6wzjlX6JyrAl4CjgG2mVknAP90e+AxpSVqmxDL3ZMGk7ephMc+1lObRA5FIOW+HjjKzBLMzICTgGXAq8Bk/3smA7MCiygt2YTBHTllUDr3/3slawv3eh1HJGwEMuY+D3gB+BJY7P+uGcB0YJyZrQLG+V+LHBYz455Jg4mP9jH1xcXU1urcd5HGCOhsGefcr5xz/Z1zg51zlzrnKpxzRc65k5xzffzT4mCFlZapQ3I8t00cyPz8YnLmr/c6jkhY0BWqEhbOG9mVY3unMv3NZXqotkgjqNwlLJgZvz17CLUObnlpsW5NIHIQKncJG91SErhpfD8+XFnIM19s8DqOSEhTuUtY+cHRmYzp3Z57Xl/K+iI9lk9kf1TuElZ8PuMP5w4jymf84vmF1OjsGZEGqdwl7HRu24q7zhjEF/k7efzjtV7HEQlJKncJS2cd0YXxgzryx3dXsnxriddxREKOyl3Ckpkx7azBJLeK4efPLqKyWveeEalP5S5hq31SHNPPHsKyLSX88d0VXscRCSkqdwlr3x+YTvboDB79aC0frtSto0W+oXKXsHf7xIH0S2/NDc8uZHtJuddxREKCyl3CXnxMFA9efASlldVc/6xOjxQBlbtEiD7prbn7jMF8tqaIhz/Qo/lEVO4SMc7L6soZwzpz3+yVfJGvm5FKy6Zyl4jxzemR3VIS+OlTX7F9j8bfpeVSuUtEaR0fw8PZI9m1r5Jrc76iSs9elRYqkAdk9zOzhfX+lJjZ9WaWYmazzWyVf9oumIFFDmZg52R+d85Q5ucXM+2NZV7HEfFEII/ZW+GcG+6cGw6MBMqAl4GpwBznXB9gjv+1SLOaNLwLVxzbgyc+y+elLzd6HUek2QVrWOYkYI1zrgCYBMz0z58JnBmkZYgckpsn9Oeoninc/NJi8jbt9jqOSLMKVrlfCDzt/zndObcFwD/t0NAHzGyKmeWaWW5hoa4slOCLjvLx4MUjaJ8Yy5X/zGWbLnCSFiTgcjezWOAM4PlD+ZxzboZzLss5l5WWlhZoDJEGpSbF8fjkIynZV8UPn/iC0opqryOJNItg7LlPAL50zm3zv95mZp0A/NPtQViGyGEb2DmZBy8ewbItJVz39Fe6glVahGCU+0X8Z0gG4FVgsv/nycCsICxDJCAn9O/AXZMGM2f5du55fanXcUSaXHQgHzazBGAccFW92dOB58zsCmA9cF4gyxAJlkuP6s76olIe+3gdHdvEc/XYXl5HEmkyAZW7c64MaP+deUXUnT0jEnJunjCArSUVTH9rOa3jo8ke3d3rSCJNIqByFwk3Pp9x3/nDKK2o5rZX8kiKi2bS8C5exxIJOt1+QFqcmCgfD2WPYHSPFG54bhGzl247+IdEwozKXVqk+JgoHp98JIO7tOEnOQt4O2+r15FEgkrlLi1WUlw0/7piFEO6tOGap75k1sJNXkcSCRqVu7RoyfEx/POK0WR1b8f1zy7kudwNXkcSCQqVu7R4SXHRPHH5KI7tncqNL3zNwx+swTld6CThTeUuArSKjeLxyVmcPqwzv3t7Obe+kkf1kzmQmQk+X900J8frmCKNplMhRfzioqP48wXD6dquFQ9/sIYt+Wv585ZCkp2DggKYMqXujdnZ3gYVaQTtuYvU4/MZN43vz7QvnubjbkOZNPl+VqT6L3QqK4Nbb/U2oEgjqdxFGpD9/lM89cyt7I1txZmX/pFXBxxf94v1670NJtJIKneRhmRkMGrjEt544mcM2r6G6864kV9O+Bl7evb1OplIo6jcRRoybRokJNChdCdPP30L1372DC8OPokJF/2eeWuLvE4nclAqd5GGZGfDjBnQvTsxrpb/W/8xz/cuJSq5NRc+NpebX1rMztJKr1OK7JeFwvm8WVlZLjc31+sYIgdVWlHNfbNX8sRn+STHR3PT+P6cl9WNKJ95HU1aIDNb4JzLauh32nMXOQSJcdHcPnEgb1x3LH06tGbqS4s55U8f8ebiLdTqCU8SQlTuIoehf8dknr3qKB7KHgHAT3K+5LQHPuGVrzZRWV3rcTqRAMvdzNqa2QtmttzMlpnZ0WaWYmazzWyVf9ouWGFFQomZceqQTrxz/fHcf8EwKqpquP7ZhYz53Xv86d8r2VBc5nXEOjm60rYlCmjM3cxmAh875x43s1ggAbgFKHbOTTezqUA759xNB/oejblLJKitdXy0qpCZn+Xz/opCAEZktOWMYZ05aUA63VISmj9UTk7dlbVl9f6hSUioO1isK23D3oHG3A+73M0sGVgE9HT1vsTMVgDfc85tMbNOwAfOuX4H+i6Vu0SaDcVlvPb1Zl5duJnlW/cAkNk+gWP7pDKyezuGdGlDj9SkJjkQ65xjb0U1RXsrKTplIsUlZRQntKGoVRuKE+r+lLRLpXzsiVRU11BRXUtldS0xUT5iooyYKB+JcdGkJsXSPimODq3j6JGaSO8OSXRu0wqfDh6HjKYq9+HADGApMAxYAPwM2OSca1vvfTudc/8zNGNmU4ApABkZGSMLCgoOK4dIqFu9fS8fryrk41U7mLu2iLLKGgASY6PITE2kW7sEuqW0omObViTHR9OmVQzJrWKIiTLAMAMD9lXVUFZRQ2llNaUVNewpr6KotJIdeyvqirzUP91bSWVNw+P+rSrLSdm3mzble4k/ciRx0VHExfiIifJRU+uoqqkr+r0V1d9+b3W9A8UJsVEM79aWIzNTGN0jhazMFGKjdejOK01V7lnAXGCMc26emf0ZKAF+2phyr0977tJSVNfUsrpwL4s37mbJ5hLyi0rZUFzGxp37qDiMA7Fx0T5Sk+K+3ctun/ifaUpiLCnXTqF9/ipSynbTvqyEVtUVdR/s3h3y8w/6/bW1jqLSStYW7mV14V5WbN1Dbv5Olm0twTloHRfNCf07cOqQjpzYP11F38wOVO6B3BVyI7DROTfP//oFYCqwzcw61RuW2R7AMkQiSnSUj/4dk+nfMZnz6s2vrXXsKa+mpLyK3fuqKNlXRVWtwzmHA3B1jwZMjIsiMS6axNhokuKjSYyNwuwAwyTXZjc85j5tWqPy+nxGWus40lrHMbpn+2/nl5RXMX9tMe8u3cq/l23n1UWbSU2K5dyR3cgeneHN8QX5L4EeUP0Y+JFzboWZ3Qkk+n9VVO+Aaopz7sYDfY/23EWaUE5O3d0s16+HjIy6Yg/iwdTqmlo+Xr2Dp+at573ldftyk4Z35poTetMrLSloy5H/1STDMv4vHg48DsQCa4HLqTu98jkgA1gPnOecKz7Q96jcRSLDlt37ePzjdeTMK6CiupZzRnTlxlP60SE53utoEanJyj1YVO4ikWXH3gpmfLSWf3y6jtgoHz89qQ8/HNNDY/JBptsPiEizSk2K45ZTB/Duz8dyVM/2TH9rOWf+9VOWby3xOlqLoXIXkSbTIzWRv112JI9cMpLte8o5/YFP+Ov7q3UfnmagcheRJjd+cEfe/flYTh7UkT+8s4LLnviCYt0yuUmp3EWkWaQkxvLgRUfwm7OGMHdNERP/8jELN+zyOlbEUrmLSLMxMy4encGLPz4Gn8+44NHPeXPxFq9jRSSVu4g0uyFd2zDrmjEM7tKGn+R8yYyP1hAKZ+5FEpW7iHiifVIcOT8azWlDO/GbN5dz9+tLVfBBFMjtB0REAhIfE8UDFx5Beut4/v7pOsqrapl25mDdeTIIVO4i4imfz7h94gBaxfr46/trqKiq4ffnDiU6SgMLgVC5i4jnzIxfntKf+Ogo/jh7JbXOcd/5w7UHHwCVu4iEjJ+e1Aefz/jDOytIjIvm12cOPvBdL2W/VO4iElKuOaE3e8qreeTDNbSOj2HqhP5eRwpLKncRCTk3je/HnvIqHvlwDW0TYrh6bC+vI4UdlbuIhBwz455Jg9m9r4rpby2nS9tWnD6ss9exworKXURCks9n3HveMLbuLucXzy+iU5t4sjJTvI4VNnSukYiErPiYKGb8IIvObeK58p+55O8o9TpS2Aio3M0s38wWm9lCM8v1z0sxs9lmtso/PeDDsUVEDiQlMZZ/XD4KgMv/MofdfQaAzweZmXWPEJQGBWPP/QTn3PB6TwOZCsxxzvUB5vhfi4gcth6piTzasZgN+xzXD7+AGgwKCuoe/q2Cb1BTDMtMAmb6f54JnNkEyxCRFmbUb6byqzkzeL/Xkdx/7MV1M8vK6h7+Lf8j0HJ3wLtmtsDMpvjnpTvntgD4px0a+qCZTTGzXDPLLSwsDDCGiES89eu55Ks3Of/rd3nwmAt5u+/R384PSzk5dUNLTTTEFGi5j3HOjQAmANeY2fGN/aBzboZzLss5l5WWlhZgDBGJeBkZGHD3uw8zbPMKbjjtBlamZkBGhtfJDl1ODkyZwu6tO+ruhNkEQ0wBlbtzbrN/uh14GRgFbDOzTgD+6fZAQ4qIMG0aJCQQX1PFoy//hoTKcqacczt77p7mdbJDd+utUFbGRRf9hmsn3VQ3L8hDTIdd7maWaGatv/kZOBnIA14FJvvfNhmYFWhIERGys2HGDOjenY6lxTw07x9saNuRqVEDwu8+8OvXszsukWUdetC3sOC/5gdLIHvu6cAnZrYImA+84Zx7G5gOjDOzVcA4/2sRkcBlZ0N+PtTWMuqLOfxifH/eWLyFJ+cWHPSjISUjg/ndBuHMx1HrF//X/GA57CtUnXNrgWENzC8CTgoklIhIY1x9fC++WFfMPa8vY3i3dgzp2sbrSI0zbRpz//kJsdWVDNuysm5eQkLd0FOQ6ApVEQlbPp/xx/OH0z4plmue+pKS8iqvIzVOdjbzjh7PiKJ84muroXv3uiGn7OygLULlLiJhLSUxlgcuOoJNu/Zx0wtfh8X4++6yKpZURDP64tOgtrZuqCmIxQ4qdxGJAFmZKdx4Sj/eytvKzM/yvY5zUJ+s3oFzcFyf1CZbhspdRCLClcf15KT+HZj25jK+3rjL6zgH9NHKQlrHRzO8W9smW4bKXUQiQt34+zDSkuK45qkv2b0vNMffnXN8uLKQY3unNulDwFXuIhIx2ibE8sDFR7B5VzlTXwzN8feV2/aytaScsX2b9sp8lbuIRJSR3f8z/v6vEDz//aOVdffSOl7lLiJyaK48ricn9Evj168vI2/Tbq/j/JfZS7fRv2NrOrdt1aTLUbmLSMT55vz3lMS689/3hMj574V7KviioJhTBnVs8mWp3EUkIqUk1o2/b9y5j6kvLQ6J8fd3l27FOZgwROUuInLYjsxM4Rcn9+WNr7fw5Dzv7/v+dt5WeqQm0i+9dZMvS+UuIhHt6uN7MbZvGve8vpQlm70bf99ZWsnna4oYP7gjZtbky1O5i0hE8/mM+84fRruEGK596ivPxt9fXbSZ6lrH6UM7N8vyVO4iEvHaJ8XxlwuPoKColFtezvNk/P35BRsY1DmZgZ2Tm2V5KncRaRFG92zPL07ux2uLNvP0/A3NuuxlW0rI21TCeSO7NtsyVe4i0mL8eGwvjuuTyp2vLWHp5pJmW+5zuRuIiTLOGN6l2ZYZcLmbWZSZfWVmr/tfp5jZbDNb5Z+2CzymiEjgfD7j/guG0y4hhin/yqVob0WTL7OkvIrnczcyYXAnUhJjm3x53wjGnvvPgGX1Xk8F5jjn+gBz/K9FREJCalIcj16aReGeCn785JdUVtc26fKenb+BvRXVXHlczyZdzncFVO5m1hU4DXi83uxJwEz/zzOBMwNZhohIsA3v1pbfnzuU+fnF3PZK013gVF1TyxOf5TO6R0qzPwIw0D33PwE3AvX/6Ut3zm0B8E87NPRBM5tiZrlmlltYWBhgDBGRQzNpeBeuPaE3z+Vu5G+frGuSZbywYCObdu3jqrHNu9cOAZS7mU0EtjvnFhzO551zM5xzWc65rLS0pr07mohIQ24Y15fxgzoy7c1lzFq4KajfXV5Vw5/+vYoRGW05oV+D+7hNKpA99zHAGWaWDzwDnGhmTwLbzKwTgH+6PeCUIiJNwOcz/nTh8LrbFDy3iPeXB6+uHv1wLVtLyrlxfP9muSL1uw673J1zNzvnujrnMoELgfecc5cArwKT/W+bDMwKOKWISBOJj4ni8clZ9O/UmqufXMCnq3cE/J1rCvfy1/dXM3FoJ47q2T4IKQ9dU5znPh0YZ2argHH+1yIiISs5PoaZl4+ie/sELn/iC2Yv3XbY31VZXcsNzy0iPsbHHacPDGLKQxOUcnfOfeCcm+j/ucg5d5Jzro9/WhyMZYiINKX2SXE8O+VoBnRK5uonF/DM/EO/i6Rzjl+/sZRFG3bx+3OH0qF1fBMkbRxdoSoi4tcuMZacH41mTO9Upr60mFteXkx5VU2jP//Ae6v55+cFXHlcD8YP7tSESQ9O5S4iUk9SXDT/uOxIfvy9Xjw1bz0T/vwxn68pOuBnyqtquO2Vxdw3eyVnj+jCzRMGNFPa/Yv2OoCISKiJ8hk3je/PmF6p3PLyYi56bC5jerfnktHdOb5vGolxddW5t6Kad/K28sB7q8gvKuOqsT258ZT++HzNf3bMd1koPHoqKyvL5ebmeh1DROR/7Kus4Z+f5/P4J+so3FNBlM/omFw3lr5l9z5qHfTpkMQdpw/kuD7Ne82OmS1wzmU19DvtuYuIHECr2CiuGtuLHx7bg9z8nXy+Zgcbd+4DoFtKAsf0as+oHimenMt+ICp3EZFGiInycXSv9hzdy5vz1g+VDqiKiEQglbuISARSuYuIRCCVu4hIBFK5i4hEIJW7iEgEUrmLiEQglbuISAQKidsPmFkhUBDAV6QCgd9h33uRsh6gdQlFkbIeoHX5RnfnXIP3PAiJcg+UmeXu7/4K4SRS1gO0LqEoUtYDtC6NoWEZEZEIpHIXEYlAkVLuM7wOECSRsh6gdQlFkbIeoHU5qIgYcxcRkf8WKXvuIiJSj8pdRCQChVW5m1k3M3vfzJaZ2RIz+5l/foqZzTazVf5pO6+zHswB1uVOM9tkZgv9f071OuuBmFm8mc03s0X+9bjLPz8ct8n+1iWstkl9ZhZlZl+Z2ev+12G3XaDB9QjLbWJm+Wa22J851z+vSbZJWI25m1knoJNz7kszaw0sAM4ELgOKnXPTzWwq0M45d5N3SQ/uAOtyPrDXOXevl/kay+qeLZbonNtrZjHAJ8DPgLMJv22yv3UZTxhtk/rM7AYgC0h2zk00s98TZtsFGlyPOwnDbWJm+UCWc25HvXlNsk3Cas/dObfFOfel/+c9wDKgCzAJmOl/20zqSjKkHWBdwoqrs9f/Msb/xxGe22R/6xKWzKwrcBrweL3ZYbdd9rMekaRJtklYlXt9ZpYJHAHMA9Kdc1ugrjSBDh5GO2TfWReAa83sazP7ezj8b7P/f5kXAtuB2c65sN0m+1kXCLNt4vcn4Eagtt68cNwuf+J/1wPCc5s44F0zW2BmU/zzmmSbhGW5m1kS8CJwvXOuxOs8gWhgXR4GegHDgS3AH71L1zjOuRrn3HCgKzDKzAZ7HOmw7Wddwm6bmNlEYLtzboHXWQJxgPUIu23iN8Y5NwKYAFxjZsc31YLCrtz9Y6EvAjnOuZf8s7f5x7C/Gcve7lW+Q9HQujjntvkLphZ4DBjlZcZD4ZzbBXxA3Rh1WG6Tb9RflzDdJmOAM/xjvM8AJ5rZk4TfdmlwPcJ0m+Cc2+yfbgdepi53k2yTsCp3/wGvvwHLnHP31fvVq8Bk/8+TgVnNne1Q7W9dvtnIfmcBec2d7VCYWZqZtfX/3Ar4PrCc8NwmDa5LuG0TAOfczc65rs65TOBC4D3n3CWE2XbZ33qE4zYxs0T/yROYWSJwMnW5m2SbRAfjS5rRGOBSYLF/XBTgFmA68JyZXQGsB87zJt4h2d+6XGRmw6kbm8sHrvIi3CHoBMw0syjqdhaec869bmafE37bZH/r8q8w2yYHEo5/Vxry+zDcJunAy3X7dUQDTznn3jazL2iCbRJWp0KKiEjjhNWwjIiINI7KXUQkAqncRUQikMpdRCQCqdxFRCKQyl1EJAKp3EVEItD/A0ZqZJ5/rkuVAAAAAElFTkSuQmCC\n"}}]}}}, "version_major": 2, "version_minor": 0}
-</script>
 
 
 </html>
